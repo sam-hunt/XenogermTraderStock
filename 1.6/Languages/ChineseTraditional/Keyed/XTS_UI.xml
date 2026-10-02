@@ -68,6 +68,10 @@
   <XTS_QuantitySectionDesc>每種商人每次到訪時，會從其數量範圍中抽選攜帶的異種細胞數量。僅影響新出現的商人。</XTS_QuantitySectionDesc>
   <!-- EN: {0}: {1}~{2} -->
   <XTS_TraderCount>{0}：{1}~{2}</XTS_TraderCount>
+  <!-- EN: {0} (orbital) -->
+  <XTS_TraderOrbital>{0}（軌道）</XTS_TraderOrbital>
+  <!-- EN: {0} (caravan) -->
+  <XTS_TraderCaravan>{0}（旅隊）</XTS_TraderCaravan>
   <!-- EN: Xenogerms this trader arrives with, rolled from this range each visit -->
   <XTS_TraderCountDesc>此商人到訪時攜帶的異種細胞數量，每次從此範圍中抽選</XTS_TraderCountDesc>
 

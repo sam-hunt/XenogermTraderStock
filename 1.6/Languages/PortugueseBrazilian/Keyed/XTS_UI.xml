@@ -68,6 +68,10 @@
   <XTS_QuantitySectionDesc>Quantos xenogerminadores cada tipo de comerciante carrega, sorteados dentro do seu intervalo a cada visita. Afeta apenas novos comerciantes.</XTS_QuantitySectionDesc>
   <!-- EN: {0}: {1}~{2} -->
   <XTS_TraderCount>{0}: {1}~{2}</XTS_TraderCount>
+  <!-- EN: {0} (orbital) -->
+  <XTS_TraderOrbital>{0} (orbital)</XTS_TraderOrbital>
+  <!-- EN: {0} (caravan) -->
+  <XTS_TraderCaravan>{0} (caravana)</XTS_TraderCaravan>
   <!-- EN: Xenogerms this trader arrives with, rolled from this range each visit -->
   <XTS_TraderCountDesc>Xenogerminadores com os quais este comerciante chega, sorteados dentro deste intervalo a cada visita</XTS_TraderCountDesc>
 

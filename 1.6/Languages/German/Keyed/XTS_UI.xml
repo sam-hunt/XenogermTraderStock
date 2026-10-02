@@ -68,6 +68,10 @@
   <XTS_QuantitySectionDesc>Wie viele Xenokeime jede Händlerart mit sich führt, bei jedem Besuch neu aus ihrem Bereich gewürfelt. Wirkt sich nur auf neue Händler aus.</XTS_QuantitySectionDesc>
   <!-- EN: {0}: {1}~{2} -->
   <XTS_TraderCount>{0}: {1}~{2}</XTS_TraderCount>
+  <!-- EN: {0} (orbital) -->
+  <XTS_TraderOrbital>{0} (Orbit)</XTS_TraderOrbital>
+  <!-- EN: {0} (caravan) -->
+  <XTS_TraderCaravan>{0} (Karawane)</XTS_TraderCaravan>
   <!-- EN: Xenogerms this trader arrives with, rolled from this range each visit -->
   <XTS_TraderCountDesc>Xenokeime, mit denen dieser Händler eintrifft, bei jedem Besuch neu aus diesem Bereich gewürfelt</XTS_TraderCountDesc>
 

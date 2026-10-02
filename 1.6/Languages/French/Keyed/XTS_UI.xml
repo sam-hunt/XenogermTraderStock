@@ -68,6 +68,10 @@
   <XTS_QuantitySectionDesc>Combien de xénogermes chaque type de commerçant transporte, tiré au sort dans sa plage à chaque visite. N'affecte que les nouveaux commerçants.</XTS_QuantitySectionDesc>
   <!-- EN: {0}: {1}~{2} -->
   <XTS_TraderCount>{0} : {1}~{2}</XTS_TraderCount>
+  <!-- EN: {0} (orbital) -->
+  <XTS_TraderOrbital>{0} (en orbite)</XTS_TraderOrbital>
+  <!-- EN: {0} (caravan) -->
+  <XTS_TraderCaravan>{0} (caravane)</XTS_TraderCaravan>
   <!-- EN: Xenogerms this trader arrives with, rolled from this range each visit -->
   <XTS_TraderCountDesc>Xénogermes avec lesquels ce commerçant arrive, tirés au sort dans cette plage à chaque visite</XTS_TraderCountDesc>
 

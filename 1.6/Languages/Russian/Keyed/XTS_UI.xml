@@ -68,6 +68,10 @@
   <XTS_QuantitySectionDesc>Сколько ксеносемян несёт с собой каждый вид торговца: это число определяется случайно из заданного диапазона при каждом визите. Затрагивает только новых торговцев.</XTS_QuantitySectionDesc>
   <!-- EN: {0}: {1}~{2} -->
   <XTS_TraderCount>{0}: {1}~{2}</XTS_TraderCount>
+  <!-- EN: {0} (orbital) -->
+  <XTS_TraderOrbital>{0} (с орбиты)</XTS_TraderOrbital>
+  <!-- EN: {0} (caravan) -->
+  <XTS_TraderCaravan>{0} (караван)</XTS_TraderCaravan>
   <!-- EN: Xenogerms this trader arrives with, rolled from this range each visit -->
   <XTS_TraderCountDesc>Ксеносемена, с которыми прибывает этот торговец: их число определяется случайно из этого диапазона при каждом визите.</XTS_TraderCountDesc>
 

@@ -68,6 +68,10 @@
   <XTS_QuantitySectionDesc>每种贸易商携带的异种胚芽数量，每次到访时都会在其范围内重新随机。仅影响新生成的贸易商。</XTS_QuantitySectionDesc>
   <!-- EN: {0}: {1}~{2} -->
   <XTS_TraderCount>{0}: {1}~{2}</XTS_TraderCount>
+  <!-- EN: {0} (orbital) -->
+  <XTS_TraderOrbital>{0}（轨道）</XTS_TraderOrbital>
+  <!-- EN: {0} (caravan) -->
+  <XTS_TraderCaravan>{0}（远行队）</XTS_TraderCaravan>
   <!-- EN: Xenogerms this trader arrives with, rolled from this range each visit -->
   <XTS_TraderCountDesc>该贸易商到访时携带的异种胚芽数量，每次到访都会在此范围内重新随机</XTS_TraderCountDesc>
 

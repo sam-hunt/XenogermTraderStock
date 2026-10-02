@@ -68,6 +68,10 @@
   <XTS_QuantitySectionDesc>각 상인 종류가 보유하는 변형이식체 수로, 방문할 때마다 지정된 범위에서 무작위로 정해집니다. 새로 생성되는 상인에게만 적용됩니다.</XTS_QuantitySectionDesc>
   <!-- EN: {0}: {1}~{2} -->
   <XTS_TraderCount>{0}: {1}~{2}</XTS_TraderCount>
+  <!-- EN: {0} (orbital) -->
+  <XTS_TraderOrbital>{0} (궤도)</XTS_TraderOrbital>
+  <!-- EN: {0} (caravan) -->
+  <XTS_TraderCaravan>{0} (상단)</XTS_TraderCaravan>
   <!-- EN: Xenogerms this trader arrives with, rolled from this range each visit -->
   <XTS_TraderCountDesc>이 상인이 방문할 때마다 이 범위에서 무작위로 정해진 수의 변형이식체를 가지고 옵니다.</XTS_TraderCountDesc>
 

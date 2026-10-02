@@ -68,6 +68,10 @@
   <XTS_QuantitySectionDesc>各トレーダー種別が持つ異種胚の数です.訪問のたびに設定範囲からランダムに決まります.新しく生成されるトレーダーにのみ適用されます.</XTS_QuantitySectionDesc>
   <!-- EN: {0}: {1}~{2} -->
   <XTS_TraderCount>{0}: {1}~{2}</XTS_TraderCount>
+  <!-- EN: {0} (orbital) -->
+  <XTS_TraderOrbital>{0}(軌道)</XTS_TraderOrbital>
+  <!-- EN: {0} (caravan) -->
+  <XTS_TraderCaravan>{0}(キャラバン隊)</XTS_TraderCaravan>
   <!-- EN: Xenogerms this trader arrives with, rolled from this range each visit -->
   <XTS_TraderCountDesc>このトレーダーが訪問のたびに持ってくる異種胚の数で,この範囲からランダムに決まります.</XTS_TraderCountDesc>
 
