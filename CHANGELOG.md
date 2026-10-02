@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- Entries are short one-liners ready to paste as Steam Workshop change notes: what changed for the player, no rationale, no def names, no sub-bullets. -->
 
-## [Unreleased]
+## [1.0.4] - 2026-10-03
 
 ### Fixed
 
@@ -54,6 +54,7 @@ Initial release.
 - Compatible with Gene Trader; VRE Android xenotypes are excluded.
 - Nine translations: Chinese (Simplified/Traditional), French, German, Japanese, Korean, Brazilian Portuguese, Russian, Spanish.
 
+[1.0.4]: https://github.com/sam-hunt/XenogermTraderStock/releases/tag/v1.0.4
 [1.0.3]: https://github.com/sam-hunt/XenogermTraderStock/releases/tag/v1.0.3
 [1.0.2]: https://github.com/sam-hunt/XenogermTraderStock/releases/tag/v1.0.2
 [1.0.1]: https://github.com/sam-hunt/XenogermTraderStock/releases/tag/v1.0.1
