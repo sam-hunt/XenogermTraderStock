@@ -66,6 +66,7 @@ Subscribe on the [Steam Workshop](https://steamcommunity.com/sharedfiles/filedet
 ## Compatibility
 
 - **Gene Trader mod** (`tac.genetrader`) — Fully supported. If installed, the orbital gene trader will also stock xenogerms.
+- **GTG Trader Core** (`Teiwaz.GTGTraderCore`) — Supported. GTG marks xenogerms as something traders may not sell, which would silently empty this mod's stock; the mod restores trader sale at startup and logs a single line when it does.
 - **Save-safe** — Can be added or removed mid-game without issues.
 - **Xenotype mods** — Automatically includes xenotypes from other mods.
 - **ReSplice: Core** — Duplicated xenogerms retain their xenotype identity on implantation (ideology recognition included).

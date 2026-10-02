@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 
 - Stock quantity settings now tell the orbital and caravan exotic goods traders apart instead of showing two identically named rows.
+- Xenogerms appear in trader stock again with GTG Trader Core installed.
 
 ## [1.0.3] - 2026-09-05
 

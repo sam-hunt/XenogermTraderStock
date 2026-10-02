@@ -15,6 +15,11 @@ namespace XenogermTraderStock
             // before eligibility is read.
             XenotypeEligibility.SeedUnseen();
 
+            // The consumer (ThingSetMaker_TraderStock) discards anything whose
+            // def traders cannot sell; another mod may have made Xenogerm such
+            // a def since startup (see XenogermTradeability).
+            XenogermTradeability.EnsureTraderCanSell();
+
             // Combined preset + custom pool with a parallel price list: the
             // commonality strategy is pool-relative (the bell curve centres on
             // the pool's median price), so weights are computed in one pass over
