@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- Entries are short one-liners ready to paste as Steam Workshop change notes: what changed for the player, no rationale, no def names, no sub-bullets. -->
 
+## [Unreleased]
+
+### Fixed
+
+- Stock quantity settings now tell the orbital and caravan exotic goods traders apart instead of showing two identically named rows.
+
 ## [1.0.3] - 2026-09-05
 
 ### Added

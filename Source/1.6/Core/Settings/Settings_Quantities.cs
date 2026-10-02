@@ -70,13 +70,34 @@ namespace XenogermTraderStock
             // a third-party def someone patches the generator onto shows up
             // unasked. Ordered by label rather than def order, which is load
             // order and reshuffles when the mod list moves.
-            foreach ((TraderKindDef trader, IntRange xmlDefault) in
-                StockGenerator_Xenogerms.PatchedTraders().OrderBy(t => t.trader.LabelCap.ToString()))
+            foreach ((string traderLabel, TraderKindDef trader, IntRange xmlDefault) in StockGenerator_Xenogerms.PatchedTraders()
+                .Select(t => (TraderRowLabel(t.trader), t.trader, t.xmlCountRange))
+                .OrderBy(t => t.Item1))
             {
-                TraderCountRow(listing, trader, xmlDefault);
+                TraderCountRow(listing, traderLabel, trader, xmlDefault);
             }
 
             listing.Gap(SectionGap);
+        }
+
+        // The trader's label qualified by how it arrives. Vanilla gives the
+        // orbital and caravan exotic goods traders the same label ("exotic
+        // goods trader"), so the bare LabelCap left two indistinguishable
+        // rows. Caravan is read off the factions' caravanTraderKinds lists;
+        // a kind that is neither (a settlement trader someone patched the
+        // generator onto) keeps its bare label rather than a wrong qualifier.
+        private static string TraderRowLabel(TraderKindDef trader)
+        {
+            if (trader.orbital)
+            {
+                return "XTS_TraderOrbital".Translate(trader.LabelCap);
+            }
+
+            bool caravan = DefDatabase<FactionDef>.AllDefsListForReading
+                .Any(f => f.caravanTraderKinds?.Contains(trader) == true);
+            return caravan
+                ? "XTS_TraderCaravan".Translate(trader.LabelCap)
+                : trader.LabelCap.ToString();
         }
 
         // Left inset of the range slider under its full-width trader label, so
@@ -96,10 +117,10 @@ namespace XenogermTraderStock
         // XML default, description as hover tooltip on the label. The label is
         // the row's only readout - CompactIntRange drops the centred grey one
         // vanilla's slider draws, which only repeated these same numbers.
-        private void TraderCountRow(Listing_Standard listing, TraderKindDef trader, IntRange xmlDefault)
+        private void TraderCountRow(Listing_Standard listing, string traderLabel, TraderKindDef trader, IntRange xmlDefault)
         {
             IntRange value = GetTraderCountRange(trader.defName) ?? xmlDefault;
-            string label = "XTS_TraderCount".Translate(trader.LabelCap, value.min, value.max);
+            string label = "XTS_TraderCount".Translate(traderLabel, value.min, value.max);
             if (value == xmlDefault)
             {
                 label += "XTS_DefaultSuffix".Translate();

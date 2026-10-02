@@ -42,6 +42,9 @@
   <XTS_QuantitySectionDesc>How many xenogerms each trader kind carries, rolled from its range on every visit. Affects new traders only.</XTS_QuantitySectionDesc>
   <!-- {0}: trader kind label, {1}/{2}: current minimum/maximum count -->
   <XTS_TraderCount>{0}: {1}~{2}</XTS_TraderCount>
+  <!-- {0}: trader kind label. Vanilla labels the orbital and caravan exotic goods traders identically, so the rows are told apart by how the trader arrives -->
+  <XTS_TraderOrbital>{0} (orbital)</XTS_TraderOrbital>
+  <XTS_TraderCaravan>{0} (caravan)</XTS_TraderCaravan>
   <XTS_TraderCountDesc>Xenogerms this trader arrives with, rolled from this range each visit</XTS_TraderCountDesc>
 
   <XTS_ImplantationSection>Implantation</XTS_ImplantationSection>
