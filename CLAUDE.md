@@ -38,7 +38,7 @@ The build system auto-detects the RimWorld installation path on Windows/Linux/Ma
 
 The repo lives in `~/dev/XenogermTraderStock`, separate from the RimWorld Mods folder. The csproj's `StageMod` target is the **single source of truth** for what files ship: its ItemGroup feeds both the post-build local deploy (`DeployToModFolder` → `StageMod`, an atomic wipe+recopy of `$RIMWORLD_PATH/Mods/XenogermTraderStock/`, so renamed/deleted files never linger) and the CI release, which invokes the same target with `-p:StageDir=...` so the release zip cannot drift from local deploys. Add/remove shipped files only in that ItemGroup.
 
-A machine-local Claude Code Stop hook (`.claude/hooks/sync-mod.sh`, untracked) rebuilds and redeploys after any turn that touched mod files, so the deployed copy stays fresh without manual builds. Its `find` watch list must cover every content root `StageMod` ships (root, any version folder, and the compat roots `Mods/` and `*/Mods/`), or edits under a missed root silently stop redeploying.
+A tracked Claude Code Stop hook (`.claude/hooks/sync-mod.sh`, wired by the tracked `.claude/settings.json`; logs to `$TMPDIR/XenogermTraderStock-build.log`) rebuilds and redeploys after any turn that touched mod files, so the deployed copy stays fresh without manual builds. The script is byte-identical across the mod family and derives the solution, project folder and mod name itself, so change it in the template and copy it verbatim, never per repo; it bails when no RimWorld install is found, so CI and contributors without the game are unaffected. Its `find` watch list must cover every content root `StageMod` ships (root, any version folder, and the compat roots `Mods/` and `*/Mods/`), or edits under a missed root silently stop redeploying.
 
 **WSL Setup:** Requires `RIMWORLD_PATH` env var in `~/.bashrc` pointing to the Windows RimWorld install (e.g., `/mnt/c/Program Files (x86)/Steam/steamapps/common/RimWorld`). The csproj auto-detects `RimWorldWin64_Data` when the Linux data folder isn't found.
 
@@ -117,7 +117,7 @@ Scripts/
 
 ### .claude layout
 
-`.gitignore` tracks only `.claude/skills/` (shared: `release`, `translate`, `rimworld-logs`); `.claude/hooks/` and `.claude/settings.local.json` (Stop-hook wiring, permissions) stay machine-local. The `release` skill's tag scheme includes `X.Y.Z-rc.N` release candidates (CHANGELOG-less and Workshop-less, with the suffix only in `modVersion` and `AssemblyInformationalVersion`); `release.yml` treats any suffixed tag as a prerelease to match, so change the two together.
+`.gitignore` tracks `.claude/skills/` (shared: `release`, `translate`, `rimworld-logs`), `.claude/hooks/` (the Stop hook) and `.claude/settings.json` (its wiring); `.claude/settings.local.json` (personal permissions) stays machine-local. The `release` skill's tag scheme includes `X.Y.Z-rc.N` release candidates (CHANGELOG-less and Workshop-less, with the suffix only in `modVersion` and `AssemblyInformationalVersion`); `release.yml` treats any suffixed tag as a prerelease to match, so change the two together.
 
 ### Core Mechanism
 
