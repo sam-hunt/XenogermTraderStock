@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-**Xenogerm Trader Stock** is a RimWorld 1.6 mod that adds xenogerms for preset xenotypes to trader inventories, allowing players to purchase pre-made xenogerms as an alternative to collecting individual genes. Requires the Biotech DLC.
+**Xenogerm Trader Stock** is a RimWorld 1.6 and 1.7 mod that adds xenogerms for preset xenotypes to trader inventories, allowing players to purchase pre-made xenogerms as an alternative to collecting individual genes. Requires the Biotech DLC.
 
 **Key Features:**
 
@@ -32,7 +32,7 @@ dotnet clean XenogermTraderStock.sln && dotnet build XenogermTraderStock.sln -c 
 dotnet test Tests/1.6/XenogermTraderStock.Tests.csproj
 ```
 
-The build system auto-detects the RimWorld installation path on Windows/Linux/Mac (including WSL targeting a Windows install). For CI builds without RimWorld installed, it falls back to the `Krafs.Rimworld.Ref` NuGet package.
+The build compiles against the `Krafs.Rimworld.Ref` NuGet package (pinned to the final 1.6 build, `1.6.4871`) everywhere, locally and in CI; the local RimWorld install is never referenced, only deployed to and decompiled. The install path (auto-detected on Windows/Linux/Mac including WSL targeting a Windows install, or `RIMWORLD_PATH`) decides only whether the build deploys, gated on the game's `Mods/` folder existing so it works on the 1.6 Unity layout and the flat 1.7 Waylith layout alike.
 
 ### Deployment
 
@@ -40,7 +40,7 @@ The repo lives in `~/dev/XenogermTraderStock`, separate from the RimWorld Mods f
 
 A tracked Claude Code Stop hook (`.claude/hooks/sync-mod.sh`, wired by the tracked `.claude/settings.json`; logs to `$TMPDIR/XenogermTraderStock-build.log`) rebuilds and redeploys after any turn that touched mod files, so the deployed copy stays fresh without manual builds. The script is byte-identical across the mod family and derives the solution, project folder and mod name itself, so change it in the template and copy it verbatim, never per repo; it bails when no RimWorld install is found, so CI and contributors without the game are unaffected. Its `find` watch list must cover every content root `StageMod` ships (root, any version folder, and the compat roots `Mods/` and `*/Mods/`), or edits under a missed root silently stop redeploying.
 
-**WSL Setup:** Requires `RIMWORLD_PATH` env var in `~/.bashrc` pointing to the Windows RimWorld install (e.g., `/mnt/c/Program Files (x86)/Steam/steamapps/common/RimWorld`). The csproj auto-detects `RimWorldWin64_Data` when the Linux data folder isn't found.
+**WSL Setup:** Requires `RIMWORLD_PATH` env var in `~/.bashrc` pointing to the Windows RimWorld install (e.g., `/mnt/c/Program Files (x86)/Steam/steamapps/common/RimWorld`). The test suite's 1.6 runtime assemblies come from `~/.local/share/RimWorld-1.6/Managed` by default, or `RIMWORLD_MANAGED_1_6` (see Testing).
 
 ## Architecture
 
@@ -182,7 +182,7 @@ The settings grid previews the *shelf price*, `MarketValue × 1.4` (`XenogermPri
 
 ## Testing
 
-`Tests/1.6/` holds an xUnit (net472) suite for the pure logic: `XenogermPricing` breakdown/market-value math, settings defaults/`ResetToDefaults`, the `XenogermCommonality` spawn-weight strategies, the `PreferredXenotypeGate` prediction and `XenogermIdentity.InferPreset`. Tests are headless — no live game context (`GeneDef`s are built uninitialized via `FormatterServices`); anything needing `DefDatabase`/`Current.Game` is out of scope. Run natively with `dotnet test Tests/1.6/XenogermTraderStock.Tests.csproj` — vstest hosts the net472 suite via mono. If a run fails with `BadImageFormatException`/`TypeLoadException`, a DLL is missing from the test csproj copy target (see the Assembly-CSharp-firstpass comment there): mono resolves field types eagerly where the Windows CLR is lazy. CI builds the Tests project but does not run it. The release skill runs the suite and a Release build as its first gate.
+`Tests/1.6/` holds an xUnit (net472) suite for the pure logic: `XenogermPricing` breakdown/market-value math, settings defaults/`ResetToDefaults`, the `XenogermCommonality` spawn-weight strategies, the `PreferredXenotypeGate` prediction and `XenogermIdentity.InferPreset`. Tests are headless — no live game context (`GeneDef`s are built uninitialized via `FormatterServices`); anything needing `DefDatabase`/`Current.Game` is out of scope. Run natively with `dotnet test Tests/1.6/XenogermTraderStock.Tests.csproj` — vstest hosts the net472 suite via mono. The suite loads the game's real 1.6 runtime assemblies (Krafs's reference-only stubs cannot be loaded at run time); the Tests csproj resolves their folder in order: `RIMWORLD_MANAGED_1_6`, then a 1.6 install's `<Data>/Managed/`, then the frozen copy at `~/.local/share/RimWorld-1.6/Managed` (its README.txt records provenance). A 1.7 install has no 1.6 assemblies at all, so on 1.7 the frozen copy is the only source; without one the build still succeeds on the Krafs fallback but every test fails with `TypeLoadException` on Assembly-CSharp, and that fallback run overwrites any real DLLs an earlier build had copied into the test bin. Otherwise, if a run fails with `BadImageFormatException`/`TypeLoadException`, a DLL is missing from the test csproj copy target (see the Assembly-CSharp-firstpass comment there): mono resolves field types eagerly where the Windows CLR is lazy. CI builds the Tests project but does not run it. The release skill runs the suite and a Release build as its first gate.
 
 **Startup smoke test (pre-release):** `python3 Scripts/integration-smoke-test.py` (game closed) boots the *deployed* copy of the mod on its pinned minimal list (Biotech plus VEF core + Vanilla Races Expanded - Android, so `Patches_VREAndroid.xml`'s `FindMod` branch actually executes) — it does not build, and only `-c Release` builds deploy, so run the Release build first or it silently tests the previous DLL. It then classifies Player.log errors by origin and fails on anything attributed to this mod. Run before every release (wired into the release skill); thin shim over the shared engine in `l10n/smoke/` (born from the BetterTradersGuild v1.1.0 CWTL incident).
 
@@ -212,7 +212,7 @@ Roslynator.Analyzers runs on every build (`PrivateAssets=all` so nothing ships).
 
 **Dev-mode tools (`XenogermDebugActions`, debug menu category "Xenogerm Trader Stock"):** *Spawn preset xenogerm* places a trader-style germ for any preset or scenario template at the cursor. *Reset genes to scenario xenotype* is a pawn tool: click a pawn, then pick a `CustomXenotype` **by name** from `Current.Game.customXenotypeDatabase` — nothing is inferred from the pawn's genes, the player must see and choose the template — and the pawn is rebuilt as a generated member of it (inheritable ⇒ germline, else xenogenes over a colour-only germline; tracker at Baseliner + template name/icon so `PawnIsCustomXenotype` matches). Fills vanilla's gap: the genes-tab Devtool "Reset genes to base xenotype" hides for any `UniqueXenotype` and resets to `genes.Xenotype`, a def, so a custom-identity pawn has no reset. It is also the one-click repair for pawns hit by the pre-1.0.3 xenogene implant of an inheritable scenario germ.
 
-Use the `rimworld-logs` skill — it covers Player.log locations (Windows/WSL/Linux), the `[Xenogerm Trader Stock]` log prefix (the mod display name, as vanilla uses for patch/def errors about the mod), and API disassembly (`monodis`/`ilspycmd` against the live install's `Assembly-CSharp.dll`, preferred over the `Krafs.Rimworld.Ref` CI fallback).
+Use the `rimworld-logs` skill — it covers Player.log locations (Windows/WSL/Linux), the `[Xenogerm Trader Stock]` log prefix (the mod display name, as vanilla uses for patch/def errors about the mod), and API disassembly (`monodis`/`ilspycmd` against the live install's `Assembly-CSharp.dll`, preferred over the `Krafs.Rimworld.Ref` package the build compiles against). The 1.7 log is `Logs/Player.log` (timestamps, levels and stack frames on every entry; the 1.6 `Player.log` one level up is left in place, stale), and the 1.7 assembly sits flat in the install root with `UnityStubs.dll` beside it for Unity-facing signatures (1.6: `RimWorldWin64_Data/Managed/`). The local install's assembly is now the 1.7 one, so a decompile-verified call path in a code header that was verified on 1.6 should say so if it is re-verified on 1.7 and differs.
 
 ## Harmony Patch Examples
 

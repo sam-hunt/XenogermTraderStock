@@ -1,6 +1,6 @@
 # Xenogerm Trader Stock
 
-[![RimWorld](https://img.shields.io/badge/RimWorld-1.6-blue.svg)](https://rimworldgame.com/)
+[![RimWorld](https://img.shields.io/badge/RimWorld-1.6%20%7C%201.7-blue.svg)](https://rimworldgame.com/)
 [![Biotech DLC](https://img.shields.io/badge/DLC-Biotech-red.svg)](https://store.steampowered.com/app/1826140/RimWorld__Biotech/)
 [![Subscribers](https://img.shields.io/steam/subscriptions/3794698080?logo=steam&label=subscribers)](https://steamcommunity.com/sharedfiles/filedetails/?id=3794698080)
 [![Downloads](https://img.shields.io/steam/downloads/3794698080?logo=steam&label=downloads)](https://steamcommunity.com/sharedfiles/filedetails/?id=3794698080)
@@ -44,7 +44,7 @@ Xenogerm prices are based on gene complexity, metabolism impact, and archite gen
 
 ## Requirements
 
-- **RimWorld 1.6** or later
+- **RimWorld 1.6** or **1.7**
 - **Biotech DLC** (required)
 
 ## Installation
