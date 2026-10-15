@@ -70,6 +70,5 @@
   <XTS_StrategyUniformDesc>Every sellable xenotype is equally likely, regardless of price.</XTS_StrategyUniformDesc>
 
   <XTS_DefaultSuffix> (default)</XTS_DefaultSuffix>
-  <XTS_ResetToDefaults>Reset to defaults</XTS_ResetToDefaults>
 
 </LanguageData>

@@ -99,7 +99,7 @@ namespace XenogermTraderStock
             listing.End();
             Widgets.EndScrollView();
 
-            if (Widgets.ButtonText(buttonRect, "XTS_ResetToDefaults".Translate()))
+            if (Widgets.ButtonText(buttonRect, "RestoreToDefaultSettings".Translate()))
             {
                 ResetToDefaults();
             }
