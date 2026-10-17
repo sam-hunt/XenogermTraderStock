@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- Entries are short one-liners ready to paste as Steam Workshop change notes: what changed for the player, no rationale, no def names, no sub-bullets. -->
 
+## [1.1.1] - 2026-10-17
+
+### Changed
+
+- The mod preview image now shows RimWorld 1.7 support.
+
 ## [1.1.0] - 2026-10-15
 
 ### Added
@@ -64,6 +70,7 @@ Initial release.
 - Compatible with Gene Trader; VRE Android xenotypes are excluded.
 - Nine translations: Chinese (Simplified/Traditional), French, German, Japanese, Korean, Brazilian Portuguese, Russian, Spanish.
 
+[1.1.1]: https://github.com/sam-hunt/XenogermTraderStock/releases/tag/v1.1.1
 [1.1.0]: https://github.com/sam-hunt/XenogermTraderStock/releases/tag/v1.1.0
 [1.0.4]: https://github.com/sam-hunt/XenogermTraderStock/releases/tag/v1.0.4
 [1.0.3]: https://github.com/sam-hunt/XenogermTraderStock/releases/tag/v1.0.3
