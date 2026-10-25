@@ -51,7 +51,7 @@
   <!-- {0}: the faction's member noun (pawnSingular: "outlander", "imperial"), which is what names a settlement trader kind - those defs carry no label of their own -->
   <XTS_TraderSettlement>{0} settlements</XTS_TraderSettlement>
   <XTS_TraderCountDesc>Xenogerms this trader arrives with, rolled from this range each visit</XTS_TraderCountDesc>
-  <XTS_SettlementCountDesc>Xenogerms these settlements keep in stock, rolled from this range whenever a settlement restocks (about once a month). Patched settlements also buy xenogerms.</XTS_SettlementCountDesc>
+  <XTS_SettlementCountDesc>Xenogerms these settlements keep in stock, rolled from this range whenever a settlement restocks (about once a month).</XTS_SettlementCountDesc>
 
   <XTS_ImplantationSection>Implantation</XTS_ImplantationSection>
   <XTS_ImplantationSectionDesc>How trader-sold xenogerms behave when implanted.</XTS_ImplantationSectionDesc>
