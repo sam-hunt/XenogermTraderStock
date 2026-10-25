@@ -40,9 +40,6 @@ Los precios de los xenogérmenes se pueden configurar en los ajustes, o usar los
 [b]P: ¿Necesito el DLC Biotech?[/b]
 R: Sí. Este mod utiliza directamente el ThingDef de xenogermen de Biotech y su sistema de genes.
 
-[b]P: ¿Se ha hecho esto con LLM?[/b]
-R: Parte del código rutinario, y la mayoría de las localizaciones. Soy ingeniero de software de profesión, y llevo 25 años escribiendo código. Todo el código se revisa y se prueba manualmente; todos los informes de errores y conflictos entre mods se atienden personalmente según el tiempo y el detalle disponibles. Todo el arte está encargado a humanos, hecho a mano en Krita, o ambas cosas.
-
 [b]P: ¿Combat Extended?[/b]
 R: [noparse]ദ്ദി(ㆆ_ㆆꐦ)ദ്ദി[/noparse]
 

@@ -40,9 +40,6 @@ Os preços dos xenogerminadores são configuráveis nas opções do mod, ou use 
 [b]P: Preciso do DLC Biotech?[/b]
 R: Sim. Este mod usa diretamente o ThingDef de xenogerminador e o sistema de genes do Biotech.
 
-[b]P: Isso foi feito usando LLMs!?[/b]
-R: Parte do código rotineiro, e a maioria das localizações. Sou engenheiro de software de profissão e escrevo código há 25 anos. Todo o código é revisado e testado manualmente, e todos os relatórios de bugs e conflitos entre mods são acompanhados pessoalmente, conforme o tempo e os detalhes permitem. Toda a arte é encomendada de humanos, feita à mão no Krita, ou ambos.
-
 [b]P: Combat Extended?[/b]
 R: [noparse]ദ്ദി(ㆆ_ㆆꐦ)ദ്ദി[/noparse]
 
