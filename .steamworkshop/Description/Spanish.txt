@@ -8,7 +8,7 @@ Este mod añade xenogérmenes completos de xenotipos preestablecidos al inventar
 [hr][/hr]
 [h2]Comercio de xenogérmenes[/h2]
 [list]
-[*]Los comerciantes orbitales de productos exóticos tienen xenogérmenes de xenotipos preestablecidos; los xenotipos añadidos por mods se detectan automáticamente
+[*]Los comerciantes orbitales de productos exóticos y las colonias imperiales tienen xenogérmenes de xenotipos preestablecidos; los xenotipos añadidos por mods se detectan automáticamente
 [*]Los xenogérmenes comprados asignan el xenotipo real al implantarse, lo que permite el reconocimiento por parte de la ideoligión
 [*]Activa en los ajustes del mod los xenotipos de línea germinal para crear miembros "naturalizados"
 [*]Frecuencia configurable según el precio: por defecto, los xenogérmenes caros son más raros, o elige otra escala

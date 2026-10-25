@@ -8,7 +8,7 @@ Este mod adiciona xenogerminadores completos de xenótipos predefinidos aos inve
 [hr][/hr]
 [h2]Comércio de Xenogerminadores[/h2]
 [list]
-[*]Comerciantes de produtos exóticos estocam xenogerminadores para xenótipos predefinidos, com xenótipos de mods detectados automaticamente
+[*]Comerciantes de produtos exóticos e assentamentos imperiais estocam xenogerminadores para xenótipos predefinidos, com xenótipos de mods detectados automaticamente
 [*]Xenogerminadores comprados atribuem a identidade do xenótipo na implantação, permitindo o reconhecimento pela ideologia
 [*]Ative os xenótipos de linha germinativa nas opções do mod para criar membros "naturalizados" de linha germinativa
 [*]Frequência configurável baseada no preço: xenogerminadores caros são mais raros por padrão, ou escolha uma escala diferente

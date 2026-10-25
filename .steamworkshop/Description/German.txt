@@ -8,7 +8,7 @@ Dieser Mod fügt vollständige Xenokeime für vordefinierte Xenotypen zum Bestan
 [hr][/hr]
 [h2]Xenokeim-Handel[/h2]
 [list]
-[*]Händler exotischer Güter führen Xenokeime für vordefinierte Xenotypen, modifizierte Xenotypen werden automatisch erkannt
+[*]Händler exotischer Güter und imperiale Siedlungen führen Xenokeime für vordefinierte Xenotypen, modifizierte Xenotypen werden automatisch erkannt
 [*]Gekaufte Xenokeime weisen bei der Implantation den tatsächlichen Xenotyp zu, wodurch die Ideologie ihn anerkennt
 [*]Aktiviere Keimbahn-Xenotypen in den Mod-Einstellungen, um 'naturalisierte' Mitglieder von Xenotypen mit reinen Keimbahngenen zu erschaffen
 [*]Konfigurierbare, preisabhängige Häufigkeit: Teure Xenokeime sind standardmäßig seltener, du kannst aber eine andere Skalierung wählen

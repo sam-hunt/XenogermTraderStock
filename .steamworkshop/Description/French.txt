@@ -8,7 +8,7 @@ Ce mod ajoute des xénogermes complets pour les xénotypes prédéfinis aux stoc
 [hr][/hr]
 [h2]Commerce de xénogermes[/h2]
 [list]
-[*]Les vendeurs de produits exotiques en orbite proposent des xénogermes pour les xénotypes prédéfinis ; les xénotypes ajoutés par d'autres mods sont détectés automatiquement
+[*]Les vendeurs de produits exotiques et les bases impériales proposent des xénogermes pour les xénotypes prédéfinis ; les xénotypes ajoutés par d'autres mods sont détectés automatiquement
 [*]Les xénogermes achetés attribuent le vrai xénotype lors de l'implantation, permettant la reconnaissance par l'idéologie
 [*]Activez les xénotypes à gènes germinaux dans les paramètres du mod pour créer des membres "naturalisés" de la lignée germinale
 [*]Fréquence des xénotypes configurable selon le prix : les xénogermes coûteux sont plus rares par défaut, ou choisissez une autre pondération
