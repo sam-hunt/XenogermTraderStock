@@ -11,12 +11,15 @@
   <XTS_FilterPlayerScenario>Player-scenario xenotypes</XTS_FilterPlayerScenario>
   <XTS_FilterPlayerScenarioDesc>The custom xenotypes your scenario's starting colonists were created with. Xenotypes assembled in-game are never sold.</XTS_FilterPlayerScenarioDesc>
   <XTS_NoXenotypes>No sellable xenotypes are loaded.</XTS_NoXenotypes>
-  <!-- Price breakdown labels: one line per formula component. The rows closing the list (market-value
+  <!-- Price breakdown labels: one line per formula component, shared by the settings grid tooltip and the
+       xenogerm info card's market-value explanation (which uses XTS_PriceScenario in place of XTS_PricePreset
+       for a scenario-template germ and appends the xenotype's name in parentheses). The rows closing the list (market-value
        subtotal, vanilla's x1.40 buying markup, final asking price) reuse the vanilla trade-tooltip keys
        (MarketValue stat label, "Buying", "FinalPrice"), so no XTS strings exist for them. The silver
        amounts are no longer part of these strings - code appends each as a right-aligned column. -->
   <XTS_PriceBase>Base xenogerm</XTS_PriceBase>
   <XTS_PricePreset>Preset xenotype</XTS_PricePreset>
+  <XTS_PriceScenario>Scenario xenotype</XTS_PriceScenario>
   <!-- {0}: stat point count, {1}: silver per point -->
   <XTS_PriceMetabolism>Metabolism {0} × {1}</XTS_PriceMetabolism>
   <XTS_PriceComplexity>Complexity {0} × {1}</XTS_PriceComplexity>

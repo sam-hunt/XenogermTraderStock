@@ -24,6 +24,8 @@
   <XTS_PriceBase>Xenogerminador base</XTS_PriceBase>
   <!-- EN: Preset xenotype -->
   <XTS_PricePreset>Xenótipo predefinido</XTS_PricePreset>
+  <!-- EN: Scenario xenotype -->
+  <XTS_PriceScenario>Xenótipo de cenário</XTS_PriceScenario>
   <!-- EN: Metabolism {0} × {1} -->
   <XTS_PriceMetabolism>Eficiência metabólica {0} × {1}</XTS_PriceMetabolism>
   <!-- EN: Complexity {0} × {1} -->

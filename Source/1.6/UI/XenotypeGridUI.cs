@@ -237,8 +237,10 @@ namespace XenogermTraderStock
                 text += "\n\n" + descriptors;
             }
 
-            // Formula transparency: one line per pricing component, its silver
-            // amount hung off a right-aligned column. The list closes with the
+            // Formula transparency: one line per pricing component (the shared
+            // XenogermPriceRows, so the info card's StatPart explanation words
+            // them identically), its silver amount hung off a right-aligned
+            // column. The list closes with the
             // market-value subtotal, vanilla's buying markup (shown as the
             // silver it adds, "+40%", so every uncolored row stays additive
             // and only the yellow rows total) and the final asking price,
@@ -253,27 +255,19 @@ namespace XenogermTraderStock
             // (RawText, tags kept) rather than left to ride the + chain as a
             // bare TaggedString, whose implicit string conversion is
             // RawText.StripTags() - one leak decolorizes the entire tooltip.
-            var priceRows = new List<(string label, string money, bool accent)>
+            var priceRows = new List<(string label, string money, bool accent)>();
+            priceRows.Add((XenogermPriceRows.Base.Label(), XenogermPriceRows.Base.Silver.ToStringMoney(), false));
+            var presetRow = XenogermPriceRows.Preset(settings);
+            priceRows.Add((presetRow.Label(), presetRow.Silver.ToStringMoney(), false));
+            foreach (var row in XenogermPriceRows.Genes(breakdown, settings))
             {
-                ("XTS_PriceBase".Translate().ToString(),
-                    XenogermPricing.BaseXenogermValue.ToStringMoney(), false),
-                ("XTS_PricePreset".Translate().ToString(),
-                    settings.basePresetValue.ToStringMoney(), false),
-                ("XTS_PriceMetabolism".Translate(
-                        breakdown.AbsoluteMetabolism, settings.valuePerMetabolism.ToString("F0")).ToString(),
-                    (breakdown.AbsoluteMetabolism * settings.valuePerMetabolism).ToStringMoney(), false),
-                ("XTS_PriceComplexity".Translate(
-                        breakdown.Complexity, settings.valuePerComplexity.ToString("F0")).ToString(),
-                    (breakdown.Complexity * settings.valuePerComplexity).ToStringMoney(), false),
-                ("XTS_PriceArchite".Translate(
-                        breakdown.Archites, settings.valuePerArchite.ToString("F0")).ToString(),
-                    (breakdown.Archites * settings.valuePerArchite).ToStringMoney(), false),
-                (StatDefOf.MarketValue.LabelCap.ToString(), marketValue.ToStringMoney(), true),
-                ("+" + (XenogermPricing.VanillaBuyMarkup - 1f).ToStringPercent()
-                        + " (" + "Buying".Translate().ToString() + ")",
-                    (buyPrice - marketValue).ToStringMoney(), false),
-                ("FinalPrice".Translate().ToString(), buyPrice.ToStringMoney(), true),
-            };
+                priceRows.Add((row.Label(), row.Silver.ToStringMoney(), false));
+            }
+            priceRows.Add((StatDefOf.MarketValue.LabelCap.ToString(), marketValue.ToStringMoney(), true));
+            priceRows.Add(("+" + (XenogermPricing.VanillaBuyMarkup - 1f).ToStringPercent()
+                    + " (" + "Buying".Translate().ToString() + ")",
+                (buyPrice - marketValue).ToStringMoney(), false));
+            priceRows.Add(("FinalPrice".Translate().ToString(), buyPrice.ToStringMoney(), true));
             List<string> priceLines = AlignPriceColumn(priceRows.ConvertAll(row => (row.label, row.money)));
             for (int i = 0; i < priceLines.Count; i++)
             {

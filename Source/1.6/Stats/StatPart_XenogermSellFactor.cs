@@ -58,8 +58,11 @@ namespace XenogermTraderStock
             if (archites <= 0)
                 return null;
 
+            // Worded with the grid tooltip's archite row ("Archite genes {0} × {1}"),
+            // the per-gene step shown as a percent since this stat is a factor.
             float bonus = archites * BonusPerArchite;
-            return $"Archite genes ({archites}): +{bonus:P0}";
+            return "XTS_PriceArchite".Translate(archites, BonusPerArchite.ToStringPercent()).ToString()
+                + ": " + bonus.ToStringByStyle(ToStringStyle.PercentOne, ToStringNumberSense.Offset);
         }
     }
 }

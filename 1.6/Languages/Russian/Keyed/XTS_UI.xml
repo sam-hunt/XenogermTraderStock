@@ -24,6 +24,8 @@
   <XTS_PriceBase>Базовое ксеносемя</XTS_PriceBase>
   <!-- EN: Preset xenotype -->
   <XTS_PricePreset>Стандартный ксенотип</XTS_PricePreset>
+  <!-- EN: Scenario xenotype -->
+  <XTS_PriceScenario>Ксенотип сценария</XTS_PriceScenario>
   <!-- EN: Metabolism {0} × {1} -->
   <XTS_PriceMetabolism>Метаболизм {0} × {1}</XTS_PriceMetabolism>
   <!-- EN: Complexity {0} × {1} -->

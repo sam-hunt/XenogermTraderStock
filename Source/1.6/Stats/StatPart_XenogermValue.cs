@@ -52,37 +52,33 @@ namespace XenogermTraderStock
             if (geneSet == null)
                 return null;
 
+            // Same rows the settings grid tooltip shows (XenogermPriceRows), in
+            // vanilla StatPart shape: "label: +$n", zero-silver gene rows dropped.
+            // The premium row names the germ's source the way vanilla's own
+            // parts parenthesise their input ("Quality (Excellent): x150%").
+            var settings = Settings;
             var breakdown = XenogermPricing.Calculate(geneSet.GenesListForReading);
             var sb = new StringBuilder();
 
-            // Show xenotype name
-            string source = comp.sourceXenotype != null
-                ? $"Preset xenotype ({comp.sourceXenotype.label})"
-                : $"Scenario xenotype ({comp.sourceCustomName})";
-            sb.AppendLine($"{source}: +{Settings.basePresetValue}");
+            string sourceLabel = comp.sourceXenotype != null
+                ? "XTS_PricePreset".Translate().ToString() + " (" + comp.sourceXenotype.LabelCap.ToString() + ")"
+                : "XTS_PriceScenario".Translate().ToString() + " (" + comp.sourceCustomName + ")";
+            sb.AppendLine(sourceLabel + ": " + Offset(XenogermPriceRows.Preset(settings).Silver));
 
-            // Show metabolism contribution
-            if (breakdown.AbsoluteMetabolism > 0)
+            foreach (var row in XenogermPriceRows.Genes(breakdown, settings))
             {
-                float metabolismValue = breakdown.AbsoluteMetabolism * Settings.valuePerMetabolism;
-                sb.AppendLine($"Genetic metabolism ({breakdown.AbsoluteMetabolism}): +{metabolismValue}");
-            }
-
-            // Show complexity contribution
-            if (breakdown.Complexity > 0)
-            {
-                float complexityValue = breakdown.Complexity * Settings.valuePerComplexity;
-                sb.AppendLine($"Genetic complexity ({breakdown.Complexity}): +{complexityValue}");
-            }
-
-            // Show archite contribution
-            if (breakdown.Archites > 0)
-            {
-                float architeValue = breakdown.Archites * Settings.valuePerArchite;
-                sb.AppendLine($"Archite genes ({breakdown.Archites}): +{architeValue}");
+                if (row.Silver > 0f)
+                {
+                    sb.AppendLine(row.Label() + ": " + Offset(row.Silver));
+                }
             }
 
             return sb.ToString().TrimEnd();
+        }
+
+        private static string Offset(float silver)
+        {
+            return silver.ToStringByStyle(ToStringStyle.Money, ToStringNumberSense.Offset);
         }
     }
 }
