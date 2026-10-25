@@ -74,8 +74,12 @@
   <XTS_TraderOrbital>{0}(軌道)</XTS_TraderOrbital>
   <!-- EN: {0} (caravan) -->
   <XTS_TraderCaravan>{0}(キャラバン隊)</XTS_TraderCaravan>
+  <!-- EN: {0} settlements -->
+  <XTS_TraderSettlement>{0}の入植地</XTS_TraderSettlement>
   <!-- EN: Xenogerms this trader arrives with, rolled from this range each visit -->
   <XTS_TraderCountDesc>このトレーダーが訪問のたびに持ってくる異種胚の数で,この範囲からランダムに決まります.</XTS_TraderCountDesc>
+  <!-- EN: Xenogerms these settlements keep in stock, rolled from this range whenever a settlement restocks (about once a month). -->
+  <XTS_SettlementCountDesc>これらの入植地が在庫として持つ異種胚の数で,入植地が再入荷するたび(約1か月に1回)この範囲からランダムに決まります.</XTS_SettlementCountDesc>
 
   <!-- EN: Implantation -->
   <XTS_ImplantationSection>移植</XTS_ImplantationSection>

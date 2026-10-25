@@ -74,8 +74,12 @@
   <XTS_TraderOrbital>{0}（軌道）</XTS_TraderOrbital>
   <!-- EN: {0} (caravan) -->
   <XTS_TraderCaravan>{0}（旅隊）</XTS_TraderCaravan>
+  <!-- EN: {0} settlements -->
+  <XTS_TraderSettlement>{0}據點</XTS_TraderSettlement>
   <!-- EN: Xenogerms this trader arrives with, rolled from this range each visit -->
   <XTS_TraderCountDesc>此商人到訪時攜帶的異種細胞數量，每次從此範圍中抽選</XTS_TraderCountDesc>
+  <!-- EN: Xenogerms these settlements keep in stock, rolled from this range whenever a settlement restocks (about once a month). -->
+  <XTS_SettlementCountDesc>這些據點庫存中的異種細胞數量，每次據點補貨時（約每月一次）從此範圍中抽選。</XTS_SettlementCountDesc>
 
   <!-- EN: Implantation -->
   <XTS_ImplantationSection>植入</XTS_ImplantationSection>

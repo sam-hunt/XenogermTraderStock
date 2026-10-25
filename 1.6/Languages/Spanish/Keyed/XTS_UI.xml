@@ -74,8 +74,12 @@
   <XTS_TraderOrbital>{0} (orbital)</XTS_TraderOrbital>
   <!-- EN: {0} (caravan) -->
   <XTS_TraderCaravan>{0} (caravana)</XTS_TraderCaravan>
+  <!-- EN: {0} settlements -->
+  <XTS_TraderSettlement>Colonias ({0})</XTS_TraderSettlement>
   <!-- EN: Xenogerms this trader arrives with, rolled from this range each visit -->
   <XTS_TraderCountDesc>Xenogérmenes con los que llega este comerciante, calculados a partir de este rango en cada visita</XTS_TraderCountDesc>
+  <!-- EN: Xenogerms these settlements keep in stock, rolled from this range whenever a settlement restocks (about once a month). -->
+  <XTS_SettlementCountDesc>Xenogérmenes que estas colonias tienen en existencias, calculados a partir de este rango cada vez que se reabastecen (aproximadamente una vez al mes).</XTS_SettlementCountDesc>
 
   <!-- EN: Implantation -->
   <XTS_ImplantationSection>Implantación</XTS_ImplantationSection>

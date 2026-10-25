@@ -74,8 +74,12 @@
   <XTS_TraderOrbital>{0} (궤도)</XTS_TraderOrbital>
   <!-- EN: {0} (caravan) -->
   <XTS_TraderCaravan>{0} (상단)</XTS_TraderCaravan>
+  <!-- EN: {0} settlements -->
+  <XTS_TraderSettlement>{0} 정착지</XTS_TraderSettlement>
   <!-- EN: Xenogerms this trader arrives with, rolled from this range each visit -->
   <XTS_TraderCountDesc>이 상인이 방문할 때마다 이 범위에서 무작위로 정해진 수의 변형이식체를 가지고 옵니다.</XTS_TraderCountDesc>
+  <!-- EN: Xenogerms these settlements keep in stock, rolled from this range whenever a settlement restocks (about once a month). -->
+  <XTS_SettlementCountDesc>이 정착지들이 재고로 보유하는 변형이식체의 수로, 정착지가 물품을 보충할 때마다(약 한 달에 한 번) 이 범위에서 무작위로 정해집니다.</XTS_SettlementCountDesc>
 
   <!-- EN: Implantation -->
   <XTS_ImplantationSection>이식</XTS_ImplantationSection>
