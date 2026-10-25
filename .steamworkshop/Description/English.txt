@@ -8,7 +8,8 @@ This mod adds complete xenogerms for preset xenotypes to trader inventories, so 
 [hr][/hr]
 [h2]Xenogerm Trading[/h2]
 [list]
-[*]Exotic goods traders stock xenogerms for preset xenotypes, modded xenotypes detected automatically
+[*]Exotic goods traders and imperial settlements stock xenogerms for preset xenotypes, modded xenotypes detected automatically
+[*]Outlander settlements can be opted in from the stock quantity settings
 [*]Purchased xenogerms assign xenotype identity on implantation, enabling ideology recognition
 [*]Enable endogene-only xenotypes in mod settings to create naturalized germ-line members
 [*]Configurable price-driven commonality: expensive xenogerms are rarer by default, or choose a different scaling

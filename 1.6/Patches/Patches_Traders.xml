@@ -22,4 +22,19 @@
       </li>
     </value>
   </Operation>
+
+  <!-- Outlander settlements (every faction whose baseTraderKinds names this
+       kind: the civil and rough unions, plus modded factions reusing it).
+       Opt-in: an industrial-tech town has no business stocking xenogerms, so
+       the shipped default rolls none and the settings row is the lever for
+       players who want them. Patching the kind still makes those settlements
+       BUY xenogerms, so there is somewhere on the ground to sell one. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/TraderKindDef[defName="Base_Outlander_Standard"]/stockGenerators</xpath>
+    <value>
+      <li Class="XenogermTraderStock.StockGenerator_Xenogerms">
+        <countRange>0~0</countRange>
+      </li>
+    </value>
+  </Operation>
 </Patch>

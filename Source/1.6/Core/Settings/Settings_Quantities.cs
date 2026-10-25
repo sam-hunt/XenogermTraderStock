@@ -83,9 +83,13 @@ namespace XenogermTraderStock
         // The trader's label qualified by how it arrives. Vanilla gives the
         // orbital and caravan exotic goods traders the same label ("exotic
         // goods trader"), so the bare LabelCap left two indistinguishable
-        // rows. Caravan is read off the factions' caravanTraderKinds lists;
-        // a kind that is neither (a settlement trader someone patched the
-        // generator onto) keeps its bare label rather than a wrong qualifier.
+        // rows. Caravan is read off the factions' caravanTraderKinds lists.
+        // A settlement kind (a faction's baseTraderKinds) carries no label
+        // at all - the trade window names the settlement instead - so its
+        // row is named for the factions that use it, by their member noun
+        // ("outlander", "imperial"), which the sibling unions share where
+        // their faction labels differ. A kind that is none of these keeps
+        // its bare label rather than a wrong qualifier.
         private static string TraderRowLabel(TraderKindDef trader)
         {
             if (trader.orbital)
@@ -93,11 +97,28 @@ namespace XenogermTraderStock
                 return "XTS_TraderOrbital".Translate(trader.LabelCap);
             }
 
-            bool caravan = DefDatabase<FactionDef>.AllDefsListForReading
-                .Any(f => f.caravanTraderKinds?.Contains(trader) == true);
-            return caravan
-                ? "XTS_TraderCaravan".Translate(trader.LabelCap)
-                : trader.LabelCap.ToString();
+            List<FactionDef> factions = DefDatabase<FactionDef>.AllDefsListForReading;
+            if (factions.Any(f => f.caravanTraderKinds?.Contains(trader) == true))
+            {
+                return "XTS_TraderCaravan".Translate(trader.LabelCap);
+            }
+
+            if (IsSettlementKind(trader))
+            {
+                string members = string.Join(", ", factions
+                    .Where(f => f.baseTraderKinds?.Contains(trader) == true)
+                    .Select(f => f.pawnSingular)
+                    .Distinct());
+                return "XTS_TraderSettlement".Translate(members.CapitalizeFirst());
+            }
+
+            return trader.LabelCap.ToString();
+        }
+
+        private static bool IsSettlementKind(TraderKindDef trader)
+        {
+            return DefDatabase<FactionDef>.AllDefsListForReading
+                .Any(f => f.baseTraderKinds?.Contains(trader) == true);
         }
 
         // Left inset of the range slider under its full-width trader label, so
@@ -132,7 +153,10 @@ namespace XenogermTraderStock
             float prevSpacing = listing.verticalSpacing;
             listing.verticalSpacing = 0f;
 
-            listing.Label(label, tooltip: "XTS_TraderCountDesc".Translate(xmlDefault.min, xmlDefault.max));
+            string tooltip = IsSettlementKind(trader)
+                ? "XTS_SettlementCountDesc".Translate()
+                : "XTS_TraderCountDesc".Translate();
+            listing.Label(label, tooltip: tooltip);
 
             IntRange edited = value;
             listing.Indent(CountSliderIndent);

@@ -19,7 +19,7 @@ This mod adds complete xenogerms to trader inventories, letting you purchase a r
 
 ### Xenogerm Trading
 
-- **Preset xenogerms at traders**: Exotic goods traders stock xenogerms for preset xenotypes, modded xenotypes detected automatically
+- **Preset xenogerms at traders**: Exotic goods traders and imperial settlements (Royalty) stock xenogerms for preset xenotypes, modded xenotypes detected automatically; outlander settlements can be opted in
 - **Proper xenotype assignment**: Purchased xenogerms assign xenotype identity on implantation, enabling ideology recognition
 - **Ideology-aware implantation**: An ideoligion with a preferred xenotype accepts a xenogerm for that xenotype instead of vanilla's blanket "Ideoligion forbids" refusal (bloodfeeder refusals still apply)
 - **Naturalized germline members**: Enable endogene-only xenotypes in mod settings to create naturalized germ-line members
@@ -38,7 +38,7 @@ Xenogerm prices are based on gene complexity, metabolism impact, and archite gen
 
 - **Xenotypes for sale** — A grid of every sellable xenotype, preset or player-scenario, with its shelf price. Tick what traders may stock; the Archite, Germline and Player-scenario rows switch whole groups at once. Germline xenotypes (Impid, Yttakin, Baseliner) start unsold since implanting one converts the pawn outright; everything else starts sold.
 - **Xenogerm pricing** — Sliders for the base preset value and the per-metabolism, per-complexity and per-archite-gene multipliers
-- **Stock quantity** — Per-trader-kind range for how many xenogerms a visit carries
+- **Stock quantity** — Per-trader-kind range for how many xenogerms a visit carries, including the imperial (Royalty) and outlander settlement rows (outlanders stock none until raised)
 - **Implantation** — *Implant germline xenotypes as endogenes* writes a germline xenogerm's genes into the pawn's germline, so children inherit them and later implants stack instead of overwriting (default: on). *Preserve deathrest capacity through implantation* keeps serum-bought deathrest capacity through any xenogerm implant or reimplant, which vanilla resets to one (default: on)
 - **Xenotype commonality by price** — How price weights spawn chance: inverse, inverse root (default), linear, square root, bell curve or uniform
 
