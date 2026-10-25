@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- Entries are short one-liners ready to paste as Steam Workshop change notes: what changed for the player, no rationale, no def names, no sub-bullets. -->
 
+## [1.2.0] - 2026-10-26
+
+### Added
+
+- Imperial settlements now stock and buy xenogerms (requires Royalty).
+- Outlander settlements can be set to stock xenogerms from the stock quantity settings (off by default).
+
+### Fixed
+
+- The xenogerm info card's price breakdown is now translated and worded the same as the settings price tooltip.
+
 ## [1.1.1] - 2026-10-17
 
 ### Changed
@@ -70,6 +81,7 @@ Initial release.
 - Compatible with Gene Trader; VRE Android xenotypes are excluded.
 - Nine translations: Chinese (Simplified/Traditional), French, German, Japanese, Korean, Brazilian Portuguese, Russian, Spanish.
 
+[1.2.0]: https://github.com/sam-hunt/XenogermTraderStock/releases/tag/v1.2.0
 [1.1.1]: https://github.com/sam-hunt/XenogermTraderStock/releases/tag/v1.1.1
 [1.1.0]: https://github.com/sam-hunt/XenogermTraderStock/releases/tag/v1.1.0
 [1.0.4]: https://github.com/sam-hunt/XenogermTraderStock/releases/tag/v1.0.4
