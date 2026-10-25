@@ -88,8 +88,11 @@ namespace XenogermTraderStock
         // at all - the trade window names the settlement instead - so its
         // row is named for the factions that use it, by their member noun
         // ("outlander", "imperial"), which the sibling unions share where
-        // their faction labels differ. A kind that is none of these keeps
-        // its bare label rather than a wrong qualifier.
+        // their faction labels differ. Where the nouns disagree the most
+        // common one wins, def order breaking ties: Biotech's pigskin union
+        // shares the outlander kind, and "Outlander, pigskin settlements"
+        // named nothing a player recognises. A kind that is none of these
+        // keeps its bare label rather than a wrong qualifier.
         private static string TraderRowLabel(TraderKindDef trader)
         {
             if (trader.orbital)
@@ -105,10 +108,11 @@ namespace XenogermTraderStock
 
             if (IsSettlementKind(trader))
             {
-                string members = string.Join(", ", factions
+                string members = factions
                     .Where(f => f.baseTraderKinds?.Contains(trader) == true)
-                    .Select(f => f.pawnSingular)
-                    .Distinct());
+                    .GroupBy(f => f.pawnSingular)
+                    .OrderByDescending(g => g.Count())
+                    .First().Key;
                 return "XTS_TraderSettlement".Translate(members.CapitalizeFirst());
             }
 
