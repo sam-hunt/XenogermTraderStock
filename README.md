@@ -36,11 +36,11 @@ Xenogerm prices are based on gene complexity, metabolism impact, and archite gen
 
 ### Mod Settings
 
-- **Xenotypes for sale** — A grid of every sellable xenotype, preset or player-scenario, with its shelf price. Tick what traders may stock; the Archite, Germline and Player-scenario rows switch whole groups at once. Germline xenotypes (Impid, Yttakin, Baseliner) start unsold since implanting one converts the pawn outright; everything else starts sold.
+- **Xenotypes for sale** — A grid of every sellable xenotype, preset or player-scenario, with its shelf price. Tick what traders may stock; the Archite, Germline and Scenario rows switch whole groups at once. Germline xenotypes (Impid, Yttakin, Baseliner) start unsold since implanting one converts the pawn outright; everything else starts sold.
 - **Xenogerm pricing** — Sliders for the base preset value and the per-metabolism, per-complexity and per-archite-gene multipliers
 - **Stock quantity** — Per-trader-kind range for how many xenogerms a visit carries, including the imperial (Royalty) and outlander settlement rows (outlanders stock none until raised)
-- **Implantation** — *Implant germline xenotypes as endogenes* writes a germline xenogerm's genes into the pawn's germline, so children inherit them and later implants stack instead of overwriting (default: on). *Preserve deathrest capacity through implantation* keeps serum-bought deathrest capacity through any xenogerm implant or reimplant, which vanilla resets to one (default: on)
-- **Xenotype commonality by price** — How price weights spawn chance: inverse, inverse root (default), linear, square root, bell curve or uniform
+- **Implantation** — *Germline xenogerms replace germline genes* writes a germline xenogerm's genes into the pawn's germline, so children inherit them and later implants stack instead of overwriting (default: on). *Keep deathrest capacity* keeps serum-bought deathrest capacity through any xenogerm implant or reimplant, which vanilla resets to one (default: on)
+- **Xenotype rarity by price** — How price weights spawn chance: inverse, inverse root (default), linear, square root, bell curve or uniform
 
 ## Requirements
 

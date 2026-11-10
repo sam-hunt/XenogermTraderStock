@@ -2,7 +2,7 @@ using Verse;
 
 namespace XenogermTraderStock
 {
-    // "Xenotype commonality by price" settings section: which weighting strategy the
+    // "Xenotype rarity by price" settings section: which weighting strategy the
     // stock generator uses to pick xenotypes for a trader's xenogerms
     // (XenogermCommonality evaluates it). Read at generation time, so a change
     // shows on newly generated traders only.

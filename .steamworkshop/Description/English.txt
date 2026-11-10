@@ -8,15 +8,15 @@ This mod adds complete xenogerms for preset xenotypes to trader inventories, so 
 [hr][/hr]
 [h2]Xenogerm Trading[/h2]
 [list]
-[*]Exotic goods traders and imperial settlements stock xenogerms for preset xenotypes, modded xenotypes detected automatically
-[*]Purchased xenogerms assign xenotype identity on implantation, enabling ideology recognition
-[*]Enable endogene-only xenotypes in mod settings to create naturalized germ-line members
-[*]Configurable price-driven commonality: expensive xenogerms are rarer by default, or choose a different scaling
-[*]Player-scenario xenotypes are treated as first-class citizens and included in trade-stock too
+[*]Exotic goods traders and imperial settlements stock xenogerms for preset xenotypes
+[*]A purchased xenogerm gives the person that xenotype, so an ideoligion that prefers it will accept them
+[*]Germline xenotypes such as impids are not sold by default. Enable them in the mod settings to make a person a born member whose children inherit the genes
+[*]Expensive xenogerms are rarer by default. The rule can be changed in the mod settings
+[*]The custom xenotypes of your starting colonists are sold too
 [/list]
 
 [h2]Pricing[/h2]
-Xenogerm prices configurable in settings, or take the defaults:
+Prices can be changed in the mod settings. The defaults are:
 [list]
 [*]Pigskin, Impid, Dirtmole: 1500~1700 silver
 [*]Hussar, Starjack, Highmate: 1700~2000 silver
@@ -32,13 +32,13 @@ Xenogerm prices configurable in settings, or take the defaults:
 [*]Orbital [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2886375137]Gene Trader[/url] will also stock xenogerms
 [*]Automatically detects xenotypes added by other mods
 [*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=2975771801]VRE Android[/url] xenotypes intentionally excluded
-[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3236303965]ReSplice: Core[/url] duplicated xenogerms retain their xenotype identity on implantation
+[*][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3236303965]ReSplice: Core[/url] duplicated xenogerms still implant as the right xenotype
 [/list]
 
 [hr][/hr]
 [h1]FAQ[/h1]
 [b]Q: Do I need Biotech DLC?[/b]
-A: Yes. This mod directly uses Biotech's xenogerm ThingDef and gene system.
+A: Yes. This mod builds on Biotech's xenogerms and genes.
 
 [b]Q: Combat Extended?[/b]
 A: [noparse]ദ്ദി(ㆆ_ㆆꐦ)ദ്ദി[/noparse]

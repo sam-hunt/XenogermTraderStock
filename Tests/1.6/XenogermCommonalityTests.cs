@@ -5,7 +5,7 @@ using Xunit;
 namespace XenogermTraderStock.Tests
 {
     // XenogermCommonality.Weights is the pure pool-price -> spawn-weight math
-    // behind the "Xenotype commonality by price" setting. No settings or game
+    // behind the "Xenotype rarity by price" setting. No settings or game
     // state involved: weights depend only on the price list and the strategy.
     public class XenogermCommonalityTests
     {
