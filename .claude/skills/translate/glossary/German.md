@@ -55,13 +55,7 @@ without appending the English brand name.
 
 ## Phrasing decisions
 
-- **"naturalized" (member) — needs native review.** No Ideology-DLC data
-  was extracted for this pass (only Core + Biotech tars were pulled), so
-  this term is ungrounded. Rendered as `'naturalisiert'` (ASCII-quoted,
-  matching the English source's own quoting and this language's
-  citation-quote style) as the most natural literal rendering; a native or
-  an Ideology-tar grounding pass should confirm whether RimWorld's German
-  Ideology data uses a different established term for this concept.
+- **"naturalized" (retired 2026-11-11):** the English no longer uses the term, so the earlier flagged rendering is gone from every file.
 - "preset xenotype" is rendered as "vordefinierter Xenotyp" rather than a
   loanword "Preset-Xenotyp" — no vanilla precedent for "preset" as a
   loanword in this domain, and "vordefiniert" is standard German UI
@@ -104,3 +98,4 @@ without appending the English brand name.
   now-removed "Mod-Einstellungen" Workshop section (settings toggle list)
   and its accompanying sell-price/formula paragraph have no equivalent in
   the new English body and were dropped entirely, not reworded.
+- **2026-11-11 update pass (English reword f019544, machine-assisted, native review pending):** the English dropped its modder vocabulary ("endogenes", "pawn", "commonality", "trader kind", "rolled", "naturalized"), so this pass retranslated the 26 affected keys and the Workshop bullets. Decisions, superseding anything above: rarity = Seltenheit (Core `Jade.description`); "kind of trader" = Händlerart (calque, no vanilla anchor); person = Person (Biotech `ForceXenogermImplantationDesc`); toggle tooltips use vanilla's "Wenn aktiviert, ... Wenn deaktiviert, ..."; `XTS_ImplantGermlineAsEndogenes` = "Keimbahn-Xenokeime ersetzen Keimbahngene" (own wording).

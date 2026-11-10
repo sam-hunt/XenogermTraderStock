@@ -8,16 +8,16 @@
   <XTS_XenotypesSection>販売するゼノタイプ</XTS_XenotypesSection>
   <!-- EN: Archite xenotypes -->
   <XTS_FilterArchite>アルカイトゼノタイプ</XTS_FilterArchite>
-  <!-- EN: Preset xenotypes containing archite genes (e.g., Sanguophage). Scenario xenotypes are grouped under the scenario row instead. -->
-  <XTS_FilterArchiteDesc>アルカイト遺伝子を含むプリセットゼノタイプです(サングオファージなど).シナリオのゼノタイプは代わりにシナリオの行にまとめられます.</XTS_FilterArchiteDesc>
+  <!-- EN: Preset xenotypes with archite genes, such as sanguophages. Scenario xenotypes are grouped separately. -->
+  <XTS_FilterArchiteDesc>サングオファージなど,アルカイト遺伝子を持つプリセットゼノタイプです.シナリオのゼノタイプは別にまとめられます.</XTS_FilterArchiteDesc>
   <!-- EN: Germline xenotypes -->
   <XTS_FilterInheritable>生殖系ゼノタイプ</XTS_FilterInheritable>
-  <!-- EN: Preset xenotypes whose xenogerm rewrites the pawn's germline: inheritable xenotypes (e.g., Impid, Yttakin) and Baseliner, whose empty xenogerm converts the pawn back to a baseliner. -->
-  <XTS_FilterInheritableDesc>異種胚を移植するとポーンの生殖系遺伝子が書き換わるプリセットゼノタイプです.遺伝するゼノタイプ(インピッド,イータキンなど)と,空の異種胚でポーンをベースライナーに戻すベースライナーが含まれます.</XTS_FilterInheritableDesc>
-  <!-- EN: Player-scenario xenotypes -->
+  <!-- EN: Preset xenotypes whose genes are passed on to children, such as impids and yttakin. The baseliner xenogerm is listed here too, because it turns a person back into a baseliner. -->
+  <XTS_FilterInheritableDesc>インピッドやイータキンなど,遺伝子が子供に受け継がれるプリセットゼノタイプです.ベースライナーの異種胚は人をベースライナーに戻すため,これもここに含まれます.</XTS_FilterInheritableDesc>
+  <!-- EN: Scenario xenotypes -->
   <XTS_FilterPlayerScenario>シナリオゼノタイプ</XTS_FilterPlayerScenario>
-  <!-- EN: The custom xenotypes your scenario's starting colonists were created with. Xenotypes assembled in-game are never sold. -->
-  <XTS_FilterPlayerScenarioDesc>あなたのシナリオの開始入植者が持つカスタムゼノタイプです.ゲーム内で作成したゼノタイプは販売されません.</XTS_FilterPlayerScenarioDesc>
+  <!-- EN: The custom xenotypes your starting colonists were created with. Xenotypes you assemble during the game will never be sold. -->
+  <XTS_FilterPlayerScenarioDesc>開始入植者が持っていたカスタムゼノタイプです.ゲーム中に作成したゼノタイプが販売されることはありません.</XTS_FilterPlayerScenarioDesc>
   <!-- EN: No sellable xenotypes are loaded. -->
   <XTS_NoXenotypes>販売可能なゼノタイプが読み込まれていません.</XTS_NoXenotypes>
   <!-- EN: Base xenogerm -->
@@ -34,40 +34,40 @@
   <XTS_PriceArchite>アルカイト遺伝子 {0} × {1}</XTS_PriceArchite>
   <!-- EN: Contains archite genes -->
   <XTS_XenotypeArchite>アルカイト遺伝子を含む</XTS_XenotypeArchite>
-  <!-- EN: Contains endogenes -->
+  <!-- EN: Contains germline genes -->
   <XTS_XenotypeEndogenes>生殖系遺伝子を含む</XTS_XenotypeEndogenes>
   <!-- EN: Contains xenogenes -->
   <XTS_XenotypeXenogenes>異種遺伝子を含む</XTS_XenotypeXenogenes>
-  <!-- EN: A custom xenotype your scenario's starting colonists were created with. -->
-  <XTS_CustomXenotypeDesc>あなたのシナリオの開始入植者が持つカスタムゼノタイプです.</XTS_CustomXenotypeDesc>
+  <!-- EN: A custom xenotype your starting colonists were created with. -->
+  <XTS_CustomXenotypeDesc>開始入植者が持つカスタムゼノタイプです.</XTS_CustomXenotypeDesc>
   <!-- EN: Scenario -->
   <XTS_XenotypeSourceScenario>シナリオ</XTS_XenotypeSourceScenario>
 
   <!-- EN: Xenogerm pricing -->
   <XTS_PricingSection>異種胚の価格</XTS_PricingSection>
-  <!-- EN: Market value formula for trader-sold xenogerms. Affects new xenogerms only. -->
-  <XTS_PricingSectionDesc>トレーダーが販売する異種胚の標準小売価格の計算式です.新しく生成される異種胚にのみ適用されます.</XTS_PricingSectionDesc>
+  <!-- EN: The market value of xenogerms sold by traders. -->
+  <XTS_PricingSectionDesc>トレーダーが販売する異種胚の標準小売価格です.</XTS_PricingSectionDesc>
   <!-- EN: Base preset value: {0} -->
   <XTS_BasePresetValue>基本プリセット価格: {0}</XTS_BasePresetValue>
-  <!-- EN: Base silver value added to all preset xenotype xenogerms -->
-  <XTS_BasePresetValueDesc>すべてのプリセットゼノタイプの異種胚に加算される基本シルバー価格です.</XTS_BasePresetValueDesc>
+  <!-- EN: The silver added to the market value of every xenogerm sold by traders. -->
+  <XTS_BasePresetValueDesc>トレーダーが販売するすべての異種胚の標準小売価格に加算されるシルバーです.</XTS_BasePresetValueDesc>
   <!-- EN: Value per metabolism: {0} -->
   <XTS_ValuePerMetabolism>代謝効率ごとの価格: {0}</XTS_ValuePerMetabolism>
-  <!-- EN: Silver value added per point of absolute metabolism -->
-  <XTS_ValuePerMetabolismDesc>代謝効率の絶対値1につき加算されるシルバー価格です.</XTS_ValuePerMetabolismDesc>
+  <!-- EN: The silver added for each point of metabolic efficiency, positive or negative. -->
+  <XTS_ValuePerMetabolismDesc>代謝効率の正負を問わず,1ポイントごとに加算されるシルバーです.</XTS_ValuePerMetabolismDesc>
   <!-- EN: Value per complexity: {0} -->
   <XTS_ValuePerComplexity>複雑性ごとの価格: {0}</XTS_ValuePerComplexity>
-  <!-- EN: Silver value added per point of genetic complexity -->
-  <XTS_ValuePerComplexityDesc>遺伝的複雑性1につき加算されるシルバー価格です.</XTS_ValuePerComplexityDesc>
+  <!-- EN: The silver added for each point of complexity. -->
+  <XTS_ValuePerComplexityDesc>複雑性1ポイントごとに加算されるシルバーです.</XTS_ValuePerComplexityDesc>
   <!-- EN: Value per archite gene: {0} -->
   <XTS_ValuePerArchite>アルカイト遺伝子ごとの価格: {0}</XTS_ValuePerArchite>
-  <!-- EN: Silver value added per archite gene -->
-  <XTS_ValuePerArchiteDesc>アルカイト遺伝子1つにつき加算されるシルバー価格です.</XTS_ValuePerArchiteDesc>
+  <!-- EN: The silver added for each archite gene. -->
+  <XTS_ValuePerArchiteDesc>アルカイト遺伝子1つごとに加算されるシルバーです.</XTS_ValuePerArchiteDesc>
 
   <!-- EN: Stock quantity -->
   <XTS_QuantitySection>在庫数</XTS_QuantitySection>
-  <!-- EN: How many xenogerms each trader kind carries, rolled from its range on every visit. Affects new traders only. -->
-  <XTS_QuantitySectionDesc>各トレーダー種別が持つ異種胚の数です.訪問のたびに設定範囲からランダムに決まります.新しく生成されるトレーダーにのみ適用されます.</XTS_QuantitySectionDesc>
+  <!-- EN: The number of xenogerms each kind of trader will stock, picked at random from its range. -->
+  <XTS_QuantitySectionDesc>各種類のトレーダーが在庫に持つ異種胚の数です.設定した範囲からランダムに決まります.</XTS_QuantitySectionDesc>
   <!-- EN: {0}: {1}~{2} -->
   <XTS_TraderCount>{0}: {1}~{2}</XTS_TraderCount>
   <!-- EN: {0} (orbital) -->
@@ -76,48 +76,48 @@
   <XTS_TraderCaravan>{0}(キャラバン隊)</XTS_TraderCaravan>
   <!-- EN: {0} settlements -->
   <XTS_TraderSettlement>{0}の入植地</XTS_TraderSettlement>
-  <!-- EN: Xenogerms this trader arrives with, rolled from this range each visit -->
-  <XTS_TraderCountDesc>このトレーダーが訪問のたびに持ってくる異種胚の数で,この範囲からランダムに決まります.</XTS_TraderCountDesc>
-  <!-- EN: Xenogerms these settlements keep in stock, rolled from this range whenever a settlement restocks (about once a month). -->
-  <XTS_SettlementCountDesc>これらの入植地が在庫として持つ異種胚の数で,入植地が再入荷するたび(約1か月に1回)この範囲からランダムに決まります.</XTS_SettlementCountDesc>
+  <!-- EN: The number of xenogerms this trader will arrive with. -->
+  <XTS_TraderCountDesc>このトレーダーが持ってくる異種胚の数です.</XTS_TraderCountDesc>
+  <!-- EN: The number of xenogerms these settlements will keep in stock. Settlements restock about once a month. -->
+  <XTS_SettlementCountDesc>これらの入植地が在庫に持つ異種胚の数です.入植地は約1か月ごとに再入荷します.</XTS_SettlementCountDesc>
 
   <!-- EN: Implantation -->
   <XTS_ImplantationSection>移植</XTS_ImplantationSection>
-  <!-- EN: How trader-sold xenogerms behave when implanted. -->
-  <XTS_ImplantationSectionDesc>トレーダーが販売する異種胚を移植したときの挙動です.</XTS_ImplantationSectionDesc>
-  <!-- EN: Implant germline xenotypes as endogenes -->
-  <XTS_ImplantGermlineAsEndogenes>生殖系ゼノタイプを生殖系遺伝子として移植する</XTS_ImplantGermlineAsEndogenes>
-  <!-- EN: Preserve deathrest capacity through implantation -->
-  <XTS_PreserveDeathrestCapacity>移植時に死眠容量を維持する</XTS_PreserveDeathrestCapacity>
-  <!-- EN: Vanilla recreates the deathrest gene on every xenogerm implant or sanguophage reimplant, resetting serum-bought deathrest capacity to one. With this on, the pawn's previous capacity is restored whenever it still has a deathrest gene afterwards. Applies to all xenogerms, not just trader-sold ones. -->
-  <XTS_PreserveDeathrestCapacityDesc>バニラでは,異種胚の移植やサングオファージの遺伝子移植のたびに死眠遺伝子が再生成され,シーラムで得た死眠容量が1にリセットされます.この設定を有効にすると,移植後もポーンが死眠遺伝子を持っている場合に限り,以前の容量が復元されます.トレーダー販売品に限らず,すべての異種胚に適用されます.</XTS_PreserveDeathrestCapacityDesc>
-  <!-- EN: When a trader-sold xenogerm for a germline xenotype is implanted, its genes replace the pawn's endogenes instead of becoming xenogenes, making the pawn a born member of that xenotype: children inherit the genes, and later xenogerm implants add to them instead of overwriting them. Xenogenes the pawn already carries are kept, and a pawn named for them (a sanguophage, say) keeps its name and icon. -->
-  <XTS_ImplantGermlineAsEndogenesDesc>トレーダーが販売する生殖系ゼノタイプの異種胚を移植すると,その遺伝子は異種遺伝子としてではなく,ポーンの生殖系遺伝子を置き換える形で追加されます.これにより,ポーンはそのゼノタイプの生まれながらのメンバーになります.子はその遺伝子を継承し,以降の異種胚移植は上書きではなく追加されます.ポーンがすでに持っていた異種遺伝子はそのまま保持され,それによって名付けられていたポーン(サングオファージなど)は名前とアイコンを保持します.</XTS_ImplantGermlineAsEndogenesDesc>
+  <!-- EN: How xenogerms behave when implanted. -->
+  <XTS_ImplantationSectionDesc>異種胚を移植したときの挙動です.</XTS_ImplantationSectionDesc>
+  <!-- EN: Germline xenogerms replace germline genes -->
+  <XTS_ImplantGermlineAsEndogenes>生殖系ゼノタイプの異種胚は生殖系遺伝子を置き換える</XTS_ImplantGermlineAsEndogenes>
+  <!-- EN: Keep deathrest capacity -->
+  <XTS_PreserveDeathrestCapacity>死眠容量を維持する</XTS_PreserveDeathrestCapacity>
+  <!-- EN: When enabled, a person will keep the deathrest capacity gained from serums when a xenogerm is implanted, as long as they still have the deathrest gene. When disabled, their deathrest capacity will reset to one. -->
+  <XTS_PreserveDeathrestCapacityDesc>有効にすると,異種胚を移植しても,死眠遺伝子が残っている限り,シーラムで得た死眠容量が維持されます.無効にすると,死眠容量は1にリセットされます.</XTS_PreserveDeathrestCapacityDesc>
+  <!-- EN: When enabled, a xenogerm for a germline xenotype will replace the person's germline genes, and their children will inherit them. Their existing xenogenes will be kept. When disabled, the genes will be implanted as xenogenes and will overwrite the existing ones. -->
+  <XTS_ImplantGermlineAsEndogenesDesc>有効にすると,生殖系ゼノタイプの異種胚が人の生殖系遺伝子を置き換え,その遺伝子は子供に受け継がれます.すでに持っている異種遺伝子は保持されます.無効にすると,遺伝子は異種遺伝子として移植され,既存の異種遺伝子を上書きします.</XTS_ImplantGermlineAsEndogenesDesc>
 
-  <!-- EN: Xenotype commonality by price -->
-  <XTS_CommonalitySection>価格によるゼノタイプ出現率</XTS_CommonalitySection>
-  <!-- EN: How a trader picks which xenotypes to stock, weighted by the prices of everything currently sellable. Affects new stock only. -->
-  <XTS_CommonalitySectionDesc>トレーダーが在庫に加えるゼノタイプを選ぶ方法で,現在販売可能なすべての価格に基づいて重み付けされます.新しく生成される在庫にのみ適用されます.</XTS_CommonalitySectionDesc>
+  <!-- EN: Xenotype rarity by price -->
+  <XTS_CommonalitySection>価格によるゼノタイプの希少度</XTS_CommonalitySection>
+  <!-- EN: How the price of a xenogerm changes the chance that a trader will stock it. -->
+  <XTS_CommonalitySectionDesc>異種胚の価格が,トレーダーがそれを在庫に加える確率にどう影響するかです.</XTS_CommonalitySectionDesc>
   <!-- EN: Inverse -->
   <XTS_StrategyInversePrice>反比例</XTS_StrategyInversePrice>
-  <!-- EN: Cheaper xenogerms are more common: chance is proportional to 1 / price. Archite xenogerms stay rare. -->
-  <XTS_StrategyInversePriceDesc>安価な異種胚ほど出現しやすくなります.出現率は1 / 価格に比例します.アルカイトの異種胚は引き続き希少です.</XTS_StrategyInversePriceDesc>
+  <!-- EN: Cheaper xenogerms will be much more common. Archite xenogerms will stay rare. -->
+  <XTS_StrategyInversePriceDesc>安価な異種胚がはるかに出現しやすくなります.アルカイトの異種胚は希少なままです.</XTS_StrategyInversePriceDesc>
   <!-- EN: Inverse root -->
   <XTS_StrategySoftInversePrice>逆平方根</XTS_StrategySoftInversePrice>
-  <!-- EN: Cheaper xenogerms are more common, with a gentler bias: chance is proportional to 1 / √price. -->
-  <XTS_StrategySoftInversePriceDesc>安価な異種胚ほど出現しやすくなりますが,偏りは穏やかです.出現率は1 / √価格に比例します.</XTS_StrategySoftInversePriceDesc>
+  <!-- EN: Cheaper xenogerms will be somewhat more common. -->
+  <XTS_StrategySoftInversePriceDesc>安価な異種胚がやや出現しやすくなります.</XTS_StrategySoftInversePriceDesc>
   <!-- EN: Linear -->
   <XTS_StrategyPrice>比例</XTS_StrategyPrice>
-  <!-- EN: Pricier xenogerms are more common: chance is proportional to price. -->
-  <XTS_StrategyPriceDesc>高価な異種胚ほど出現しやすくなります.出現率は価格に比例します.</XTS_StrategyPriceDesc>
+  <!-- EN: More expensive xenogerms will be much more common. -->
+  <XTS_StrategyPriceDesc>高価な異種胚がはるかに出現しやすくなります.</XTS_StrategyPriceDesc>
   <!-- EN: Square root -->
   <XTS_StrategySqrtPrice>平方根</XTS_StrategySqrtPrice>
-  <!-- EN: Pricier xenogerms are more common, with a gentler bias: chance is proportional to √price. -->
-  <XTS_StrategySqrtPriceDesc>高価な異種胚ほど出現しやすくなりますが,偏りは穏やかです.出現率は√価格に比例します.</XTS_StrategySqrtPriceDesc>
+  <!-- EN: More expensive xenogerms will be somewhat more common. -->
+  <XTS_StrategySqrtPriceDesc>高価な異種胚がやや出現しやすくなります.</XTS_StrategySqrtPriceDesc>
   <!-- EN: Bell curve -->
   <XTS_StrategyBellCurve>ベルカーブ</XTS_StrategyBellCurve>
-  <!-- EN: Mid-priced xenogerms are most common: chances follow a bell curve centred on the median price, so the cheapest and priciest are both rare. -->
-  <XTS_StrategyBellCurveDesc>中程度の価格の異種胚が最も出現しやすくなります.出現率は価格の中央値を中心としたベルカーブに従うため,最も安価なものと最も高価なものは両方とも希少になります.</XTS_StrategyBellCurveDesc>
+  <!-- EN: Xenogerms near the median price will be the most common. The cheapest and the most expensive will both be rare. -->
+  <XTS_StrategyBellCurveDesc>価格が中央値に近い異種胚が最も出現しやすくなります.最も安価なものと最も高価なものはどちらも希少です.</XTS_StrategyBellCurveDesc>
   <!-- EN: Uniform -->
   <XTS_StrategyUniform>均等</XTS_StrategyUniform>
   <!-- EN: Every sellable xenotype is equally likely, regardless of price. -->

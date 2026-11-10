@@ -55,11 +55,7 @@ naturally as a Korean noun-phrase title (modifier-modifier-head), conveying
 
 ## Phrasing decisions
 
-- **"naturalized" (English source uses scare quotes: 'naturalized' members)
-  has no vanilla Korean anchor** — grepped Biotech/Core Keyed and DefInjected
-  for `naturaliz*` with zero hits. Rendered as 귀화 (the ordinary Korean word
-  for naturalization/immigration status), kept in the same single-quote
-  scare-quotes the English uses. **Needs native review.**
+- **"naturalized" (retired 2026-11-11):** the English no longer uses the term, so the earlier flagged rendering is gone from every file.
 - **"Biotech" (DLC name) is not present in the extracted Keyed/DefInjected
   dump** (only found `RoomRequirementNoBiotechBuildings` → 생명공학 건물 없음,
   a generic "biotech buildings" phrase, not the DLC's own label). Used
@@ -106,3 +102,4 @@ naturally as a Korean noun-phrase title (modifier-modifier-head), conveying
 - "Sanguophage reimplant" reuses the `ReimplantXenogerm` ability's own label
   verb (유전자 이식) per the update brief's instruction, rather than coining
   a separate "재이식" word.
+- **2026-11-11 update pass (English reword f019544, machine-assisted, native review pending):** the English dropped its modder vocabulary ("endogenes", "pawn", "commonality", "trader kind", "rolled", "naturalized"), so this pass retranslated the 26 affected keys and the Workshop bullets. Decisions, superseding anything above: rarity = 희귀도 (no vanilla anchor; replaces 출현 빈도 for `XTS_CommonalitySection`); "kind of trader" = 상인 종류; person = 사람; toggle tooltips use 활성화하면 .... 비활성화하면 ....; "born member" = 그 인종형의 구성원.

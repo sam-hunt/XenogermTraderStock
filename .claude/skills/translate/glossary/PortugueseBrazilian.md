@@ -50,11 +50,7 @@ appending any English brand text.
 
 ## Phrasing decisions
 
-- **"naturalized" (member) is ungrounded** — no `naturaliz*` string exists
-  anywhere in the extracted Biotech Keyed/DefInjected data. Rendered as the
-  literal cognate `"naturalizados"` (quoted, matching the English's quoted
-  `'naturalized'`, per the family's ASCII-straight-quote rule). **Needs
-  native review.**
+- **"naturalized" (retired 2026-11-11):** the English no longer uses the term, so the earlier flagged rendering is gone from every file.
 - `<Default>`=`Padrão` (Core) is a singular noun; `XTS_ResetToDefaults` uses
   the natural plural `Restaurar padrões` since English "defaults" is plural
   and Core's own `ResetButton`=`Restaurar` supplied the verb.
@@ -93,3 +89,4 @@ appending any English brand text.
   Raiz inversa, Linear, Raiz quadrada, Curva em sino, Uniforme) are ordinary
   Portuguese mathematical vocabulary, not vanilla-grounded (no RimWorld
   Keyed source uses them), per the brief's allowance.
+- **2026-11-11 update pass (English reword f019544, machine-assisted, native review pending):** the English dropped its modder vocabulary ("endogenes", "pawn", "commonality", "trader kind", "rolled", "naturalized"), so this pass retranslated the 26 affected keys and the Workshop bullets. Decisions, superseding anything above: rarity = raridade (no vanilla anchor); "kind of trader" = tipo de comerciante; person = pessoa (Biotech `ForceXenogermImplantationDesc`; the English no longer says "pawn", so the colono row above applies only to colonists); toggle tooltips use "Quando ativado, ... Quando desativado, ..."; the four per-point slider tooltips vary their openers.

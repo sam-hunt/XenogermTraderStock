@@ -8,16 +8,16 @@
   <XTS_XenotypesSection>Xenótipos à venda</XTS_XenotypesSection>
   <!-- EN: Archite xenotypes -->
   <XTS_FilterArchite>Xenótipos arquita</XTS_FilterArchite>
-  <!-- EN: Preset xenotypes containing archite genes (e.g., Sanguophage). Scenario xenotypes are grouped under the scenario row instead. -->
-  <XTS_FilterArchiteDesc>Xenótipos predefinidos que contêm genes arquita (por exemplo, Sanguófago). Os xenótipos de cenário, em vez disso, são agrupados na linha de cenário.</XTS_FilterArchiteDesc>
+  <!-- EN: Preset xenotypes with archite genes, such as sanguophages. Scenario xenotypes are grouped separately. -->
+  <XTS_FilterArchiteDesc>Xenótipos predefinidos com genes arquita, como os sanguófagos. Os xenótipos de cenário são agrupados à parte.</XTS_FilterArchiteDesc>
   <!-- EN: Germline xenotypes -->
   <XTS_FilterInheritable>Xenótipos de linha germinativa</XTS_FilterInheritable>
-  <!-- EN: Preset xenotypes whose xenogerm rewrites the pawn's germline: inheritable xenotypes (e.g., Impid, Yttakin) and Baseliner, whose empty xenogerm converts the pawn back to a baseliner. -->
-  <XTS_FilterInheritableDesc>Xenótipos predefinidos cujo xenogerminador reescreve a linha germinativa do colono: xenótipos hereditários (por exemplo, Diabrete, Yttakin) e Padrão, cujo xenogerminador vazio converte o colono de volta a um padrão.</XTS_FilterInheritableDesc>
-  <!-- EN: Player-scenario xenotypes -->
-  <XTS_FilterPlayerScenario>Xenótipos de cenário do jogador</XTS_FilterPlayerScenario>
-  <!-- EN: The custom xenotypes your scenario's starting colonists were created with. Xenotypes assembled in-game are never sold. -->
-  <XTS_FilterPlayerScenarioDesc>Os xenótipos personalizados com os quais os colonos iniciais do seu cenário foram criados. Xenótipos montados durante o jogo nunca são vendidos.</XTS_FilterPlayerScenarioDesc>
+  <!-- EN: Preset xenotypes whose genes are passed on to children, such as impids and yttakin. The baseliner xenogerm is listed here too, because it turns a person back into a baseliner. -->
+  <XTS_FilterInheritableDesc>Xenótipos predefinidos cujos genes são passados aos filhos, como os diabretes e os yttakin. O xenogerminador padrão também fica aqui, pois transforma uma pessoa de volta em padrão.</XTS_FilterInheritableDesc>
+  <!-- EN: Scenario xenotypes -->
+  <XTS_FilterPlayerScenario>Xenótipos de cenário</XTS_FilterPlayerScenario>
+  <!-- EN: The custom xenotypes your starting colonists were created with. Xenotypes you assemble during the game will never be sold. -->
+  <XTS_FilterPlayerScenarioDesc>Os xenótipos personalizados com os quais os seus colonos iniciais foram criados. Os xenótipos que você montar durante o jogo nunca serão vendidos.</XTS_FilterPlayerScenarioDesc>
   <!-- EN: No sellable xenotypes are loaded. -->
   <XTS_NoXenotypes>Nenhum xenótipo vendável está carregado.</XTS_NoXenotypes>
   <!-- EN: Base xenogerm -->
@@ -34,40 +34,40 @@
   <XTS_PriceArchite>Genes arquita {0} × {1}</XTS_PriceArchite>
   <!-- EN: Contains archite genes -->
   <XTS_XenotypeArchite>Contém genes arquita</XTS_XenotypeArchite>
-  <!-- EN: Contains endogenes -->
+  <!-- EN: Contains germline genes -->
   <XTS_XenotypeEndogenes>Contém genes de linha germinativa</XTS_XenotypeEndogenes>
   <!-- EN: Contains xenogenes -->
   <XTS_XenotypeXenogenes>Contém xenogenes</XTS_XenotypeXenogenes>
-  <!-- EN: A custom xenotype your scenario's starting colonists were created with. -->
-  <XTS_CustomXenotypeDesc>Um xenótipo personalizado com o qual os colonos iniciais do seu cenário foram criados.</XTS_CustomXenotypeDesc>
+  <!-- EN: A custom xenotype your starting colonists were created with. -->
+  <XTS_CustomXenotypeDesc>Um xenótipo personalizado com o qual os seus colonos iniciais foram criados.</XTS_CustomXenotypeDesc>
   <!-- EN: Scenario -->
   <XTS_XenotypeSourceScenario>Cenário</XTS_XenotypeSourceScenario>
 
   <!-- EN: Xenogerm pricing -->
   <XTS_PricingSection>Preço dos xenogerminadores</XTS_PricingSection>
-  <!-- EN: Market value formula for trader-sold xenogerms. Affects new xenogerms only. -->
-  <XTS_PricingSectionDesc>Fórmula de valor de mercado para xenogerminadores vendidos por comerciantes. Afeta apenas novos xenogerminadores.</XTS_PricingSectionDesc>
+  <!-- EN: The market value of xenogerms sold by traders. -->
+  <XTS_PricingSectionDesc>O valor de mercado dos xenogerminadores vendidos por comerciantes.</XTS_PricingSectionDesc>
   <!-- EN: Base preset value: {0} -->
   <XTS_BasePresetValue>Valor base predefinido: {0}</XTS_BasePresetValue>
-  <!-- EN: Base silver value added to all preset xenotype xenogerms -->
-  <XTS_BasePresetValueDesc>Valor base em prata adicionado a todos os xenogerminadores de xenótipos predefinidos</XTS_BasePresetValueDesc>
+  <!-- EN: The silver added to the market value of every xenogerm sold by traders. -->
+  <XTS_BasePresetValueDesc>A prata somada ao valor de mercado de todo xenogerminador vendido por comerciantes.</XTS_BasePresetValueDesc>
   <!-- EN: Value per metabolism: {0} -->
   <XTS_ValuePerMetabolism>Valor por metabolismo: {0}</XTS_ValuePerMetabolism>
-  <!-- EN: Silver value added per point of absolute metabolism -->
-  <XTS_ValuePerMetabolismDesc>Valor em prata adicionado por ponto de metabolismo absoluto</XTS_ValuePerMetabolismDesc>
+  <!-- EN: The silver added for each point of metabolic efficiency, positive or negative. -->
+  <XTS_ValuePerMetabolismDesc>Quanta prata é somada por cada ponto de eficiência metabólica, positivo ou negativo.</XTS_ValuePerMetabolismDesc>
   <!-- EN: Value per complexity: {0} -->
   <XTS_ValuePerComplexity>Valor por complexidade: {0}</XTS_ValuePerComplexity>
-  <!-- EN: Silver value added per point of genetic complexity -->
-  <XTS_ValuePerComplexityDesc>Valor em prata adicionado por ponto de complexidade genética</XTS_ValuePerComplexityDesc>
+  <!-- EN: The silver added for each point of complexity. -->
+  <XTS_ValuePerComplexityDesc>O valor em prata somado por cada ponto de complexidade.</XTS_ValuePerComplexityDesc>
   <!-- EN: Value per archite gene: {0} -->
   <XTS_ValuePerArchite>Valor por gene arquita: {0}</XTS_ValuePerArchite>
-  <!-- EN: Silver value added per archite gene -->
-  <XTS_ValuePerArchiteDesc>Valor em prata adicionado por gene arquita</XTS_ValuePerArchiteDesc>
+  <!-- EN: The silver added for each archite gene. -->
+  <XTS_ValuePerArchiteDesc>A prata somada por cada gene arquita.</XTS_ValuePerArchiteDesc>
 
   <!-- EN: Stock quantity -->
   <XTS_QuantitySection>Quantidade em estoque</XTS_QuantitySection>
-  <!-- EN: How many xenogerms each trader kind carries, rolled from its range on every visit. Affects new traders only. -->
-  <XTS_QuantitySectionDesc>Quantos xenogerminadores cada tipo de comerciante carrega, sorteados dentro do seu intervalo a cada visita. Afeta apenas novos comerciantes.</XTS_QuantitySectionDesc>
+  <!-- EN: The number of xenogerms each kind of trader will stock, picked at random from its range. -->
+  <XTS_QuantitySectionDesc>A quantidade de xenogerminadores que cada tipo de comerciante terá em estoque, escolhida ao acaso dentro do seu intervalo.</XTS_QuantitySectionDesc>
   <!-- EN: {0}: {1}~{2} -->
   <XTS_TraderCount>{0}: {1}~{2}</XTS_TraderCount>
   <!-- EN: {0} (orbital) -->
@@ -76,48 +76,48 @@
   <XTS_TraderCaravan>{0} (caravana)</XTS_TraderCaravan>
   <!-- EN: {0} settlements -->
   <XTS_TraderSettlement>Assentamentos ({0})</XTS_TraderSettlement>
-  <!-- EN: Xenogerms this trader arrives with, rolled from this range each visit -->
-  <XTS_TraderCountDesc>Xenogerminadores com os quais este comerciante chega, sorteados dentro deste intervalo a cada visita</XTS_TraderCountDesc>
-  <!-- EN: Xenogerms these settlements keep in stock, rolled from this range whenever a settlement restocks (about once a month). -->
-  <XTS_SettlementCountDesc>Xenogerminadores que estes assentamentos mantêm em estoque, sorteados dentro deste intervalo a cada reabastecimento (cerca de uma vez por mês).</XTS_SettlementCountDesc>
+  <!-- EN: The number of xenogerms this trader will arrive with. -->
+  <XTS_TraderCountDesc>A quantidade de xenogerminadores com que este comerciante chegará.</XTS_TraderCountDesc>
+  <!-- EN: The number of xenogerms these settlements will keep in stock. Settlements restock about once a month. -->
+  <XTS_SettlementCountDesc>A quantidade de xenogerminadores que estes assentamentos manterão em estoque. Os assentamentos se reabastecem cerca de uma vez por mês.</XTS_SettlementCountDesc>
 
   <!-- EN: Implantation -->
   <XTS_ImplantationSection>Implantação</XTS_ImplantationSection>
-  <!-- EN: How trader-sold xenogerms behave when implanted. -->
-  <XTS_ImplantationSectionDesc>Como os xenogerminadores vendidos por comerciantes se comportam quando implantados.</XTS_ImplantationSectionDesc>
-  <!-- EN: Implant germline xenotypes as endogenes -->
-  <XTS_ImplantGermlineAsEndogenes>Implantar xenótipos de linha germinativa como genes de linha germinativa</XTS_ImplantGermlineAsEndogenes>
-  <!-- EN: Preserve deathrest capacity through implantation -->
-  <XTS_PreserveDeathrestCapacity>Preservar a capacidade do descanso mortal durante a implantação</XTS_PreserveDeathrestCapacity>
-  <!-- EN: Vanilla recreates the deathrest gene on every xenogerm implant or sanguophage reimplant, resetting serum-bought deathrest capacity to one. With this on, the pawn's previous capacity is restored whenever it still has a deathrest gene afterwards. Applies to all xenogerms, not just trader-sold ones. -->
-  <XTS_PreserveDeathrestCapacityDesc>O jogo base recria o gene do descanso mortal a cada implante de xenogerminador ou reimplante de sanguófago, reiniciando para um a capacidade do descanso mortal comprada com soro. Com esta opção ativada, a capacidade anterior do colono é restaurada sempre que ele ainda tiver um gene do descanso mortal depois disso. Aplica-se a todos os xenogerminadores, não apenas aos vendidos por comerciantes.</XTS_PreserveDeathrestCapacityDesc>
-  <!-- EN: When a trader-sold xenogerm for a germline xenotype is implanted, its genes replace the pawn's endogenes instead of becoming xenogenes, making the pawn a born member of that xenotype: children inherit the genes, and later xenogerm implants add to them instead of overwriting them. Xenogenes the pawn already carries are kept, and a pawn named for them (a sanguophage, say) keeps its name and icon. -->
-  <XTS_ImplantGermlineAsEndogenesDesc>Quando um xenogerminador vendido por um comerciante para um xenótipo de linha germinativa é implantado, os genes dele substituem os genes de linha germinativa do colono em vez de se tornarem xenogenes, tornando o colono um membro nato daquele xenótipo: os filhos herdam os genes, e implantes posteriores de xenogerminadores se somam a eles em vez de sobrescrevê-los. Os xenogenes que o colono já possui são mantidos, e um colono nomeado por causa deles (um sanguófago, por exemplo) mantém seu nome e ícone.</XTS_ImplantGermlineAsEndogenesDesc>
+  <!-- EN: How xenogerms behave when implanted. -->
+  <XTS_ImplantationSectionDesc>Como os xenogerminadores se comportam quando implantados.</XTS_ImplantationSectionDesc>
+  <!-- EN: Germline xenogerms replace germline genes -->
+  <XTS_ImplantGermlineAsEndogenes>Xenogerminadores de linha germinativa substituem os genes de linha germinativa</XTS_ImplantGermlineAsEndogenes>
+  <!-- EN: Keep deathrest capacity -->
+  <XTS_PreserveDeathrestCapacity>Manter a capacidade do descanso mortal</XTS_PreserveDeathrestCapacity>
+  <!-- EN: When enabled, a person will keep the deathrest capacity gained from serums when a xenogerm is implanted, as long as they still have the deathrest gene. When disabled, their deathrest capacity will reset to one. -->
+  <XTS_PreserveDeathrestCapacityDesc>Quando ativado, ao implantar um xenogerminador a pessoa manterá a capacidade do descanso mortal obtida com soros, desde que ainda tenha o gene do descanso mortal. Quando desativado, a capacidade do descanso mortal voltará a um.</XTS_PreserveDeathrestCapacityDesc>
+  <!-- EN: When enabled, a xenogerm for a germline xenotype will replace the person's germline genes, and their children will inherit them. Their existing xenogenes will be kept. When disabled, the genes will be implanted as xenogenes and will overwrite the existing ones. -->
+  <XTS_ImplantGermlineAsEndogenesDesc>Quando ativado, um xenogerminador de xenótipo de linha germinativa substituirá os genes de linha germinativa da pessoa, e os filhos dela os herdarão. Os xenogenes que ela já tiver serão mantidos. Quando desativado, os genes serão implantados como xenogenes e sobrescreverão os existentes.</XTS_ImplantGermlineAsEndogenesDesc>
 
-  <!-- EN: Xenotype commonality by price -->
-  <XTS_CommonalitySection>Frequência de xenótipos por preço</XTS_CommonalitySection>
-  <!-- EN: How a trader picks which xenotypes to stock, weighted by the prices of everything currently sellable. Affects new stock only. -->
-  <XTS_CommonalitySectionDesc>Como um comerciante escolhe quais xenótipos estocar, ponderado pelos preços de tudo que está disponível para venda no momento. Afeta apenas o novo estoque.</XTS_CommonalitySectionDesc>
+  <!-- EN: Xenotype rarity by price -->
+  <XTS_CommonalitySection>Raridade dos xenótipos por preço</XTS_CommonalitySection>
+  <!-- EN: How the price of a xenogerm changes the chance that a trader will stock it. -->
+  <XTS_CommonalitySectionDesc>Como o preço de um xenogerminador altera a chance de um comerciante o estocar.</XTS_CommonalitySectionDesc>
   <!-- EN: Inverse -->
   <XTS_StrategyInversePrice>Inverso</XTS_StrategyInversePrice>
-  <!-- EN: Cheaper xenogerms are more common: chance is proportional to 1 / price. Archite xenogerms stay rare. -->
-  <XTS_StrategyInversePriceDesc>Xenogerminadores mais baratos são mais comuns: a chance é proporcional a 1 / preço. Xenogerminadores arquita continuam raros.</XTS_StrategyInversePriceDesc>
+  <!-- EN: Cheaper xenogerms will be much more common. Archite xenogerms will stay rare. -->
+  <XTS_StrategyInversePriceDesc>Os xenogerminadores mais baratos serão bem mais comuns. Os xenogerminadores arquita continuarão raros.</XTS_StrategyInversePriceDesc>
   <!-- EN: Inverse root -->
   <XTS_StrategySoftInversePrice>Raiz inversa</XTS_StrategySoftInversePrice>
-  <!-- EN: Cheaper xenogerms are more common, with a gentler bias: chance is proportional to 1 / √price. -->
-  <XTS_StrategySoftInversePriceDesc>Xenogerminadores mais baratos são mais comuns, com uma tendência mais suave: a chance é proporcional a 1 / √preço.</XTS_StrategySoftInversePriceDesc>
+  <!-- EN: Cheaper xenogerms will be somewhat more common. -->
+  <XTS_StrategySoftInversePriceDesc>Os xenogerminadores mais baratos serão um pouco mais comuns.</XTS_StrategySoftInversePriceDesc>
   <!-- EN: Linear -->
   <XTS_StrategyPrice>Linear</XTS_StrategyPrice>
-  <!-- EN: Pricier xenogerms are more common: chance is proportional to price. -->
-  <XTS_StrategyPriceDesc>Xenogerminadores mais caros são mais comuns: a chance é proporcional ao preço.</XTS_StrategyPriceDesc>
+  <!-- EN: More expensive xenogerms will be much more common. -->
+  <XTS_StrategyPriceDesc>Os xenogerminadores mais caros serão bem mais comuns.</XTS_StrategyPriceDesc>
   <!-- EN: Square root -->
   <XTS_StrategySqrtPrice>Raiz quadrada</XTS_StrategySqrtPrice>
-  <!-- EN: Pricier xenogerms are more common, with a gentler bias: chance is proportional to √price. -->
-  <XTS_StrategySqrtPriceDesc>Xenogerminadores mais caros são mais comuns, com uma tendência mais suave: a chance é proporcional a √preço.</XTS_StrategySqrtPriceDesc>
+  <!-- EN: More expensive xenogerms will be somewhat more common. -->
+  <XTS_StrategySqrtPriceDesc>Os xenogerminadores mais caros serão um pouco mais comuns.</XTS_StrategySqrtPriceDesc>
   <!-- EN: Bell curve -->
   <XTS_StrategyBellCurve>Curva em sino</XTS_StrategyBellCurve>
-  <!-- EN: Mid-priced xenogerms are most common: chances follow a bell curve centred on the median price, so the cheapest and priciest are both rare. -->
-  <XTS_StrategyBellCurveDesc>Xenogerminadores de preço médio são os mais comuns: as chances seguem uma curva em sino centrada no preço mediano, então tanto os mais baratos quanto os mais caros são raros.</XTS_StrategyBellCurveDesc>
+  <!-- EN: Xenogerms near the median price will be the most common. The cheapest and the most expensive will both be rare. -->
+  <XTS_StrategyBellCurveDesc>Os xenogerminadores de preço próximo à mediana serão os mais comuns. Os mais baratos e os mais caros serão ambos raros.</XTS_StrategyBellCurveDesc>
   <!-- EN: Uniform -->
   <XTS_StrategyUniform>Uniforme</XTS_StrategyUniform>
   <!-- EN: Every sellable xenotype is equally likely, regardless of price. -->

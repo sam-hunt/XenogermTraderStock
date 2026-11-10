@@ -75,13 +75,7 @@ since it made the title noticeably longer without adding clarity.
   "endogenes" are built from the same phrase — this mirrors the English's
   own near-overlap (endogenes literally are the germline genes) rather than
   being a translation artifact. Not flagged as an error.
-- **"naturalized" is ungrounded — needs native review.** No official
-  Spanish rendering of "naturalized" (in the Biotech xenotype/ideology
-  sense) turned up in the extracted Biotech or Core Keyed/DefInjected data.
-  Used the plain, most natural word `naturalizados`, quoted in ASCII
-  straight quotes per style (matching the English's single-quoted
-  `'naturalized'`), consistent with vanilla's convention of quoting cited
-  terms. Flag for native-speaker confirmation.
+- **"naturalized" (retired 2026-11-11):** the English no longer uses the term, so the earlier flagged rendering is gone from every file.
 - **Plural of `xenogermen` is `xenogérmenes` (attested).** The Biotech tar
   uses `xenogérmenes` a dozen times alongside ~70 singular `xenogermen` hits,
   following the regular stress-shift pattern (`origen`→`orígenes`). The
@@ -98,3 +92,4 @@ since it made the title noticeably longer without adding clarity.
 - **No dashes introduced.** The English " - " after bold Mod Settings
   labels and in the Links line was replaced with a colon throughout,
   per the family's zero-dash rule for Spanish.
+- **2026-11-11 update pass (English reword f019544, machine-assisted, native review pending):** the English dropped its modder vocabulary ("endogenes", "pawn", "commonality", "trader kind", "rolled", "naturalized"), so this pass retranslated the 26 affected keys and the Workshop bullets. Decisions, superseding anything above: rarity = rareza ("Rareza de los xenotipos según el precio"; vanilla has it only in descriptions); "kind of trader" = tipo de comerciante (Core `ChooseOrbitalTraderKind`); person = persona; settlements = asentamientos, never colonias; toggle tooltips use "Si está activado, ... Si está desactivado, ..."; "born member" is described ("los lleve en su línea germinal"), since "miembro de nacimiento" read as a calque.

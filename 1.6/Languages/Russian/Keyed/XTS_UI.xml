@@ -8,16 +8,16 @@
   <XTS_XenotypesSection>Ксенотипы в продаже</XTS_XenotypesSection>
   <!-- EN: Archite xenotypes -->
   <XTS_FilterArchite>Архитные ксенотипы</XTS_FilterArchite>
-  <!-- EN: Preset xenotypes containing archite genes (e.g., Sanguophage). Scenario xenotypes are grouped under the scenario row instead. -->
-  <XTS_FilterArchiteDesc>Стандартные ксенотипы, содержащие архитные гены (например, гемофаг). Ксенотипы сценария при этом отнесены к отдельной строке сценария.</XTS_FilterArchiteDesc>
+  <!-- EN: Preset xenotypes with archite genes, such as sanguophages. Scenario xenotypes are grouped separately. -->
+  <XTS_FilterArchiteDesc>Стандартные ксенотипы с архитными генами, например гемофаги. Ксенотипы сценария собраны отдельно.</XTS_FilterArchiteDesc>
   <!-- EN: Germline xenotypes -->
   <XTS_FilterInheritable>Наследуемые ксенотипы</XTS_FilterInheritable>
-  <!-- EN: Preset xenotypes whose xenogerm rewrites the pawn's germline: inheritable xenotypes (e.g., Impid, Yttakin) and Baseliner, whose empty xenogerm converts the pawn back to a baseliner. -->
-  <XTS_FilterInheritableDesc>Стандартные ксенотипы, чьё ксеносемя переписывает наследуемые гены поселенца: наследуемые ксенотипы (например, импид, иттакин) и первозданный, чьё пустое ксеносемя превращает поселенца обратно в первозданного.</XTS_FilterInheritableDesc>
-  <!-- EN: Player-scenario xenotypes -->
-  <XTS_FilterPlayerScenario>Ксенотипы сценария игрока</XTS_FilterPlayerScenario>
-  <!-- EN: The custom xenotypes your scenario's starting colonists were created with. Xenotypes assembled in-game are never sold. -->
-  <XTS_FilterPlayerScenarioDesc>Ксенотипы, созданные для стартовых поселенцев вашего сценария. Ксенотипы, собранные в игре, никогда не продаются.</XTS_FilterPlayerScenarioDesc>
+  <!-- EN: Preset xenotypes whose genes are passed on to children, such as impids and yttakin. The baseliner xenogerm is listed here too, because it turns a person back into a baseliner. -->
+  <XTS_FilterInheritableDesc>Стандартные ксенотипы, гены которых передаются детям, например импиды и иттакины. Сюда же относится ксеносемя первозданного: оно снова превращает поселенца в первозданного.</XTS_FilterInheritableDesc>
+  <!-- EN: Scenario xenotypes -->
+  <XTS_FilterPlayerScenario>Ксенотипы сценария</XTS_FilterPlayerScenario>
+  <!-- EN: The custom xenotypes your starting colonists were created with. Xenotypes you assemble during the game will never be sold. -->
+  <XTS_FilterPlayerScenarioDesc>Созданные ксенотипы, с которыми начали игру ваши стартовые поселенцы. Ксенотипы, которые вы соберёте во время игры, продаваться не будут.</XTS_FilterPlayerScenarioDesc>
   <!-- EN: No sellable xenotypes are loaded. -->
   <XTS_NoXenotypes>Не загружено ни одного продаваемого ксенотипа.</XTS_NoXenotypes>
   <!-- EN: Base xenogerm -->
@@ -34,40 +34,40 @@
   <XTS_PriceArchite>Архитные гены {0} × {1}</XTS_PriceArchite>
   <!-- EN: Contains archite genes -->
   <XTS_XenotypeArchite>Содержит архитные гены</XTS_XenotypeArchite>
-  <!-- EN: Contains endogenes -->
+  <!-- EN: Contains germline genes -->
   <XTS_XenotypeEndogenes>Содержит наследуемые гены</XTS_XenotypeEndogenes>
   <!-- EN: Contains xenogenes -->
   <XTS_XenotypeXenogenes>Содержит ксеногены</XTS_XenotypeXenogenes>
-  <!-- EN: A custom xenotype your scenario's starting colonists were created with. -->
-  <XTS_CustomXenotypeDesc>Ксенотип, созданный для стартовых поселенцев вашего сценария.</XTS_CustomXenotypeDesc>
+  <!-- EN: A custom xenotype your starting colonists were created with. -->
+  <XTS_CustomXenotypeDesc>Созданный ксенотип, с которым начали игру ваши стартовые поселенцы.</XTS_CustomXenotypeDesc>
   <!-- EN: Scenario -->
   <XTS_XenotypeSourceScenario>Сценарий</XTS_XenotypeSourceScenario>
 
   <!-- EN: Xenogerm pricing -->
   <XTS_PricingSection>Ценообразование ксеносемян</XTS_PricingSection>
-  <!-- EN: Market value formula for trader-sold xenogerms. Affects new xenogerms only. -->
-  <XTS_PricingSectionDesc>Формула рыночной стоимости ксеносемян, продаваемых торговцами. Затрагивает только новые ксеносемена.</XTS_PricingSectionDesc>
+  <!-- EN: The market value of xenogerms sold by traders. -->
+  <XTS_PricingSectionDesc>Рыночная стоимость ксеносемян, продаваемых торговцами.</XTS_PricingSectionDesc>
   <!-- EN: Base preset value: {0} -->
   <XTS_BasePresetValue>Базовая стоимость стандартного ксенотипа: {0}</XTS_BasePresetValue>
-  <!-- EN: Base silver value added to all preset xenotype xenogerms -->
-  <XTS_BasePresetValueDesc>Базовая стоимость в серебре, добавляемая ко всем ксеносеменам стандартных ксенотипов.</XTS_BasePresetValueDesc>
+  <!-- EN: The silver added to the market value of every xenogerm sold by traders. -->
+  <XTS_BasePresetValueDesc>Серебро, добавляемое к рыночной стоимости каждого ксеносемени, продаваемого торговцами.</XTS_BasePresetValueDesc>
   <!-- EN: Value per metabolism: {0} -->
   <XTS_ValuePerMetabolism>Стоимость за метаболизм: {0}</XTS_ValuePerMetabolism>
-  <!-- EN: Silver value added per point of absolute metabolism -->
-  <XTS_ValuePerMetabolismDesc>Стоимость в серебре за каждую единицу абсолютной эффективности метаболизма.</XTS_ValuePerMetabolismDesc>
+  <!-- EN: The silver added for each point of metabolic efficiency, positive or negative. -->
+  <XTS_ValuePerMetabolismDesc>Серебро, добавляемое за каждую единицу эффективности метаболизма, положительной или отрицательной.</XTS_ValuePerMetabolismDesc>
   <!-- EN: Value per complexity: {0} -->
   <XTS_ValuePerComplexity>Стоимость за сложность: {0}</XTS_ValuePerComplexity>
-  <!-- EN: Silver value added per point of genetic complexity -->
-  <XTS_ValuePerComplexityDesc>Стоимость в серебре за каждую единицу генетической сложности.</XTS_ValuePerComplexityDesc>
+  <!-- EN: The silver added for each point of complexity. -->
+  <XTS_ValuePerComplexityDesc>Серебро, добавляемое за каждую единицу сложности.</XTS_ValuePerComplexityDesc>
   <!-- EN: Value per archite gene: {0} -->
   <XTS_ValuePerArchite>Стоимость за архитный ген: {0}</XTS_ValuePerArchite>
-  <!-- EN: Silver value added per archite gene -->
-  <XTS_ValuePerArchiteDesc>Стоимость в серебре за каждый архитный ген.</XTS_ValuePerArchiteDesc>
+  <!-- EN: The silver added for each archite gene. -->
+  <XTS_ValuePerArchiteDesc>Серебро, добавляемое за каждый архитный ген.</XTS_ValuePerArchiteDesc>
 
   <!-- EN: Stock quantity -->
   <XTS_QuantitySection>Количество ксеносемян</XTS_QuantitySection>
-  <!-- EN: How many xenogerms each trader kind carries, rolled from its range on every visit. Affects new traders only. -->
-  <XTS_QuantitySectionDesc>Сколько ксеносемян несёт с собой каждый вид торговца: это число определяется случайно из заданного диапазона при каждом визите. Затрагивает только новых торговцев.</XTS_QuantitySectionDesc>
+  <!-- EN: The number of xenogerms each kind of trader will stock, picked at random from its range. -->
+  <XTS_QuantitySectionDesc>Сколько ксеносемян будет в ассортименте у каждого вида торговцев: число выбирается случайно из заданного диапазона.</XTS_QuantitySectionDesc>
   <!-- EN: {0}: {1}~{2} -->
   <XTS_TraderCount>{0}: {1}~{2}</XTS_TraderCount>
   <!-- EN: {0} (orbital) -->
@@ -76,48 +76,48 @@
   <XTS_TraderCaravan>{0} (караван)</XTS_TraderCaravan>
   <!-- EN: {0} settlements -->
   <XTS_TraderSettlement>Поселения ({0})</XTS_TraderSettlement>
-  <!-- EN: Xenogerms this trader arrives with, rolled from this range each visit -->
-  <XTS_TraderCountDesc>Ксеносемена, с которыми прибывает этот торговец: их число определяется случайно из этого диапазона при каждом визите.</XTS_TraderCountDesc>
-  <!-- EN: Xenogerms these settlements keep in stock, rolled from this range whenever a settlement restocks (about once a month). -->
-  <XTS_SettlementCountDesc>Ксеносемена, которые эти поселения держат в продаже: их число определяется случайно из этого диапазона при каждом обновлении товаров (примерно раз в месяц).</XTS_SettlementCountDesc>
+  <!-- EN: The number of xenogerms this trader will arrive with. -->
+  <XTS_TraderCountDesc>Сколько ксеносемян привезёт с собой этот торговец.</XTS_TraderCountDesc>
+  <!-- EN: The number of xenogerms these settlements will keep in stock. Settlements restock about once a month. -->
+  <XTS_SettlementCountDesc>Сколько ксеносемян будет в продаже у этих поселений. Товары в поселениях обновляются примерно раз в месяц.</XTS_SettlementCountDesc>
 
   <!-- EN: Implantation -->
   <XTS_ImplantationSection>Вживление</XTS_ImplantationSection>
-  <!-- EN: How trader-sold xenogerms behave when implanted. -->
-  <XTS_ImplantationSectionDesc>Как ведут себя купленные у торговцев ксеносемена при вживлении.</XTS_ImplantationSectionDesc>
-  <!-- EN: Implant germline xenotypes as endogenes -->
-  <XTS_ImplantGermlineAsEndogenes>Вживлять наследуемые ксенотипы в наследуемые гены</XTS_ImplantGermlineAsEndogenes>
-  <!-- EN: Preserve deathrest capacity through implantation -->
-  <XTS_PreserveDeathrestCapacity>Сохранять торпорную вместимость при вживлении</XTS_PreserveDeathrestCapacity>
-  <!-- EN: Vanilla recreates the deathrest gene on every xenogerm implant or sanguophage reimplant, resetting serum-bought deathrest capacity to one. With this on, the pawn's previous capacity is restored whenever it still has a deathrest gene afterwards. Applies to all xenogerms, not just trader-sold ones. -->
-  <XTS_PreserveDeathrestCapacityDesc>Обычно игра пересоздаёт ген торпора при каждом вживлении ксеносемени или при использовании гемофагом способности «Вживление генов», сбрасывая купленную сыворотками торпорную вместимость до одной единицы. При включении этой настройки прежняя вместимость поселенца восстанавливается, если после этого у него всё ещё есть ген торпора. Действует на все ксеносемена, а не только купленные у торговцев.</XTS_PreserveDeathrestCapacityDesc>
-  <!-- EN: When a trader-sold xenogerm for a germline xenotype is implanted, its genes replace the pawn's endogenes instead of becoming xenogenes, making the pawn a born member of that xenotype: children inherit the genes, and later xenogerm implants add to them instead of overwriting them. Xenogenes the pawn already carries are kept, and a pawn named for them (a sanguophage, say) keeps its name and icon. -->
-  <XTS_ImplantGermlineAsEndogenesDesc>При вживлении купленного у торговца ксеносемени наследуемого ксенотипа его гены заменяют наследуемые гены поселенца, а не становятся ксеногенами: поселенец становится прирождённым представителем этого ксенотипа, дети наследуют эти гены, а последующие вживления ксеносемян будут добавляться к ним, а не перезаписывать их. Ксеногены, уже имеющиеся у поселенца, сохраняются, а если по ним был назван поселенец (например, гемофаг), его имя и иконка останутся прежними.</XTS_ImplantGermlineAsEndogenesDesc>
+  <!-- EN: How xenogerms behave when implanted. -->
+  <XTS_ImplantationSectionDesc>Как ксеносемена ведут себя при вживлении.</XTS_ImplantationSectionDesc>
+  <!-- EN: Germline xenogerms replace germline genes -->
+  <XTS_ImplantGermlineAsEndogenes>Ксеносемена наследуемых ксенотипов заменяют наследуемые гены</XTS_ImplantGermlineAsEndogenes>
+  <!-- EN: Keep deathrest capacity -->
+  <XTS_PreserveDeathrestCapacity>Сохранять торпорную вместимость</XTS_PreserveDeathrestCapacity>
+  <!-- EN: When enabled, a person will keep the deathrest capacity gained from serums when a xenogerm is implanted, as long as they still have the deathrest gene. When disabled, their deathrest capacity will reset to one. -->
+  <XTS_PreserveDeathrestCapacityDesc>Если включено, при вживлении ксеносемени поселенец сохранит торпорную вместимость, полученную от сывороток, пока у него остаётся ген торпора. Если выключено, его торпорная вместимость сбросится до одной единицы.</XTS_PreserveDeathrestCapacityDesc>
+  <!-- EN: When enabled, a xenogerm for a germline xenotype will replace the person's germline genes, and their children will inherit them. Their existing xenogenes will be kept. When disabled, the genes will be implanted as xenogenes and will overwrite the existing ones. -->
+  <XTS_ImplantGermlineAsEndogenesDesc>Если включено, ксеносемя наследуемого ксенотипа заменит наследуемые гены поселенца, и его дети унаследуют их. Уже имеющиеся ксеногены сохранятся. Если выключено, гены будут вживлены как ксеногены и перезапишут уже имеющиеся.</XTS_ImplantGermlineAsEndogenesDesc>
 
-  <!-- EN: Xenotype commonality by price -->
-  <XTS_CommonalitySection>Частота ксенотипов в зависимости от цены</XTS_CommonalitySection>
-  <!-- EN: How a trader picks which xenotypes to stock, weighted by the prices of everything currently sellable. Affects new stock only. -->
-  <XTS_CommonalitySectionDesc>Как торговец выбирает, какие ксенотипы включить в ассортимент: вес каждого определяется ценами всех доступных для продажи ксенотипов. Затрагивает только новый ассортимент.</XTS_CommonalitySectionDesc>
+  <!-- EN: Xenotype rarity by price -->
+  <XTS_CommonalitySection>Редкость ксенотипов в зависимости от цены</XTS_CommonalitySection>
+  <!-- EN: How the price of a xenogerm changes the chance that a trader will stock it. -->
+  <XTS_CommonalitySectionDesc>Как цена ксеносемени влияет на шанс, что торговец привезёт его на продажу.</XTS_CommonalitySectionDesc>
   <!-- EN: Inverse -->
   <XTS_StrategyInversePrice>Обратная</XTS_StrategyInversePrice>
-  <!-- EN: Cheaper xenogerms are more common: chance is proportional to 1 / price. Archite xenogerms stay rare. -->
-  <XTS_StrategyInversePriceDesc>Чем дешевле ксеносемя, тем чаще оно встречается: шанс пропорционален 1 / цена. Архитные ксеносемена остаются редкими.</XTS_StrategyInversePriceDesc>
+  <!-- EN: Cheaper xenogerms will be much more common. Archite xenogerms will stay rare. -->
+  <XTS_StrategyInversePriceDesc>Дешёвые ксеносемена будут встречаться намного чаще. Архитные ксеносемена останутся редкими.</XTS_StrategyInversePriceDesc>
   <!-- EN: Inverse root -->
   <XTS_StrategySoftInversePrice>Обратный корень</XTS_StrategySoftInversePrice>
-  <!-- EN: Cheaper xenogerms are more common, with a gentler bias: chance is proportional to 1 / √price. -->
-  <XTS_StrategySoftInversePriceDesc>Чем дешевле ксеносемя, тем чаще оно встречается, но с более мягким уклоном: шанс пропорционален 1 / √цена.</XTS_StrategySoftInversePriceDesc>
+  <!-- EN: Cheaper xenogerms will be somewhat more common. -->
+  <XTS_StrategySoftInversePriceDesc>Дешёвые ксеносемена будут встречаться немного чаще.</XTS_StrategySoftInversePriceDesc>
   <!-- EN: Linear -->
   <XTS_StrategyPrice>Линейная</XTS_StrategyPrice>
-  <!-- EN: Pricier xenogerms are more common: chance is proportional to price. -->
-  <XTS_StrategyPriceDesc>Чем дороже ксеносемя, тем чаще оно встречается: шанс пропорционален цене.</XTS_StrategyPriceDesc>
+  <!-- EN: More expensive xenogerms will be much more common. -->
+  <XTS_StrategyPriceDesc>Дорогие ксеносемена будут встречаться намного чаще.</XTS_StrategyPriceDesc>
   <!-- EN: Square root -->
   <XTS_StrategySqrtPrice>Квадратный корень</XTS_StrategySqrtPrice>
-  <!-- EN: Pricier xenogerms are more common, with a gentler bias: chance is proportional to √price. -->
-  <XTS_StrategySqrtPriceDesc>Чем дороже ксеносемя, тем чаще оно встречается, но с более мягким уклоном: шанс пропорционален √цене.</XTS_StrategySqrtPriceDesc>
+  <!-- EN: More expensive xenogerms will be somewhat more common. -->
+  <XTS_StrategySqrtPriceDesc>Дорогие ксеносемена будут встречаться немного чаще.</XTS_StrategySqrtPriceDesc>
   <!-- EN: Bell curve -->
   <XTS_StrategyBellCurve>Колоколообразная кривая</XTS_StrategyBellCurve>
-  <!-- EN: Mid-priced xenogerms are most common: chances follow a bell curve centred on the median price, so the cheapest and priciest are both rare. -->
-  <XTS_StrategyBellCurveDesc>Чаще всего встречаются ксеносемена со средней ценой: шансы распределены по колоколообразной кривой с центром на медианной цене, поэтому и самые дешёвые, и самые дорогие остаются редкими.</XTS_StrategyBellCurveDesc>
+  <!-- EN: Xenogerms near the median price will be the most common. The cheapest and the most expensive will both be rare. -->
+  <XTS_StrategyBellCurveDesc>Чаще всего будут встречаться ксеносемена со средней ценой. Самые дешёвые и самые дорогие будут редкими.</XTS_StrategyBellCurveDesc>
   <!-- EN: Uniform -->
   <XTS_StrategyUniform>Равномерная</XTS_StrategyUniform>
   <!-- EN: Every sellable xenotype is equally likely, regardless of price. -->

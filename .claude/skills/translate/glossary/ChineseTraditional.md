@@ -50,11 +50,7 @@ in a title.
 
 ## Phrasing decisions
 
-- **"naturalized" member — NOT grounded.** No vanilla zh-Hant string renders
-  this concept (Biotech/Core Keyed and DefInjected both searched, no hit).
-  Used 「歸化」 (naturalize/naturalized, standard PRC/Taiwan civics term) in
-  corner quotes, mirroring how vanilla quotes other bare technical terms.
-  **Needs native review.**
+- **"naturalized" (retired 2026-11-11):** the English no longer uses the term, so the earlier flagged rendering is gone from every file.
 - "archite xenotype" (a xenotype containing archite genes, not a def field)
   has no direct vanilla analogue — composed as 遠古分子異種人 by the same
   attributive pattern vanilla uses for 遠古分子基因 (archite genes) and the
@@ -123,3 +119,4 @@ in a title.
   ASCII slash's surrounding spaces) rather than converting to a full-width
   reading, since these sit inside otherwise-Chinese sentences as an inline
   math expression.
+- **2026-11-11 update pass (English reword f019544, machine-assisted, native review pending):** the English dropped its modder vocabulary ("endogenes", "pawn", "commonality", "trader kind", "rolled", "naturalized"), so this pass retranslated the 26 affected keys and the Workshop bullets. Decisions, superseding anything above: rarity = 稀有度 (vanilla 稀有 appears only in prose); person = 此人; toggle tooltips use 啟用/停用; "born member" = 天生成員, replacing 「歸化」; avoid calqued passive 被 and stacked 的.

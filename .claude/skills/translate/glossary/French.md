@@ -47,11 +47,7 @@ the ambiguous "marchand" alternative that Core uses inconsistently.
 
 ## Phrasing decisions
 
-- **"naturalized" (member) has no official French rendering anywhere in
-  Core or Biotech** — grepped `natural*` tree-wide and found only unrelated
-  hits (`grossesse naturelle`). Used "naturalisés" (ASCII-quoted, mirroring
-  the English scare-quotes) as the most natural cognate rendering. **Needs
-  native review.**
+- **"naturalized" (retired 2026-11-11):** the English no longer uses the term, so the earlier flagged rendering is gone from every file.
 - `ArchitesRequired` is a distinct concept ("Capsules d'archites", the
   Keyed label for archite-capsule cost) from "archite gene(s)" — grounded
   separately from `ArchiteCapsule.description`'s "un gène archite" instead.
@@ -79,3 +75,4 @@ the ambiguous "marchand" alternative that Core uses inconsistently.
   joueur" — "scénario" is grounded (Core `ScenarioEditor` etc.) but "player
   scenario" as a compound has no vanilla precedent; this is a natural but
   coined compound. **Flagged for native review.**
+- **2026-11-11 update pass (English reword f019544, machine-assisted, native review pending):** the English dropped its modder vocabulary ("endogenes", "pawn", "commonality", "trader kind", "rolled", "naturalized"), so this pass retranslated the 26 affected keys and the Workshop bullets. Decisions, superseding anything above: rarity = rareté (not confirmed in vanilla); "kind of trader" = type de commerçant; person = personnage; toggle tooltips use vanilla's "Lorsqu'activé, ... Lorsque désactivé, ..." (invariable masculine, elided); "born member" rendered with né/de naissance (own wording); ideoligion = idéoligion.

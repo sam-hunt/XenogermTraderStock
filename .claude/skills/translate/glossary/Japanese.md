@@ -46,13 +46,7 @@ English title's "Trader Stock" structure without appending any English.
 
 ## Phrasing decisions
 
-- **"naturalized" (member) — needs native review.** Not found anywhere in
-  the extracted Core/Biotech vanilla data (no `Naturalized`/naturalized hit
-  tree-wide). Rendered as 「帰化」("naturalization", the ordinary Japanese
-  word for a person being admitted to full membership of a group/country),
-  quoted with 「」 per the corpus's quoted-prose-term rule since it restates
-  the English's own single-quoted 'naturalized' as an explained term inside
-  descriptive prose, not a UI command. Flagged as an unlgrounded pick.
+- **"naturalized" (retired 2026-11-11):** the English no longer uses the term, so the earlier flagged rendering is gone from every file.
 - **"germline xenotypes"** rendered as 生殖系ゼノタイプ, composing the
   grounded 生殖系 (from Endogenes = 生殖系遺伝子) as an adjective on ゼノタイプ,
   since vanilla has no direct "germline xenotype" compound to copy.
@@ -94,3 +88,4 @@ English title's "Trader Stock" structure without appending any English.
   followed by a colon-joined clause; `GitHub[/url] - Source code...` →
   `GitHub[/url] - ` kept as literal ASCII ` - ` per the brief's explicit
   allowance to mirror that exact slot — see Verification below).
+- **2026-11-11 update pass (English reword f019544, machine-assisted, native review pending):** the English dropped its modder vocabulary ("endogenes", "pawn", "commonality", "trader kind", "rolled", "naturalized"), so this pass retranslated the 26 affected keys and the Workshop bullets. Decisions, superseding anything above: rarity = 希少度 (built from Core 希少); "kind of trader" = 各種類のトレーダー; person = 人/人物; ideoligion = 思想; toggle tooltips use 有効にすると,... 無効にすると,... (Core `SmoothCameraJumpsDesc`); ASCII `,` and `.` only, as everywhere else in the file.

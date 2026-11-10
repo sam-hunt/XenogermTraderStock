@@ -59,12 +59,7 @@ Short, searchable on either keyword, no English brand appended.
   following the same compounding pattern vanilla itself uses for
   `ArchiteMetabolism.label`=超凡代谢. Flagged for native review, though the
   compositional grounding is solid.
-- **"naturalized" (member)** — not found anywhere in the extracted Core or
-  Biotech Simplified Chinese data (Ideology-adjacent concept, but the
-  literal word never appears verbatim in either DLC's zh corpus). Rendered
-  as 归化 (the ordinary Chinese word for naturalized/citizenship-by-adoption),
-  set in curly quotes "归化" per the family's citation-quoting convention.
-  **Needs native review.**
+- **"naturalized" (retired 2026-11-11):** the English no longer uses the term, so the earlier flagged rendering is gone from every file.
 - **"ideology" (recognition)** — rendered as 文化 (bare noun, ideoligion),
   matching the family's Ideology DLC grounding (`ButtonShowAllIdeoligions`
   etc. use 文化); no dedicated Ideology vanilla data was pulled for this
@@ -97,3 +92,4 @@ Short, searchable on either keyword, no English brand appended.
   per-xenotype sold ledger and grid). "Custom xenotype" flagged as a
   compositional coinage (no single vanilla string); everything else is
   grounded 1:1 against the Biotech/Core zh tar.
+- **2026-11-11 update pass (English reword f019544, machine-assisted, native review pending):** the English dropped its modder vocabulary ("endogenes", "pawn", "commonality", "trader kind", "rolled", "naturalized"), so this pass retranslated the 26 affected keys and the Workshop bullets. Decisions, superseding anything above: rarity = 稀有度 (no vanilla label; replaces 常见度; section header 稀有度取决于价格); person = 人/这个人 (Biotech `ForceXenogermImplantationDesc`); toggle tooltips use 启用后，... 禁用后，...; avoid stacked 的 in the market-value tooltips.

@@ -58,12 +58,7 @@ and searchable on the mod's core nouns.
 
 ## Phrasing decisions
 
-- **"naturalized" (member) — ungrounded, needs native review.** No official
-  Russian rendering of this Biotech mechanic term (endogene-only xenotype
-  implanted via xenogerm) was found anywhere in the extracted Core or
-  Biotech data for this language. Rendered as «натурализованных» (guillemets
-  per the family's citation convention for a term-of-art) in both the Keyed
-  desc and the Workshop description. Flag for native review.
+- **"naturalized" (retired 2026-11-11):** the English no longer uses the term, so the earlier flagged rendering is gone from every file.
 - **"preset xenotype"** (this mod's own contrast against player-created
   custom xenotypes) rendered as "стандартный ксенотип" (standard xenotype)
   throughout the settings labels/descs and the Workshop description's
@@ -109,3 +104,4 @@ and searchable on the mod's core nouns.
   entirely ("Обычно игра..." / "the game normally...") rather than
   inventing a term. Flag for native review if a mod-family convention for
   "vanilla" emerges later.
+- **2026-11-11 update pass (English reword f019544, machine-assisted, native review pending):** the English dropped its modder vocabulary ("endogenes", "pawn", "commonality", "trader kind", "rolled", "naturalized"), so this pass retranslated the 26 affected keys and the Workshop bullets. Decisions, superseding anything above: rarity = редкость (ordinary Russian, no vanilla UI key); "kind of trader" = вид торговцев; person = поселенец (Core `Colonist`); toggle tooltips use «Если включено, ... Если выключено, ...»; `XTS_ImplantGermlineAsEndogenes` = «Ксеносемена наследуемых ксенотипов заменяют наследуемые гены» (inheritability belongs to the xenotype, not the germ).
