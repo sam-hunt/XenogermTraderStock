@@ -8,15 +8,15 @@ Este mod adiciona xenogerminadores completos de xenótipos predefinidos aos inve
 [hr][/hr]
 [h2]Comércio de Xenogerminadores[/h2]
 [list]
-[*]Comerciantes de produtos exóticos e assentamentos imperiais estocam xenogerminadores para xenótipos predefinidos, com xenótipos de mods detectados automaticamente
-[*]Xenogerminadores comprados atribuem a identidade do xenótipo na implantação, permitindo o reconhecimento pela ideologia
-[*]Ative os xenótipos de linha germinativa nas opções do mod para criar membros "naturalizados" de linha germinativa
-[*]Frequência configurável baseada no preço: xenogerminadores caros são mais raros por padrão, ou escolha uma escala diferente
-[*]Xenótipos de cenário do jogador recebem o mesmo tratamento que os predefinidos e também são incluídos no estoque dos comerciantes
+[*]Comerciantes de produtos exóticos e assentamentos imperiais estocam xenogerminadores para xenótipos predefinidos
+[*]Um xenogerminador comprado dá à pessoa aquele xenótipo, e as ideologias que preferem esse xenótipo passam a aceitá-lo
+[*]Os xenótipos de linha germinativa, como os diabretes, não são vendidos por padrão. Ative-os nas opções do mod para que a pessoa seja um membro nato, com filhos que herdam os genes
+[*]Os xenogerminadores caros são mais raros por padrão. A regra pode ser alterada nas opções do mod
+[*]Os xenótipos personalizados dos seus colonos iniciais também são vendidos
 [/list]
 
 [h2]Preços[/h2]
-Os preços dos xenogerminadores são configuráveis nas opções do mod, ou use os padrões:
+Os preços podem ser alterados nas opções do mod. Os padrões são:
 [list]
 [*]Pele de Porco, Diabrete, Cavaterra: 1.500~1.700 de prata
 [*]Hussardo, Starjack, Alto Companheiro: 1.700~2.000 de prata
@@ -32,13 +32,13 @@ Os preços dos xenogerminadores são configuráveis nas opções do mod, ou use 
 [*]O comerciante orbital [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2886375137]Gene Trader[/url] também estocará xenogerminadores
 [*]Detecta automaticamente xenótipos adicionados por outros mods
 [*]Xenótipos do [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2975771801]VRE Android[/url] são propositalmente excluídos
-[*]Xenogerminadores duplicados pelo [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3236303965]ReSplice: Core[/url] mantêm seu xenótipo na implantação
+[*]Xenogerminadores duplicados pelo [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3236303965]ReSplice: Core[/url] continuam sendo implantados com o xenótipo correto
 [/list]
 
 [hr][/hr]
 [h1]FAQ[/h1]
 [b]P: Preciso do DLC Biotech?[/b]
-R: Sim. Este mod usa diretamente o ThingDef de xenogerminador e o sistema de genes do Biotech.
+R: Sim. Este mod se baseia nos xenogerminadores e nos genes do Biotech.
 
 [b]P: Combat Extended?[/b]
 R: [noparse]ദ്ദി(ㆆ_ㆆꐦ)ദ്ദി[/noparse]

@@ -8,15 +8,15 @@ Ce mod ajoute des xénogermes complets pour les xénotypes prédéfinis aux stoc
 [hr][/hr]
 [h2]Commerce de xénogermes[/h2]
 [list]
-[*]Les vendeurs de produits exotiques et les bases impériales proposent des xénogermes pour les xénotypes prédéfinis ; les xénotypes ajoutés par d'autres mods sont détectés automatiquement
-[*]Les xénogermes achetés attribuent le vrai xénotype lors de l'implantation, permettant la reconnaissance par l'idéologie
-[*]Activez les xénotypes à gènes germinaux dans les paramètres du mod pour créer des membres "naturalisés" de la lignée germinale
-[*]Fréquence des xénotypes configurable selon le prix : les xénogermes coûteux sont plus rares par défaut, ou choisissez une autre pondération
-[*]Les xénotypes de scénario du joueur reçoivent le même traitement que les xénotypes prédéfinis et sont eux aussi inclus dans le stock des commerçants
+[*]Les vendeurs de produits exotiques et les bases impériales proposent des xénogermes pour les xénotypes prédéfinis
+[*]Un xénogerme acheté donne ce xénotype au personnage, qui sera donc accepté par une idéoligion qui le préfère
+[*]Les xénotypes à gènes germinaux, comme les diabloïdes, ne sont pas vendus par défaut. Activez-les dans les paramètres du mod pour faire d'un personnage un membre de naissance dont les enfants héritent des gènes
+[*]Les xénogermes coûteux sont plus rares par défaut. La règle peut être modifiée dans les paramètres du mod
+[*]Les xénotypes personnalisés de vos colons de départ sont aussi vendus
 [/list]
 
 [h2]Prix[/h2]
-Le prix des xénogermes est configurable dans les paramètres, ou utilisez les valeurs par défaut :
+Les prix peuvent être modifiés dans les paramètres du mod. Les valeurs par défaut sont :
 [list]
 [*]Homme-cochon, diabloïde, homme-taupe : de 1 500 à 1 700 pièces d'argent
 [*]Hussard, spaciens, psycharmeur : de 1 700 à 2 000 pièces d'argent
@@ -32,13 +32,13 @@ Le prix des xénogermes est configurable dans les paramètres, ou utilisez les v
 [*]Le commerçant orbital [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2886375137]Gene Trader[/url] proposera aussi des xénogermes
 [*]Détecte automatiquement les xénotypes ajoutés par d'autres mods
 [*]Les xénotypes de [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2975771801]VRE Android[/url] sont volontairement exclus
-[*]Les xénogermes dupliqués par [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3236303965]ReSplice: Core[/url] conservent leur xénotype lors de l'implantation
+[*]Les xénogermes dupliqués par [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3236303965]ReSplice: Core[/url] s'implantent toujours avec le bon xénotype
 [/list]
 
 [hr][/hr]
 [h1]FAQ[/h1]
 [b]Q : Ai-je besoin du DLC Biotech ?[/b]
-R : Oui. Ce mod utilise directement le ThingDef xénogerme et le système de gènes de Biotech.
+R : Oui. Ce mod s'appuie sur les xénogermes et les gènes de Biotech.
 
 [b]Q : Combat Extended ?[/b]
 R : [noparse]ദ്ദി(ㆆ_ㆆꐦ)ദ്ദി[/noparse]

@@ -8,15 +8,15 @@ Este mod añade xenogérmenes completos de xenotipos preestablecidos al inventar
 [hr][/hr]
 [h2]Comercio de xenogérmenes[/h2]
 [list]
-[*]Los comerciantes orbitales de productos exóticos y las colonias imperiales tienen xenogérmenes de xenotipos preestablecidos; los xenotipos añadidos por mods se detectan automáticamente
-[*]Los xenogérmenes comprados asignan el xenotipo real al implantarse, lo que permite el reconocimiento por parte de la ideoligión
-[*]Activa en los ajustes del mod los xenotipos de línea germinal para crear miembros "naturalizados"
-[*]Frecuencia configurable según el precio: por defecto, los xenogérmenes caros son más raros, o elige otra escala
-[*]Los xenotipos del escenario del jugador reciben el mismo trato que los preestablecidos, y también se incluyen en las existencias de los comerciantes
+[*]Los comerciantes orbitales de productos exóticos y los asentamientos imperiales tienen xenogérmenes de xenotipos preestablecidos
+[*]Un xenogermen comprado otorga ese xenotipo a la persona, así que una ideoligión que lo prefiera la aceptará
+[*]Los xenotipos de línea germinal, como los diablillos, no se venden por defecto. Actívalos en los ajustes del mod para que una persona los lleve en su línea germinal y sus hijos hereden los genes
+[*]Los xenogérmenes caros son más raros por defecto. La regla se puede cambiar en los ajustes del mod
+[*]También se venden los xenotipos personalizados de tus colonos iniciales
 [/list]
 
 [h2]Precios[/h2]
-Los precios de los xenogérmenes se pueden configurar en los ajustes, o usar los valores por defecto:
+Los precios se pueden cambiar en los ajustes del mod. Los valores por defecto son:
 [list]
 [*]Pielcerdo, diablillo, terra-topo: 1.500 a 1.700 de plata
 [*]Húsar, estelárido, súcubo: 1.700 a 2.000 de plata
@@ -32,13 +32,13 @@ Los precios de los xenogérmenes se pueden configurar en los ajustes, o usar los
 [*]El comerciante orbital de [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2886375137]Gene Trader[/url] también venderá xenogérmenes
 [*]Detecta automáticamente los xenotipos añadidos por otros mods
 [*]Los xenotipos de [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2975771801]VRE Android[/url] quedan excluidos intencionadamente
-[*]Los xenogérmenes duplicados por [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3236303965]ReSplice: Core[/url] conservan su xenotipo al implantarse
+[*]Los xenogérmenes duplicados por [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3236303965]ReSplice: Core[/url] siguen implantándose con el xenotipo correcto
 [/list]
 
 [hr][/hr]
 [h1]Preguntas frecuentes[/h1]
 [b]P: ¿Necesito el DLC Biotech?[/b]
-R: Sí. Este mod utiliza directamente el ThingDef de xenogermen de Biotech y su sistema de genes.
+R: Sí. Este mod se basa en los xenogérmenes y los genes de Biotech.
 
 [b]P: ¿Combat Extended?[/b]
 R: [noparse]ദ്ദി(ㆆ_ㆆꐦ)ദ്ദി[/noparse]
