@@ -3,7 +3,7 @@
   <name>Xenogerm Trader Stock</name>
   <author>Sam Hunt</author>
   <packageId>shunter.xenogermtraderstock</packageId>
-  <modVersion>1.2.0</modVersion>
+  <modVersion>1.2.1</modVersion>
   <description>Adds complete xenogerms for preset xenotypes to the stock of exotic goods traders, so you can buy a xenotype instead of collecting every gene yourself.
 
 An implanted xenogerm gives the person that xenotype, not a custom copy of it. Prices, stock sizes and the xenotypes for sale can be changed in the mod settings. Xenotypes added by other mods are included automatically.</description>
