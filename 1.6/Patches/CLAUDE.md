@@ -16,9 +16,12 @@ freely.
 - **Adding a reward or loot pool is XML only** (`Patches_Loot.xml`): add `ThingSetMaker_Xenogerms`
   as an option with its `channel`; the option's `weight` is that pool's shipped rarity at 100%
   commonality. Other mods rework these defs, so never select by position.
-- **`PatchOperationFindMod` matches display names, not packageIds:** a mod's `<name>`, or an
-  expansion's `ExpansionDef` label ("Royalty"). Wrap any patch whose target def exists only with
-  that mod or DLC, since an unmatched xpath is a patch error.
+- **Gate a DLC-only target with `PatchOperationConditional` on the target's own xpath, never
+  `PatchOperationFindMod`.** An unmatched xpath is a patch error, so the gate is needed, but
+  `FindMod` compares an expansion's `ExpansionDef` label, which is translated: after a mid-session
+  reload in a language that renames the DLC it silently stops matching. `FindMod` stays right for
+  third-party mods, whose `<name>` is never translated. `MayRequire` on an `<Operation>` is not
+  honoured.
 - **Gene opt-out:** a gene carrying `GeneExtension.excludeFromXenogermStock` bars every xenotype
   containing it, preset or custom, from stock. The snippet and the reasoning are in
   `Source/1.6/Xenotypes/GeneExtension.cs`; `Patches_VREAndroid.xml` is the shipped use, flagging

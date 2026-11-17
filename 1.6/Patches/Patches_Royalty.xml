@@ -4,14 +4,12 @@
        ultratech society is the one ground faction that plausibly keeps
        xenogerms on the shelf, so it ships at the orbital exotic trader's range.
        Trading there still needs the Trade Settlement permit, as vanilla
-       requires. Wrapped in FindMod because the def only exists with Royalty
-       active and an unmatched xpath is a patch error. FindMod matches mod
-       names; an expansion's is its ExpansionDef label ("Royalty" - its
-       About.xml carries no <name>), not its packageId. -->
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>Royalty</li>
-    </mods>
+       requires. Conditional on its own target because the def only exists with
+       Royalty active and an unmatched xpath is a patch error. Not
+       PatchOperationFindMod: that compares an expansion's translated label,
+       which stops matching on a mid-session reload in several languages. -->
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/TraderKindDef[defName="Base_Empire_Standard"]/stockGenerators</xpath>
     <match Class="PatchOperationAdd">
       <xpath>/Defs/TraderKindDef[defName="Base_Empire_Standard"]/stockGenerators</xpath>
       <value>
