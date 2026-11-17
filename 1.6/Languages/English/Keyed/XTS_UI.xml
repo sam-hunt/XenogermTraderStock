@@ -73,6 +73,23 @@
   <XTS_ImplantWarningBaseliner>This xenogerm will turn {PAWN_nameDef} back into a baseliner by removing all of {PAWN_possessive} germline genes.</XTS_ImplantWarningBaseliner>
   <XTS_ImplantWarningGermlineLost>{PAWN_pronoun} will lose the following germline genes:\n{GENES}</XTS_ImplantWarningGermlineLost>
 
+  <XTS_LootSection>Rewards and loot</XTS_LootSection>
+  <XTS_LootSectionDesc>Xenogerms can also be offered as quest rewards and found as loot. Both pick from the xenotypes that traders sell.</XTS_LootSectionDesc>
+  <!-- {0}: a percentage from 0 to 500 -->
+  <XTS_QuestRewardCommonality>Quest reward commonality: {0}%</XTS_QuestRewardCommonality>
+  <XTS_QuestRewardCommonalityDesc>How often quests will offer a xenogerm as a reward. At 0% they will never offer one.</XTS_QuestRewardCommonalityDesc>
+  <!-- {0}: the game's own name for a tech level, such as Industrial -->
+  <XTS_QuestRewardMinTech>Lowest tech level: {0}</XTS_QuestRewardMinTech>
+  <XTS_QuestRewardMinTechDesc>The lowest tech level a faction needs before its quests will offer xenogerms.</XTS_QuestRewardMinTechDesc>
+  <XTS_QuestRewardFactionless>Quests with no faction</XTS_QuestRewardFactionless>
+  <XTS_QuestRewardFactionlessDesc>When enabled, quests that come from no faction can also offer xenogerms. When disabled, only quests from a faction will offer them.</XTS_QuestRewardFactionlessDesc>
+  <!-- {0}: a percentage from 0 to 500 -->
+  <XTS_WorldLootCommonality>Loot commonality: {0}%</XTS_WorldLootCommonality>
+  <XTS_WorldLootCommonalityDesc>How often a xenogerm will turn up in ancient complexes, sealed crates and rusted safes. At 0% none will be found.</XTS_WorldLootCommonalityDesc>
+  <!-- {0}: a silver amount -->
+  <XTS_LootMaxValue>Highest loot value: {0}</XTS_LootMaxValue>
+  <XTS_LootMaxValueDesc>The highest market value a xenogerm found as loot can have. Xenotypes worth more than this will not turn up.</XTS_LootMaxValueDesc>
+
   <XTS_CommonalitySection>Xenotype rarity by price</XTS_CommonalitySection>
   <XTS_CommonalitySectionDesc>How the price of a xenogerm changes the chance that a trader will stock it.</XTS_CommonalitySectionDesc>
   <XTS_StrategyInversePrice>Inverse</XTS_StrategyInversePrice>

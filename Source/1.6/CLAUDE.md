@@ -5,7 +5,7 @@ mechanism; a pointer here says which header. Cross-cutting conventions (namespac
 errors, localization, logging) are in the root `CLAUDE.md`.
 
 One folder per concern: `Core/` (entry point, settings), `Comps/`, `Patches/`, `Stats/`,
-`Traders/`, `Xenotypes/`, `UI/`, `Debug/`.
+`Traders/`, `Loot/`, `Xenotypes/`, `UI/`, `Debug/`.
 
 ## Patching
 
@@ -73,6 +73,11 @@ tracker identity fields, `hybrid`, and which layer the genes sit on. Judge any c
   Categories are disjoint, and dormant ledger entries are never pruned.
 - **Trader germs are made only by `XenogermFactory`:** a fresh `Xenogerm`'s `geneSet` is null until
   `Initialize`, and the factory stamps the comp pricing depends on.
+- **`XenogermPool` is the one sellable list**, shared by trader stock and the loot set maker, so
+  both offer the same xenotypes at the same relative rarity. A new source of germs draws from it.
+- **Loot commonality is never written onto defs either.** `ThingSetMaker_Xenogerms` scales its XML
+  weight and drops out of the roll from live settings; its header covers the budget fit. Its
+  `CanGenerateSub` runs outside vanilla's exception guard, so nothing it reaches may throw.
 - **Counts are never written onto defs.** The per-trader settings override falls back to the
   generator's XML `countRange` at roll time, so changes need no restart
   (`Core/Settings/Settings_Quantities.cs`).

@@ -13,6 +13,9 @@ freely.
   Traders Guild, whose `baseTraderKinds` is empty. Better Traders Guild gives its settlements the
   *orbital* kinds in rotation, so the orbital rows already cover them; a settlement row there would
   need a faction-keyed override, not a def patch.
+- **Adding a reward or loot pool is XML only** (`Patches_Loot.xml`): add `ThingSetMaker_Xenogerms`
+  as an option with its `channel`; the option's `weight` is that pool's shipped rarity at 100%
+  commonality. Other mods rework these defs, so never select by position.
 - **`PatchOperationFindMod` matches display names, not packageIds:** a mod's `<name>`, or an
   expansion's `ExpansionDef` label ("Royalty"). Wrap any patch whose target def exists only with
   that mod or DLC, since an unmatched xpath is a patch error.

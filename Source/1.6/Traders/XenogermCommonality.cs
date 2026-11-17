@@ -67,6 +67,23 @@ namespace XenogermTraderStock
             return weights;
         }
 
+        // The pool's weights with every price outside [min, max] zeroed, for
+        // callers with a budget to fit. Weighted over the whole pool first, so
+        // the options that do fit keep the rarity they have at a trader.
+        public static float[] WeightsWithin(IReadOnlyList<float> prices, XenogermSelectionStrategy strategy,
+            float min, float max)
+        {
+            float[] weights = Weights(prices, strategy);
+            for (int i = 0; i < weights.Length; i++)
+            {
+                if (prices[i] < min || prices[i] > max)
+                {
+                    weights[i] = 0f;
+                }
+            }
+            return weights;
+        }
+
         // Prices are >= the base item value (20) in practice; the floor only
         // guards a modded zero from producing zero or infinite weights.
         private static float FloorPrice(float price)

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Xenogerms as quest rewards and world loot: ThingSetMaker_Xenogerms added
+       as one weighted option to vanilla pools that already carry genepacks.
+       Each weight here is that pool's SHIPPED rarity at 100% commonality; both
+       commonality settings ship at 0%, so nothing appears until a player turns
+       one up. The maker's header covers how it fits a budget and what its
+       channel gates.
+
+       Other mods rework these defs, so no xpath selects by position and each
+       names the class it expects to find. -->
+
+  <!-- Standard item rewards: quests, plus peace talks, item stashes and refugee
+       rewards, which roll the same def. Vanilla's weights in this list total
+       about 16, so 0.5 is roughly one item reward in thirty. The option with
+       maxMarketValue is the real reward list; its sibling is the gold and
+       plasteel filler. -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingSetMakerDef[defName="Reward_ItemsStandard"]/root/options/li[maxMarketValue]/thingSetMaker[@Class="ThingSetMaker_RandomOption"]/options</xpath>
+    <value>
+      <li>
+        <weight>0.5</weight>
+        <thingSetMaker Class="XenogermTraderStock.ThingSetMaker_Xenogerms">
+          <channel>QuestReward</channel>
+        </thingSetMaker>
+      </li>
+    </value>
+  </Operation>
+
+  <!-- Ancient complex loot rooms (Ideology). A genepack is 0.5 here; a whole
+       xenotype sits with the rarer finds. -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Ideology</li>
+    </mods>
+    <match Class="PatchOperationAdd">
+      <xpath>/Defs/ThingSetMakerDef[defName="MapGen_AncientComplexRoomLoot_Better"]/root[@Class="ThingSetMaker_RandomOption"]/options</xpath>
+      <value>
+        <li>
+          <weight>0.15</weight>
+          <thingSetMaker Class="XenogermTraderStock.ThingSetMaker_Xenogerms">
+            <channel>WorldLoot</channel>
+          </thingSetMaker>
+        </li>
+      </value>
+    </match>
+  </Operation>
+
+  <!-- Sealed crates and rusted safes (Odyssey). Each weight matches one entry
+       of the pool's own "misc high value" list, where the genepack sits. -->
+  <Operation Class="PatchOperationFindMod">
+    <mods>
+      <li>Odyssey</li>
+    </mods>
+    <match Class="PatchOperationSequence">
+      <operations>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingSetMakerDef[defName="MapGen_HighValueCrate"]/root[@Class="ThingSetMaker_RandomOption"]/options</xpath>
+          <value>
+            <li>
+              <weight>0.1</weight>
+              <thingSetMaker Class="XenogermTraderStock.ThingSetMaker_Xenogerms">
+                <channel>WorldLoot</channel>
+              </thingSetMaker>
+            </li>
+          </value>
+        </li>
+        <li Class="PatchOperationAdd">
+          <xpath>/Defs/ThingSetMakerDef[defName="Reward_AncientSafe"]/root[@Class="ThingSetMaker_RandomOption"]/options</xpath>
+          <value>
+            <li>
+              <weight>0.05</weight>
+              <thingSetMaker Class="XenogermTraderStock.ThingSetMaker_Xenogerms">
+                <channel>WorldLoot</channel>
+              </thingSetMaker>
+            </li>
+          </value>
+        </li>
+      </operations>
+    </match>
+  </Operation>
+</Patch>
