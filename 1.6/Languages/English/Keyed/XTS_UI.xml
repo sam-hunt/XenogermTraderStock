@@ -59,14 +59,14 @@
   <XTS_PreserveDeathrestCapacity>Keep deathrest capacity</XTS_PreserveDeathrestCapacity>
   <XTS_PreserveDeathrestCapacityDesc>When enabled, a person will keep the deathrest capacity gained from serums when a xenogerm is implanted, as long as they still have the deathrest gene. When disabled, their deathrest capacity will reset to one.</XTS_PreserveDeathrestCapacityDesc>
   <XTS_ImplantGermlineAsEndogenesDesc>When enabled, a xenogerm for a germline xenotype will replace the person's germline genes, and their children will inherit them. Their existing xenogenes will be kept. When disabled, the genes will be implanted as xenogenes and will overwrite the existing ones.</XTS_ImplantGermlineAsEndogenesDesc>
-  <XTS_MetabolismLimit>Metabolism limit</XTS_MetabolismLimit>
+  <XTS_MetabolismLimit>Metabolism limit applies to</XTS_MetabolismLimit>
   <!-- {0}: the lowest metabolic efficiency the game allows, a negative number -->
-  <XTS_MetabolismLimitDesc>A xenogerm cannot be implanted if the person's metabolic efficiency would fall below {0}. This sets which xenogerms the limit applies to.</XTS_MetabolismLimitDesc>
+  <XTS_MetabolismLimitDesc>A xenogerm cannot be implanted if the person's metabolic efficiency would fall below {0}. Choose which xenogerms this limit applies to.</XTS_MetabolismLimitDesc>
   <XTS_LimitAllXenogerms>All xenogerms</XTS_LimitAllXenogerms>
   <XTS_LimitAllXenogermsDesc>The limit applies to every xenogerm, as it does without this mod.</XTS_LimitAllXenogermsDesc>
   <XTS_LimitExceptKnown>All except preset and scenario xenotypes</XTS_LimitExceptKnown>
   <XTS_LimitExceptKnownDesc>Xenogerms for a preset or scenario xenotype, such as those sold by traders, can be implanted below the limit. Other xenogerms cannot.</XTS_LimitExceptKnownDesc>
-  <XTS_LimitOff>Off</XTS_LimitOff>
+  <XTS_LimitOff>No xenogerms</XTS_LimitOff>
   <XTS_LimitOffDesc>Any xenogerm can be implanted, no matter how low the person's metabolic efficiency will be.</XTS_LimitOffDesc>
   <!-- Paragraphs added to the game's implant confirmation. The first two stand alone; the third follows either one, separated by a space, and ends with a list of gene names. -->
   <XTS_ImplantWarningGermline>Additionally, this xenogerm will replace {PAWN_nameDef}'s germline genes, and {PAWN_possessive} children will inherit the new ones. Existing xenogenes will be kept.</XTS_ImplantWarningGermline>

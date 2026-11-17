@@ -63,11 +63,13 @@ namespace XenogermTraderStock
                 "XTS_ImplantGermlineAsEndogenes".Translate(),
                 ref implantGermlineAsEndogenes,
                 "XTS_ImplantGermlineAsEndogenesDesc".Translate());
+            listing.Gap(SettingGap);
 
             listing.CheckboxLabeled(
                 "XTS_PreserveDeathrestCapacity".Translate(),
                 ref preserveDeathrestCapacity,
                 "XTS_PreserveDeathrestCapacityDesc".Translate());
+            listing.Gap(SettingGap);
 
             listing.Label(
                 "XTS_MetabolismLimit".Translate(),

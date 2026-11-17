@@ -34,6 +34,10 @@ namespace XenogermTraderStock
         // its neighbours.
         private const float SectionGap = 18f;
 
+        // Extra space between two settings stacked as bare text rows, so they
+        // read as separate. Not used inside a setting (radio rows).
+        private const float SettingGap = 6f;
+
         // Presentation state for the scroll view, deliberately not scribed.
         private Vector2 scrollPosition;
         private float contentHeight;
