@@ -14,7 +14,7 @@ namespace XenogermTraderStock
         Uniform,          // every sellable option equally likely
     }
 
-    // Pure weight math feeding StockGenerator_Xenogerms' RandomElementByWeight.
+    // Pure weight math feeding the pool's RandomElementByWeight (XenogermPool).
     // Headless-testable, so System.Math only, no game state. Every strategy is
     // stateless by design: weights depend only on the pool's prices, never on
     // earlier picks, so repeated draws stay independent (no round-robin or
