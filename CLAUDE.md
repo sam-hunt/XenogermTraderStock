@@ -106,6 +106,8 @@ Owning files; their headers and `Source/1.6/CLAUDE.md` carry the rules.
 - **Metabolism pre-check** (`Patches/GeneUtility_MetabolismAfterImplanting_Patch.cs`): vanilla's
   implant refusal and confirmation read the metabolism a germline retarget will really leave; a
   setting chooses which xenogerms the limit still refuses.
+- **Implant confirmation** (`Patches/Xenogerm_SetTargetPawn_Patch.cs`): the dialog says when the
+  germline will be replaced and which germline genes will be lost.
 - **Deathrest-capacity carryover** (`Patches/DeathrestCapacityCarryover.cs`): any implant or
   reimplant, not only trader germs.
 - **Ideology preferred-xenotype gate** (`Patches/Xenogerm_PawnIdeoDisallowsImplanting_Patch.cs`,

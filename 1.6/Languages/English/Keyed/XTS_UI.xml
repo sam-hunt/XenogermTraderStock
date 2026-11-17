@@ -68,6 +68,10 @@
   <XTS_LimitExceptKnownDesc>Xenogerms for a preset or scenario xenotype, such as those sold by traders, can be implanted below the limit. Other xenogerms cannot.</XTS_LimitExceptKnownDesc>
   <XTS_LimitOff>Off</XTS_LimitOff>
   <XTS_LimitOffDesc>Any xenogerm can be implanted, no matter how low the person's metabolic efficiency will be.</XTS_LimitOffDesc>
+  <!-- Paragraphs added to the game's implant confirmation. The first two stand alone; the third follows either one, separated by a space, and ends with a list of gene names. -->
+  <XTS_ImplantWarningGermline>Additionally, this xenogerm will replace {PAWN_nameDef}'s germline genes, and {PAWN_possessive} children will inherit the new ones. Existing xenogenes will be kept.</XTS_ImplantWarningGermline>
+  <XTS_ImplantWarningBaseliner>This xenogerm will turn {PAWN_nameDef} back into a baseliner by removing all of {PAWN_possessive} germline genes.</XTS_ImplantWarningBaseliner>
+  <XTS_ImplantWarningGermlineLost>{PAWN_pronoun} will lose the following germline genes:\n{GENES}</XTS_ImplantWarningGermlineLost>
 
   <XTS_CommonalitySection>Xenotype rarity by price</XTS_CommonalitySection>
   <XTS_CommonalitySectionDesc>How the price of a xenogerm changes the chance that a trader will stock it.</XTS_CommonalitySectionDesc>

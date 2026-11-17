@@ -34,9 +34,6 @@ namespace XenogermTraderStock.Patches
     //
     // Dropped: inferring identity from the gene set alone. It ignores the comp,
     // so the prediction could name a different xenotype than the implant stamps.
-    //
-    // Not covered: the confirmation's "will overwrite xenogenes" paragraph still
-    // lists xenogenes a rewrite keeps.
     [HarmonyPatch(typeof(GeneUtility), nameof(GeneUtility.MetabolismAfterImplanting))]
     public static class GeneUtility_MetabolismAfterImplanting_Patch
     {
