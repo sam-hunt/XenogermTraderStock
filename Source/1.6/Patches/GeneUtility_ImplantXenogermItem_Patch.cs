@@ -198,8 +198,7 @@ namespace XenogermTraderStock.Patches
             // be relabeled Baseliner while keeping every Impid germline gene.
             // The prefix never snapshots for Baseliner either: the conversion
             // wipes both layers, so a Hussar comes out a plain baseliner.
-            bool retarget = WillRetargetGermline(pawn, source)
-                || (source.Preset == XenotypeDefOf.Baseliner && GermlineIsRewritable(pawn));
+            bool retarget = WillRetargetGermline(pawn, source) || IsBaselinerConversion(pawn, source);
 
             // Both branches mirror GeneUtility.ReimplantXenogerm's field handling: set the
             // xenotype, then assign the remaining identity fields explicitly (SetXenotypeDirect
@@ -261,6 +260,13 @@ namespace XenogermTraderStock.Patches
             return source.Inheritable
                 && XenogermTraderStockMod.Settings.implantGermlineAsEndogenes
                 && GermlineIsRewritable(pawn);
+        }
+
+        // The Baseliner germ's rewrite, which ignores the setting (see the postfix).
+        // Shared with the metabolism prediction.
+        public static bool IsBaselinerConversion(Pawn pawn, XenogermSource source)
+        {
+            return source.Preset == XenotypeDefOf.Baseliner && GermlineIsRewritable(pawn);
         }
 
         // Never rewrite the germline of a pawn whose endogenes include a gene opted

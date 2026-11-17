@@ -38,12 +38,16 @@ tracker identity fields, `hybrid`, and which layer the genes sit on. Judge any c
   on-load migration stamping comps onto matching germs (identity already resolves without one, and
   it would turn every duplicate into trader-priced stock), and patching the duplicator itself (a
   foreign-target patch that fixes nothing already sitting in saves).
-- **`WillRetargetGermline` is the one retarget decision**, shared by the implant prefix, postfix
-  and `PreferredXenotypeGate`. A new condition goes there, or the gate and the stamp disagree.
+- **`WillRetargetGermline` is the one retarget decision**, shared by the implant prefix, postfix,
+  `PreferredXenotypeGate` and the metabolism prediction. A new condition goes there, or the gates
+  and the stamp disagree.
   `Inheritable`, not the source kind, decides it; `implantGermlineAsEndogenes` is deliberately
   independent of the sold ledger (it acts on items the player already owns).
 - **`GeneLayerRebuild.Apply` is the only writer of a whole gene layer** (retarget and the dev reset
   tool). It replaces, never merges, and its step order is load-bearing (header).
+- **`GeneLayerRebuild.Predict` is `Apply`'s dry run**, read by the metabolism pre-check
+  (`Patches/GeneUtility_MetabolismAfterImplanting_Patch.cs`). Change what `Apply` leaves on either
+  layer and `Predict` changes with it, or implants are refused or allowed on a wrong number.
 - **Identity follows the layer that owned it:** a xenogene-keyed identity whose xenogenes survive a
   retarget is restored, not stamped over (implant patch header).
 - **Baseliner** is the one gene-less candidate: it gates as inheritable (`GatesAsInheritable`),

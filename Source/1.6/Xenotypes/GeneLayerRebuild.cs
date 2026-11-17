@@ -32,8 +32,34 @@ namespace XenogermTraderStock
     // the pawn is no longer a germline hybrid. The flag is read for gene
     // inheritance (PregnancyUtility treats a hybrid germline as inheritable) and
     // by the CustomXenotype matcher, so leaving it stale has real effects.
+    //
+    // Predict returns the layers Apply would leave, for the metabolism pre-check.
+    // Change the two together. It skips the colour backfill: colour genes cost
+    // no metabolism.
     public static class GeneLayerRebuild
     {
+        public static List<GeneDefWithType> Predict(List<GeneDef> endogenes, List<GeneDef> xenogenes)
+        {
+            var layers = new List<GeneDefWithType>((endogenes?.Count ?? 0) + (xenogenes?.Count ?? 0));
+            if (endogenes != null)
+            {
+                foreach (GeneDef gene in endogenes)
+                {
+                    layers.Add(new GeneDefWithType(gene, xenogene: false));
+                }
+            }
+
+            if (xenogenes != null)
+            {
+                foreach (GeneDef gene in xenogenes)
+                {
+                    layers.Add(new GeneDefWithType(gene, xenogene: true));
+                }
+            }
+
+            return layers;
+        }
+
         public static void Apply(Pawn_GeneTracker genes, List<GeneDef> endogenes, List<GeneDef> xenogenes)
         {
             genes.ClearXenogenes();
