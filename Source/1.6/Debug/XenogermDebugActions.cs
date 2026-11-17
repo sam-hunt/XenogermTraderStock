@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using LudeonTK;
 using RimWorld;
 using Verse;
@@ -162,6 +163,66 @@ namespace XenogermTraderStock
             Messages.Message(pawn.LabelShortCap + ": genes reset to " + custom.name.CapitalizeFirst()
                 + (custom.inheritable ? " (germline)." : " (xenogenes)."),
                 pawn, MessageTypeDefOf.TaskCompletion, historical: false);
+        }
+
+        // Rolls each pool Patches_Loot.xml adds a germ to and logs how many
+        // rolls held a xenogerm and how many a genepack, at the current
+        // commonality settings. At 100% the two should match. Quest rewards
+        // are the pool to watch: a genepack's weight there is an estimate
+        // (XenogermLootRules.GenepackShare). The reward pool is rolled with no
+        // giver on a mid-size budget.
+        [DebugAction("Xenogerm Trader Stock", "Log reward and loot odds", false, false, true, false, false, 0, false,
+            allowedGameStates = AllowedGameStates.PlayingOnMap)]
+        private static void LogLootOdds()
+        {
+            const int rolls = 10000;
+            const float rewardValue = 2000f;
+            string[] poolDefNames =
+            {
+                "Reward_ItemsStandard",
+                "MapGen_AncientComplexRoomLoot_Better",
+                "MapGen_HighValueCrate",
+                "Reward_AncientSafe",
+            };
+
+            var report = new StringBuilder("[Xenogerm Trader Stock] Rolls holding a xenogerm and a genepack, out of "
+                + rolls + ":");
+            foreach (string defName in poolDefNames)
+            {
+                ThingSetMakerDef def = DefDatabase<ThingSetMakerDef>.GetNamedSilentFail(defName);
+                if (def == null)
+                {
+                    continue;
+                }
+
+                ThingSetMakerParams parms = default;
+                if (def == ThingSetMakerDefOf.Reward_ItemsStandard)
+                {
+                    parms.totalMarketValueRange = new FloatRange(0.7f, 1.3f) * rewardValue;
+                }
+
+                int germs = 0;
+                int genepacks = 0;
+                for (int i = 0; i < rolls; i++)
+                {
+                    List<Thing> things = def.root.Generate(parms);
+                    if (things.Any(t => t.def == ThingDefOf.Xenogerm))
+                    {
+                        germs++;
+                    }
+                    if (things.Any(t => t.def == ThingDefOf.Genepack))
+                    {
+                        genepacks++;
+                    }
+                    foreach (Thing thing in things)
+                    {
+                        thing.Destroy();
+                    }
+                }
+                report.AppendLine().Append(defName).Append(": xenogerm ").Append(germs)
+                    .Append(", genepack ").Append(genepacks);
+            }
+            Log.Message(report.ToString());
         }
 
         private static void PlaceAtMouseCell(Thing thing)

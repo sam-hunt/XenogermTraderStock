@@ -75,9 +75,10 @@ tracker identity fields, `hybrid`, and which layer the genes sit on. Judge any c
   `Initialize`, and the factory stamps the comp pricing depends on.
 - **`XenogermPool` is the one sellable list**, shared by trader stock and the loot set maker, so
   both offer the same xenotypes at the same relative rarity. A new source of germs draws from it.
-- **Loot commonality is never written onto defs either.** `ThingSetMaker_Xenogerms` scales its XML
-  weight and drops out of the roll from live settings; its header covers the budget fit. Its
-  `CanGenerateSub` runs outside vanilla's exception guard, so nothing it reaches may throw.
+- **Loot commonality is never written onto defs either.** `ThingSetMaker_Xenogerms` weighs itself
+  as a genepack in the same pool times the live setting, and drops out of the roll when that is
+  zero; its header covers the weight and the budget fit. Its `CanGenerateSub` runs outside
+  vanilla's exception guard, so nothing it reaches may throw.
 - **Counts are never written onto defs.** The per-trader settings override falls back to the
   generator's XML `countRange` at roll time, so changes need no restart
   (`Core/Settings/Settings_Quantities.cs`).

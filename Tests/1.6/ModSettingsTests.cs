@@ -26,10 +26,7 @@ namespace XenogermTraderStock.Tests
             Assert.Equal(XenogermTraderStockSettings.DefaultValuePerArchite, settings.valuePerArchite);
             Assert.Equal(XenogermTraderStockSettings.DefaultSelectionStrategy, settings.selectionStrategy);
             Assert.Equal(XenogermTraderStockSettings.DefaultQuestRewardCommonality, settings.questRewardCommonality);
-            Assert.Equal(XenogermTraderStockSettings.DefaultQuestRewardMinTechLevel, settings.questRewardMinTechLevel);
-            Assert.Equal(XenogermTraderStockSettings.DefaultQuestRewardAllowFactionless, settings.questRewardAllowFactionless);
             Assert.Equal(XenogermTraderStockSettings.DefaultWorldLootCommonality, settings.worldLootCommonality);
-            Assert.Equal(XenogermTraderStockSettings.DefaultLootMaxValue, settings.lootMaxValue);
         }
 
         [Fact]
@@ -46,10 +43,7 @@ namespace XenogermTraderStock.Tests
                 valuePerArchite = XenogermTraderStockSettings.DefaultValuePerArchite + 50f,
                 selectionStrategy = XenogermSelectionStrategy.Uniform,
                 questRewardCommonality = 100f,
-                questRewardMinTechLevel = RimWorld.TechLevel.Ultra,
-                questRewardAllowFactionless = !XenogermTraderStockSettings.DefaultQuestRewardAllowFactionless,
                 worldLootCommonality = 100f,
-                lootMaxValue = XenogermTraderStockSettings.DefaultLootMaxValue + 500f,
             };
 
             settings.ResetToDefaults();
@@ -63,10 +57,7 @@ namespace XenogermTraderStock.Tests
             Assert.Equal(XenogermTraderStockSettings.DefaultValuePerArchite, settings.valuePerArchite);
             Assert.Equal(XenogermTraderStockSettings.DefaultSelectionStrategy, settings.selectionStrategy);
             Assert.Equal(XenogermTraderStockSettings.DefaultQuestRewardCommonality, settings.questRewardCommonality);
-            Assert.Equal(XenogermTraderStockSettings.DefaultQuestRewardMinTechLevel, settings.questRewardMinTechLevel);
-            Assert.Equal(XenogermTraderStockSettings.DefaultQuestRewardAllowFactionless, settings.questRewardAllowFactionless);
             Assert.Equal(XenogermTraderStockSettings.DefaultWorldLootCommonality, settings.worldLootCommonality);
-            Assert.Equal(XenogermTraderStockSettings.DefaultLootMaxValue, settings.lootMaxValue);
         }
 
         [Fact]

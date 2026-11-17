@@ -14,8 +14,9 @@ freely.
   *orbital* kinds in rotation, so the orbital rows already cover them; a settlement row there would
   need a faction-keyed override, not a def patch.
 - **Adding a reward or loot pool is XML only** (`Patches_Loot.xml`): add `ThingSetMaker_Xenogerms`
-  as an option with its `channel`; the option's `weight` is that pool's shipped rarity at 100%
-  commonality. Other mods rework these defs, so never select by position.
+  as an option with its `channel` and a placeholder `weight` of 1. The maker takes its real weight
+  from the genepack options beside it, so it belongs only in a `ThingSetMaker_RandomOption` that
+  already offers genepacks. Other mods rework these defs, so never select by position.
 - **Gate a DLC-only target with `PatchOperationConditional` on the target's own xpath, never
   `PatchOperationFindMod`.** An unmatched xpath is a patch error, so the gate is needed, but
   `FindMod` compares an expansion's `ExpansionDef` label, which is translated: after a mid-session

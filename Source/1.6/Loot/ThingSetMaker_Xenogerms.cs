@@ -9,29 +9,55 @@ namespace XenogermTraderStock
     // plan on the def's value (20 silver) and build the item with a bare
     // MakeThing, which leaves a xenogerm without genes.
     //
-    // Everything is read live from settings, nothing is written onto the def:
-    // the commonality slider scales the option's XML weight through
-    // ExtraSelectionWeightFactor, and CanGenerateSub drops the option out of
+    // The option is as likely as a genepack at 100% commonality. Its XML weight
+    // is a placeholder; ExtraSelectionWeightFactor supplies the weight a
+    // genepack has in the same pool (XenogermLootRules.GenepackShare over the
+    // sibling options) times the commonality setting. So the rate follows the
+    // DLC mix and any mod that reworks the pool, and a pool that offers no
+    // genepack offers no germ.
+    //
+    // That weight is state on a def instance, so it is resolved on first use
+    // rather than at startup: a play-data reload builds new makers.
+    //
+    // Nothing is written onto the def. CanGenerateSub drops the option out of
     // the roll when the channel is off, the giver is refused or no sellable
     // xenotype fits the price band. The band keeps the germ inside the budget
-    // the caller passes, and the parent measures the finished germ at its real
-    // market value, so the rest of a quest reward is balanced around it.
+    // the caller passes. A quest reward is then measured at the germ's real
+    // market value, and RewardsGenerator makes up a shortfall with filler
+    // items or the social half of the reward.
     //
     // CanGenerateSub runs outside vanilla's exception guard, so it must not
     // throw.
     //
-    // Reward_ItemsStandard is also rolled for peace talks, item stashes and
-    // refugee rewards. Those pass no giver, so the factionless toggle decides
-    // them, and where a caller passes no budget the loot value ceiling applies.
+    // Reward_ItemsStandard is also rolled for peace talks, refugee rewards and
+    // item stashes. The first two pass their faction and meet the tech floor
+    // like a quest giver; a stash passes none and is always allowed. A caller
+    // that passes no budget gets the unbudgeted value ceiling.
     public class ThingSetMaker_Xenogerms : ThingSetMaker
     {
         public XenogermLootChannel channel;
 
+        private float? genepackWeight;
+
         private static XenogermTraderStockSettings Settings => XenogermTraderStockMod.Settings;
+
+        private float SelectionWeight
+        {
+            get
+            {
+                if (!genepackWeight.HasValue)
+                {
+                    ResolveGenepackWeights();
+                    // Still unset means no random-option pool holds this maker.
+                    genepackWeight = genepackWeight ?? 0f;
+                }
+                return genepackWeight.Value * Settings.LootCommonalityFactor(channel);
+            }
+        }
 
         public override float ExtraSelectionWeightFactor(ThingSetMakerParams parms)
         {
-            return Settings.LootCommonalityFactor(channel);
+            return SelectionWeight;
         }
 
         protected override bool CanGenerateSub(ThingSetMakerParams parms)
@@ -57,8 +83,7 @@ namespace XenogermTraderStock
             pool = null;
             weights = null;
 
-            XenogermTraderStockSettings settings = Settings;
-            if (settings.LootCommonalityFactor(channel) <= 0f)
+            if (Settings.LootCommonalityFactor(channel) <= 0f || SelectionWeight <= 0f)
             {
                 return false;
             }
@@ -72,9 +97,7 @@ namespace XenogermTraderStock
                 return false;
             }
 
-            if (channel == XenogermLootChannel.QuestReward
-                && !XenogermLootRules.GiverAllowed(GiverTechLevel(parms),
-                    settings.questRewardMinTechLevel, settings.questRewardAllowFactionless))
+            if (channel == XenogermLootChannel.QuestReward && !XenogermLootRules.GiverAllowed(GiverTechLevel(parms)))
             {
                 return false;
             }
@@ -82,11 +105,11 @@ namespace XenogermTraderStock
             float? budgetMax = parms.totalMarketValueRange?.max;
             bool capped = channel == XenogermLootChannel.WorldLoot || !budgetMax.HasValue;
             XenogermLootRules.PriceBand(budgetMax, parms.minSingleItemMarketValuePct, parms.maxThingMarketValue,
-                capped ? settings.lootMaxValue : (float?)null, out float min, out float max);
+                capped ? XenogermLootRules.MaxUnbudgetedValue : (float?)null, out float min, out float max);
 
             pool = XenogermPool.Sellable();
             weights = XenogermCommonality.WeightsWithin(XenogermPool.Prices(pool),
-                settings.selectionStrategy, min, max);
+                Settings.selectionStrategy, min, max);
             for (int i = 0; i < weights.Length; i++)
             {
                 if (weights[i] > 0f)
@@ -102,6 +125,69 @@ namespace XenogermTraderStock
         {
             TechLevel? level = parms.techLevel ?? parms.makingFaction?.def?.techLevel;
             return level == TechLevel.Undefined ? null : level;
+        }
+
+        // Walks every set maker def for the pools that hold one of these makers
+        // and gives each its genepack weight. One pass serves every maker, so a
+        // load pays for it once.
+        private static void ResolveGenepackWeights()
+        {
+            foreach (ThingSetMakerDef def in DefDatabase<ThingSetMakerDef>.AllDefsListForReading)
+            {
+                Visit(def.root, def);
+            }
+        }
+
+        private static void Visit(ThingSetMaker maker, ThingSetMakerDef def)
+        {
+            if (maker is ThingSetMaker_RandomOption pool && pool.options != null)
+            {
+                foreach (ThingSetMaker_RandomOption.Option option in pool.options)
+                {
+                    if (option.thingSetMaker is ThingSetMaker_Xenogerms germs)
+                    {
+                        germs.genepackWeight = GenepackWeightIn(pool);
+                        if (germs.genepackWeight <= 0f)
+                        {
+                            Log.Message("[Xenogerm Trader Stock] " + def.defName
+                                + " offers no genepack, so no xenogerm will appear in it.");
+                        }
+                    }
+                    else
+                    {
+                        Visit(option.thingSetMaker, def);
+                    }
+                }
+            }
+            else if (maker is ThingSetMaker_Sum sum && sum.options != null)
+            {
+                foreach (ThingSetMaker_Sum.Option option in sum.options)
+                {
+                    Visit(option.thingSetMaker, def);
+                }
+            }
+            else if (maker is ThingSetMaker_Conditional conditional)
+            {
+                Visit(conditional.thingSetMaker, def);
+            }
+        }
+
+        // Reads only each sibling's own filter, which every vanilla maker that
+        // picks a genepack carries, so nothing here depends on a running game.
+        private static float GenepackWeightIn(ThingSetMaker_RandomOption pool)
+        {
+            ThingDef genepack = ThingDefOf.Genepack;
+            float total = 0f;
+            foreach (ThingSetMaker_RandomOption.Option option in pool.options)
+            {
+                ThingFilter filter = option.thingSetMaker?.fixedParams.filter;
+                if (filter != null && genepack != null)
+                {
+                    total += XenogermLootRules.GenepackShare(option.weight, filter.AllowedDefCount,
+                        filter.Allows(genepack));
+                }
+            }
+            return total;
         }
     }
 }

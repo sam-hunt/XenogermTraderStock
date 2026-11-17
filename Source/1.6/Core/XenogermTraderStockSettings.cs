@@ -134,13 +134,22 @@ namespace XenogermTraderStock
         // tooltip. Returns the slider value snapped to `step` measured from `min`.
         // Both comparisons are Mathf.Approximately rather than ==, because
         // step-snapping doesn't always reproduce the exact default float.
+        //
+        // markAt and markKey name another value as a reference point, for a
+        // setting whose number means nothing on its own. The two suffixes are
+        // independent, so a value that is both shows both.
         private static float SliderRow(Listing_Standard listing, string labelKey, string descKey,
-            float value, float defaultValue, float min, float max, float step)
+            float value, float defaultValue, float min, float max, float step,
+            float? markAt = null, string markKey = null)
         {
             string label = labelKey.Translate(value.ToString("F0"));
             if (Mathf.Approximately(value, defaultValue))
             {
                 label += "XTS_DefaultSuffix".Translate();
+            }
+            if (markAt.HasValue && markKey != null && Mathf.Approximately(value, markAt.Value))
+            {
+                label += markKey.Translate();
             }
             listing.Label(label, tooltip: descKey.Translate());
             return Mathf.Round((listing.Slider(value, min, max) - min) / step) * step + min;

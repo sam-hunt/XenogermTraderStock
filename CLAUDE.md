@@ -97,8 +97,9 @@ Owning files; their headers and `Source/1.6/CLAUDE.md` carry the rules.
 - **Trader stock** (`Traders/StockGenerator_Xenogerms.cs`, injected by `1.6/Patches/`): weighted
   picks from the sellable pool, per-trader counts overridable in settings.
 - **Quest rewards and world loot** (`Loot/ThingSetMaker_Xenogerms.cs`, injected by
-  `1.6/Patches/Patches_Loot.xml`): one germ as a weighted option in vanilla reward and loot pools,
-  off until its commonality setting is raised; quest givers gated by faction tech level.
+  `1.6/Patches/Patches_Loot.xml`): one germ as an option in vanilla reward and loot pools, off
+  until its commonality setting is raised and as likely as a genepack at 100%; quest givers gated
+  by faction tech level.
 - **What is sellable** (`Xenotypes/XenotypeEligibility.cs`): candidacy, categories and the
   per-xenotype sold ledger behind the settings grid (`UI/XenotypeGridUI.cs`).
 - **Implant identity** (`Patches/GeneUtility_ImplantXenogermItem_Patch.cs`,

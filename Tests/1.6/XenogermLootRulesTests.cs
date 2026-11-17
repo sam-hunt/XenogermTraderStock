@@ -4,8 +4,9 @@ using Xunit;
 namespace XenogermTraderStock.Tests
 {
     // The loot set maker's pure decisions: which quest givers may offer a
-    // xenogerm, which price band a germ must fit, which pool entries survive
-    // that band, and how the commonality settings become a weight factor.
+    // xenogerm, what a genepack weighs in a pool, which price band a germ must
+    // fit, which pool entries survive that band, and how the commonality
+    // settings become a weight factor.
     public class XenogermLootRulesTests
     {
         [Theory]
@@ -15,21 +16,34 @@ namespace XenogermTraderStock.Tests
         [InlineData(TechLevel.Ultra, true)]
         public void GiverAllowed_FactionMustReachTheFloor(TechLevel giver, bool expected)
         {
-            Assert.Equal(expected, XenogermLootRules.GiverAllowed(giver, TechLevel.Industrial, allowFactionless: false));
-        }
-
-        [Theory]
-        [InlineData(true)]
-        [InlineData(false)]
-        public void GiverAllowed_NoFactionFollowsTheToggle(bool allowFactionless)
-        {
-            Assert.Equal(allowFactionless, XenogermLootRules.GiverAllowed(null, TechLevel.Ultra, allowFactionless));
+            Assert.Equal(expected, XenogermLootRules.GiverAllowed(giver));
         }
 
         [Fact]
-        public void GiverAllowed_ToggleDoesNotAdmitALowTechFaction()
+        public void GiverAllowed_NoFactionIsAllowed()
         {
-            Assert.False(XenogermLootRules.GiverAllowed(TechLevel.Neolithic, TechLevel.Industrial, allowFactionless: true));
+            Assert.True(XenogermLootRules.GiverAllowed(null));
+        }
+
+        [Fact]
+        public void GenepackShare_OwnOptionKeepsItsWholeWeight()
+        {
+            Assert.Equal(0.5f, XenogermLootRules.GenepackShare(0.5f, 1, offersGenepack: true));
+        }
+
+        [Fact]
+        public void GenepackShare_SharedOptionSplitsEvenlyAcrossItsDefs()
+        {
+            Assert.Equal(0.08f, XenogermLootRules.GenepackShare(2f, 25, offersGenepack: true), 5);
+        }
+
+        [Theory]
+        [InlineData(2f, 25, false)]
+        [InlineData(2f, 0, true)]
+        [InlineData(0f, 25, true)]
+        public void GenepackShare_NothingWithoutAGenepackDefsOrWeight(float weight, int defCount, bool offersGenepack)
+        {
+            Assert.Equal(0f, XenogermLootRules.GenepackShare(weight, defCount, offersGenepack));
         }
 
         [Fact]
