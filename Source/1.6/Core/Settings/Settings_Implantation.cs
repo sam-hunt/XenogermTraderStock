@@ -1,7 +1,17 @@
+using RimWorld;
 using Verse;
 
 namespace XenogermTraderStock
 {
+    // Which xenogerms vanilla's metabolism floor still refuses at order time.
+    // Scribed by name, so renaming a member resets the setting.
+    public enum MetabolismLimitScope
+    {
+        AllXenogerms,
+        ExceptKnownXenotypes,
+        NoXenogerms,
+    }
+
     // "Implantation" settings section: how trader-sold xenogerms behave when
     // implanted (the GeneUtility.ImplantXenogermItem postfix reads it).
     public partial class XenogermTraderStockSettings
@@ -25,16 +35,24 @@ namespace XenogermTraderStock
         public const bool DefaultPreserveDeathrestCapacity = true;
         public bool preserveDeathrestCapacity = DefaultPreserveDeathrestCapacity;
 
+        // Vanilla refuses an implant that would end below its metabolism floor,
+        // though preset xenotypes may ship below it and hunger stops growing there.
+        // The middle option exempts germs XenogermIdentity resolves to a xenotype.
+        public const MetabolismLimitScope DefaultMetabolismLimitScope = MetabolismLimitScope.AllXenogerms;
+        public MetabolismLimitScope metabolismLimitScope = DefaultMetabolismLimitScope;
+
         private void ExposeImplantationSettings()
         {
             Scribe_Values.Look(ref implantGermlineAsEndogenes, "implantGermlineAsEndogenes", DefaultImplantGermlineAsEndogenes);
             Scribe_Values.Look(ref preserveDeathrestCapacity, "preserveDeathrestCapacity", DefaultPreserveDeathrestCapacity);
+            Scribe_Values.Look(ref metabolismLimitScope, "metabolismLimitScope", DefaultMetabolismLimitScope);
         }
 
         private void ResetImplantationSettings()
         {
             implantGermlineAsEndogenes = DefaultImplantGermlineAsEndogenes;
             preserveDeathrestCapacity = DefaultPreserveDeathrestCapacity;
+            metabolismLimitScope = DefaultMetabolismLimitScope;
         }
 
         private void DrawImplantationSection(Listing_Standard listing)
@@ -51,7 +69,35 @@ namespace XenogermTraderStock
                 ref preserveDeathrestCapacity,
                 "XTS_PreserveDeathrestCapacityDesc".Translate());
 
+            listing.Label(
+                "XTS_MetabolismLimit".Translate(),
+                tooltip: "XTS_MetabolismLimitDesc".Translate(GeneTuning.BiostatRange.TrueMin));
+            LimitScopeRadio(listing, MetabolismLimitScope.AllXenogerms,
+                "XTS_LimitAllXenogerms", "XTS_LimitAllXenogermsDesc");
+            LimitScopeRadio(listing, MetabolismLimitScope.ExceptKnownXenotypes,
+                "XTS_LimitExceptKnown", "XTS_LimitExceptKnownDesc");
+            LimitScopeRadio(listing, MetabolismLimitScope.NoXenogerms,
+                "XTS_LimitOff", "XTS_LimitOffDesc");
+
             listing.Gap(SectionGap);
+        }
+
+        // Same row style as the commonality section's StrategyRadio, indented
+        // under the group's label.
+        private void LimitScopeRadio(Listing_Standard listing, MetabolismLimitScope scope,
+            string labelKey, string descKey)
+        {
+            const float indent = 12f;
+
+            string label = labelKey.Translate();
+            if (scope == DefaultMetabolismLimitScope)
+            {
+                label += "XTS_DefaultSuffix".Translate();
+            }
+            if (listing.RadioButton(label, metabolismLimitScope == scope, indent, descKey.Translate()))
+            {
+                metabolismLimitScope = scope;
+            }
         }
     }
 }

@@ -59,6 +59,15 @@
   <XTS_PreserveDeathrestCapacity>Keep deathrest capacity</XTS_PreserveDeathrestCapacity>
   <XTS_PreserveDeathrestCapacityDesc>When enabled, a person will keep the deathrest capacity gained from serums when a xenogerm is implanted, as long as they still have the deathrest gene. When disabled, their deathrest capacity will reset to one.</XTS_PreserveDeathrestCapacityDesc>
   <XTS_ImplantGermlineAsEndogenesDesc>When enabled, a xenogerm for a germline xenotype will replace the person's germline genes, and their children will inherit them. Their existing xenogenes will be kept. When disabled, the genes will be implanted as xenogenes and will overwrite the existing ones.</XTS_ImplantGermlineAsEndogenesDesc>
+  <XTS_MetabolismLimit>Metabolism limit</XTS_MetabolismLimit>
+  <!-- {0}: the lowest metabolic efficiency the game allows, a negative number -->
+  <XTS_MetabolismLimitDesc>A xenogerm cannot be implanted if the person's metabolic efficiency would fall below {0}. This sets which xenogerms the limit applies to.</XTS_MetabolismLimitDesc>
+  <XTS_LimitAllXenogerms>All xenogerms</XTS_LimitAllXenogerms>
+  <XTS_LimitAllXenogermsDesc>The limit applies to every xenogerm, as it does without this mod.</XTS_LimitAllXenogermsDesc>
+  <XTS_LimitExceptKnown>All except preset and scenario xenotypes</XTS_LimitExceptKnown>
+  <XTS_LimitExceptKnownDesc>Xenogerms for a preset or scenario xenotype, such as those sold by traders, can be implanted below the limit. Other xenogerms cannot.</XTS_LimitExceptKnownDesc>
+  <XTS_LimitOff>Off</XTS_LimitOff>
+  <XTS_LimitOffDesc>Any xenogerm can be implanted, no matter how low the person's metabolic efficiency will be.</XTS_LimitOffDesc>
 
   <XTS_CommonalitySection>Xenotype rarity by price</XTS_CommonalitySection>
   <XTS_CommonalitySectionDesc>How the price of a xenogerm changes the chance that a trader will stock it.</XTS_CommonalitySectionDesc>

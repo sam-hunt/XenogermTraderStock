@@ -19,6 +19,7 @@ namespace XenogermTraderStock.Tests
 
             Assert.Equal(XenogermTraderStockSettings.DefaultImplantGermlineAsEndogenes, settings.implantGermlineAsEndogenes);
             Assert.Equal(XenogermTraderStockSettings.DefaultPreserveDeathrestCapacity, settings.preserveDeathrestCapacity);
+            Assert.Equal(XenogermTraderStockSettings.DefaultMetabolismLimitScope, settings.metabolismLimitScope);
             Assert.Equal(XenogermTraderStockSettings.DefaultBasePresetValue, settings.basePresetValue);
             Assert.Equal(XenogermTraderStockSettings.DefaultValuePerMetabolism, settings.valuePerMetabolism);
             Assert.Equal(XenogermTraderStockSettings.DefaultValuePerComplexity, settings.valuePerComplexity);
@@ -33,6 +34,7 @@ namespace XenogermTraderStock.Tests
             {
                 implantGermlineAsEndogenes = !XenogermTraderStockSettings.DefaultImplantGermlineAsEndogenes,
                 preserveDeathrestCapacity = !XenogermTraderStockSettings.DefaultPreserveDeathrestCapacity,
+                metabolismLimitScope = MetabolismLimitScope.NoXenogerms,
                 basePresetValue = XenogermTraderStockSettings.DefaultBasePresetValue + 500f,
                 valuePerMetabolism = XenogermTraderStockSettings.DefaultValuePerMetabolism + 5f,
                 valuePerComplexity = XenogermTraderStockSettings.DefaultValuePerComplexity + 5f,
@@ -44,6 +46,7 @@ namespace XenogermTraderStock.Tests
 
             Assert.Equal(XenogermTraderStockSettings.DefaultImplantGermlineAsEndogenes, settings.implantGermlineAsEndogenes);
             Assert.Equal(XenogermTraderStockSettings.DefaultPreserveDeathrestCapacity, settings.preserveDeathrestCapacity);
+            Assert.Equal(XenogermTraderStockSettings.DefaultMetabolismLimitScope, settings.metabolismLimitScope);
             Assert.Equal(XenogermTraderStockSettings.DefaultBasePresetValue, settings.basePresetValue);
             Assert.Equal(XenogermTraderStockSettings.DefaultValuePerMetabolism, settings.valuePerMetabolism);
             Assert.Equal(XenogermTraderStockSettings.DefaultValuePerComplexity, settings.valuePerComplexity);

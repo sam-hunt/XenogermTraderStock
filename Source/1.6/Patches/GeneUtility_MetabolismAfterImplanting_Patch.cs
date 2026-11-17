@@ -22,9 +22,15 @@ namespace XenogermTraderStock.Patches
     // Dialog_SelectXenogerm.Accept) and is shown in Xenogerm.SetTargetPawn's
     // confirmation. Nothing checks again at surgery time.
     //
+    // The metabolismLimitScope setting lifts the floor by raising a number below
+    // it to the floor itself, which passes all three gates. The confirmation
+    // still shows the true number (Xenogerm_SetTargetPawn_Patch). The floor is
+    // a static readonly range read inside an iterator and a closure, so it is
+    // not patched directly.
+    //
     // Vanilla passes the gene set, not the germ, and identity needs the germ's
     // comp, so the owner is looked up among the map's xenogerms. A gene set with
-    // no owner there keeps vanilla's number.
+    // no owner there counts as no known xenotype.
     //
     // Dropped: inferring identity from the gene set alone. It ignores the comp,
     // so the prediction could name a different xenotype than the implant stamps.
@@ -41,25 +47,35 @@ namespace XenogermTraderStock.Patches
                 return;
             }
 
-            Xenogerm xenogerm = FindOwner(pawn.MapHeld, geneSet);
-            if (xenogerm == null)
-            {
-                return;
-            }
+            XenogermSource source = XenogermIdentity.Resolve(FindOwner(pawn.MapHeld, geneSet));
 
-            XenogermSource source = XenogermIdentity.Resolve(xenogerm);
             bool keepsXenogenes = GeneUtility_ImplantXenogermItem_Patch.WillRetargetGermline(pawn, source);
-            if (!keepsXenogenes && !GeneUtility_ImplantXenogermItem_Patch.IsBaselinerConversion(pawn, source))
+            if (keepsXenogenes || GeneUtility_ImplantXenogermItem_Patch.IsBaselinerConversion(pawn, source))
             {
-                return;
+                List<GeneDef> keptXenogenes = keepsXenogenes
+                    ? pawn.genes.Xenogenes.Select(g => g.def).ToList()
+                    : null;
+                __result = GeneLayerRebuild.Predict(geneSet.GenesListForReading, keptXenogenes)
+                    .NonOverriddenGenes()
+                    .Sum(g => g.biostatMet);
             }
 
-            List<GeneDef> keptXenogenes = keepsXenogenes
-                ? pawn.genes.Xenogenes.Select(g => g.def).ToList()
-                : null;
-            __result = GeneLayerRebuild.Predict(geneSet.GenesListForReading, keptXenogenes)
-                .NonOverriddenGenes()
-                .Sum(g => g.biostatMet);
+            if (!Xenogerm_SetTargetPawn_Patch.Confirming)
+            {
+                __result = ApplyLimitScope(
+                    __result,
+                    GeneTuning.BiostatRange.TrueMin,
+                    XenogermTraderStockMod.Settings.metabolismLimitScope,
+                    !source.IsNone);
+            }
+        }
+
+        // Pure, for the headless suite: the number the order gates should see.
+        public static int ApplyLimitScope(int metabolism, int floor, MetabolismLimitScope scope, bool knownXenotype)
+        {
+            bool exempt = scope == MetabolismLimitScope.NoXenogerms
+                || (scope == MetabolismLimitScope.ExceptKnownXenotypes && knownXenotype);
+            return exempt && metabolism < floor ? floor : metabolism;
         }
 
         private static Xenogerm FindOwner(Map map, GeneSet geneSet)

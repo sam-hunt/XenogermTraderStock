@@ -104,7 +104,8 @@ Owning files; their headers and `Source/1.6/CLAUDE.md` carry the rules.
 - **Germline retarget** (`Xenotypes/GeneLayerRebuild.cs`): an inheritable xenotype's genes replace
   the pawn's endogenes; the Baseliner germ is the conversion item.
 - **Metabolism pre-check** (`Patches/GeneUtility_MetabolismAfterImplanting_Patch.cs`): vanilla's
-  implant refusal and confirmation read the metabolism a germline retarget will really leave.
+  implant refusal and confirmation read the metabolism a germline retarget will really leave; a
+  setting chooses which xenogerms the limit still refuses.
 - **Deathrest-capacity carryover** (`Patches/DeathrestCapacityCarryover.cs`): any implant or
   reimplant, not only trader germs.
 - **Ideology preferred-xenotype gate** (`Patches/Xenogerm_PawnIdeoDisallowsImplanting_Patch.cs`,
