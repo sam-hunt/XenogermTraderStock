@@ -3,7 +3,7 @@ using Verse;
 namespace XenogermTraderStock
 {
     // "Xenogerm pricing" settings section: the four terms of the market-value
-    // formula XenogermPricing evaluates (see CLAUDE.md, Pricing Formula). Values
+    // formula XenogermPricing evaluates (see Source/1.6/CLAUDE.md, Pricing). Values
     // are silver, read live by the StatParts and the stock generator, so a change
     // shows in the xenotype grid's prices immediately and on newly generated
     // xenogerms thereafter.

@@ -53,7 +53,7 @@ notes for the shim or flow edit this repo owes before continuing.
   convention in `.steamworkshop/README.md` (fully localized, leaning on that
   language's vanilla Biotech term for xenogerm and its ordinary word for
   traders, no English brand appended), never leave it as the English string.
-  See the CLAUDE.md localization note for the coupling rule.
+  See `1.6/Languages/CLAUDE.md` for the coupling rule.
 - **This mod ships no Defs of its own.** `1.6/Patches/**` are XML Patches
   (`PatchOperationAdd`/`PatchOperationSequence`) that bolt comps and
   StatParts (`CompXenotypeSource`, `StatPart_XenogermValue`,
