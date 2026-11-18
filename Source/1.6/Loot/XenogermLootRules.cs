@@ -18,10 +18,6 @@ namespace XenogermTraderStock
         // The lowest tech level a faction needs before its quests offer germs.
         public const TechLevel MinGiverTechLevel = TechLevel.Industrial;
 
-        // The most a germ may be worth where the caller passes no budget, which
-        // is every world loot pool.
-        public const float MaxUnbudgetedValue = 2500f;
-
         // giverTech is null when no faction stands behind the reward, as with
         // an item stash; those are always allowed.
         public static bool GiverAllowed(TechLevel? giverTech)
@@ -40,9 +36,10 @@ namespace XenogermTraderStock
 
         // The price range a germ must fall in to be offered. A budgeted pool
         // (quest rewards) bounds it by the remaining budget and vanilla's
-        // "no trivially cheap items" share of it; cap is MaxUnbudgetedValue,
-        // passed only where it applies.
-        public static void PriceBand(float? budgetMax, float? minItemShare, float? maxThingValue, float? cap,
+        // "no trivially cheap items" share of it. A pool with no budget, which
+        // is every world loot pool, is unbounded like the vanilla items beside
+        // the germ, unless the caller passes its own per-item limit.
+        public static void PriceBand(float? budgetMax, float? minItemShare, float? maxThingValue,
             out float min, out float max)
         {
             min = 0f;
@@ -55,10 +52,6 @@ namespace XenogermTraderStock
             if (maxThingValue.HasValue)
             {
                 max = Math.Min(max, maxThingValue.Value);
-            }
-            if (cap.HasValue)
-            {
-                max = Math.Min(max, cap.Value);
             }
         }
     }

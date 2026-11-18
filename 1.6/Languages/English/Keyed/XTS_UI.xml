@@ -74,8 +74,8 @@
   <XTS_ImplantWarningGermlineLost>{PAWN_pronoun} will lose the following germline genes:\n{GENES}</XTS_ImplantWarningGermlineLost>
 
   <XTS_LootSection>Rewards and loot</XTS_LootSection>
-  <!-- {0}: the game's own name for a tech level, such as industrial. {1}: a silver amount -->
-  <XTS_LootSectionDesc>Xenogerms can also be offered as quest rewards and found as loot. Only xenotypes that are for sale will appear. Factions below {0} tech will not offer them, and loot will not contain a xenogerm worth more than {1} silver.</XTS_LootSectionDesc>
+  <!-- {0}: the game's own name for a tech level, such as industrial -->
+  <XTS_LootSectionDesc>Xenogerms can also be offered as quest rewards and found as loot. Only xenotypes that are for sale will appear. Factions below {0} tech will not offer them.</XTS_LootSectionDesc>
   <!-- {0}: a percentage from 0 to 500 -->
   <XTS_QuestRewardCommonality>Quest reward frequency: {0}%</XTS_QuestRewardCommonality>
   <XTS_QuestRewardCommonalityDesc>How often quests will offer a xenogerm as a reward, compared with a genepack. At 0% they will never offer one.</XTS_QuestRewardCommonalityDesc>

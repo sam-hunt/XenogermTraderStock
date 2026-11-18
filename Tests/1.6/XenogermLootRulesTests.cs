@@ -49,37 +49,37 @@ namespace XenogermTraderStock.Tests
         [Fact]
         public void PriceBand_BudgetSetsCeilingAndCheapItemFloor()
         {
-            XenogermLootRules.PriceBand(2000f, 0.15f, null, null, out float min, out float max);
+            XenogermLootRules.PriceBand(2000f, 0.15f, null, out float min, out float max);
 
             Assert.Equal(300f, min);
             Assert.Equal(2000f, max);
         }
 
         [Fact]
-        public void PriceBand_NoBudgetIsBoundedOnlyByTheCap()
+        public void PriceBand_NoBudgetHasNoCeilingOrFloor()
         {
-            XenogermLootRules.PriceBand(null, 0.15f, null, 2500f, out float min, out float max);
+            XenogermLootRules.PriceBand(null, 0.15f, null, out float min, out float max);
 
             Assert.Equal(0f, min);
-            Assert.Equal(2500f, max);
+            Assert.Equal(float.MaxValue, max);
         }
 
         [Fact]
         public void PriceBand_TightestCeilingWins()
         {
-            XenogermLootRules.PriceBand(5000f, null, 1200f, 2500f, out float min, out float max);
+            XenogermLootRules.PriceBand(5000f, null, 1200f, out float min, out float max);
 
             Assert.Equal(0f, min);
             Assert.Equal(1200f, max);
         }
 
         [Fact]
-        public void PriceBand_UnboundedWithoutAnyLimit()
+        public void PriceBand_ItemLimitAppliesWithoutABudget()
         {
-            XenogermLootRules.PriceBand(null, null, null, null, out float min, out float max);
+            XenogermLootRules.PriceBand(null, null, 1200f, out float min, out float max);
 
             Assert.Equal(0f, min);
-            Assert.Equal(float.MaxValue, max);
+            Assert.Equal(1200f, max);
         }
 
         [Fact]

@@ -9,8 +9,8 @@ namespace XenogermTraderStock
     // own chance in the same pool, so 100% carries the "same as genepacks"
     // mark, and it is read at generation time, so a change needs no restart.
     //
-    // Which givers may offer a germ and how much a looted one may be worth are
-    // fixed (XenogermLootRules); the section tooltip states both.
+    // Which givers may offer a germ is fixed (XenogermLootRules); the section
+    // tooltip states it.
     public partial class XenogermTraderStockSettings
     {
         public const float DefaultQuestRewardCommonality = 0f;
@@ -48,8 +48,7 @@ namespace XenogermTraderStock
         private void DrawLootSection(Listing_Standard listing)
         {
             SectionHeader(listing, "XTS_LootSection".Translate(), "XTS_LootSectionDesc".Translate(
-                XenogermLootRules.MinGiverTechLevel.ToStringHuman(),
-                XenogermLootRules.MaxUnbudgetedValue.ToString("F0")));
+                XenogermLootRules.MinGiverTechLevel.ToStringHuman()));
 
             questRewardCommonality = SliderRow(listing,
                 "XTS_QuestRewardCommonality", "XTS_QuestRewardCommonalityDesc",

@@ -32,7 +32,8 @@ namespace XenogermTraderStock
     // Reward_ItemsStandard is also rolled for peace talks, refugee rewards and
     // item stashes. The first two pass their faction and meet the tech floor
     // like a quest giver; a stash passes none and is always allowed. A caller
-    // that passes no budget gets the unbudgeted value ceiling.
+    // that passes no budget, as every world loot pool does, gets no ceiling:
+    // vanilla sets none on the items those pools already hold.
     public class ThingSetMaker_Xenogerms : ThingSetMaker
     {
         public XenogermLootChannel channel;
@@ -102,10 +103,8 @@ namespace XenogermTraderStock
                 return false;
             }
 
-            float? budgetMax = parms.totalMarketValueRange?.max;
-            bool capped = channel == XenogermLootChannel.WorldLoot || !budgetMax.HasValue;
-            XenogermLootRules.PriceBand(budgetMax, parms.minSingleItemMarketValuePct, parms.maxThingMarketValue,
-                capped ? XenogermLootRules.MaxUnbudgetedValue : (float?)null, out float min, out float max);
+            XenogermLootRules.PriceBand(parms.totalMarketValueRange?.max, parms.minSingleItemMarketValuePct,
+                parms.maxThingMarketValue, out float min, out float max);
 
             pool = XenogermPool.Sellable();
             weights = XenogermCommonality.WeightsWithin(XenogermPool.Prices(pool),
