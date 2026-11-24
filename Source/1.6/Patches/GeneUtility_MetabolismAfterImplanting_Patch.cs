@@ -17,6 +17,12 @@ namespace XenogermTraderStock.Patches
     // implants that fit, and a pawn with heavy xenogenes was allowed ones that
     // did not.
     //
+    // Either way the sum counts each gene at its def's own cost. A placeholder
+    // gene that replaces itself when added declares its real cost
+    // (GeneExtension.implantedMetabolism), and the difference is added here. It
+    // is added even where the placeholder would be overridden, since it
+    // replaces itself regardless.
+    //
     // The number gates the three ways to order an implant
     // (Xenogerm.GetFloatMenuOptions, Xenogerm.GetGizmos,
     // Dialog_SelectXenogerm.Accept) and is shown in Xenogerm.SetTargetPawn's
@@ -56,6 +62,8 @@ namespace XenogermTraderStock.Patches
                     .NonOverriddenGenes()
                     .Sum(g => g.biostatMet);
             }
+
+            __result += GeneExtension.MetabolismCorrection(geneSet.GenesListForReading);
 
             if (!Xenogerm_SetTargetPawn_Patch.Confirming)
             {

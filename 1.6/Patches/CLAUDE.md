@@ -27,6 +27,10 @@ freely.
   containing it, preset or custom, from stock. The snippet and the reasoning are in
   `Source/1.6/Xenotypes/GeneExtension.cs`; `Patches_VREAndroid.xml` is the shipped use, flagging
   abstract gene bases so derived genes inherit it.
+- **Placeholder genes:** a gene that replaces itself with random genes when added carries
+  `GeneExtension.implantedMetabolism`, the cost the pawn really ends up with, so the price and the
+  implant prediction are right. `Patches_VRERandomGenes.xml` is the shipped use; a new mod with
+  the same trick needs only a new operation there.
 - **`Patches_Xenogerm.xml` and `Patches_Stats.xml` wire the C# side** (`CompXenotypeSource`, the
   StatParts, the base sell factor). A rename in C# must move with them; nothing at build time
   checks the class names in XML.

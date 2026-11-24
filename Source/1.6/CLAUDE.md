@@ -110,6 +110,9 @@ SellPriceFactor = 0.05 (base, XML) + archites × per-archite bonus
 Defaults, ranges and snap steps are the constants in `Core/Settings/Settings_Pricing.cs` and
 `Stats/StatPart_XenogermSellFactor.cs`; read them there.
 
+- **A gene's metabolism is never `biostatMet` alone** in pricing or the implant prediction: a
+  placeholder gene that replaces itself on add declares what it really costs, read through
+  `GeneExtension.MetabolismOf` or added with `MetabolismCorrection` (`Xenotypes/GeneExtension.cs`).
 - `Stats/XenogermPricing.cs` is the one calculation, used by the StatParts and by spawn weighting.
 - `Stats/XenogermPriceRows.cs` is the one wording, shared by the grid tooltip and the info-card
   explanations; the StatParts own no English literals.

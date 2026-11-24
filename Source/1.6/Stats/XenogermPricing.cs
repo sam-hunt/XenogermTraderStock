@@ -38,7 +38,7 @@ namespace XenogermTraderStock
             {
                 foreach (var gene in genes)
                 {
-                    breakdown.AbsoluteMetabolism += Math.Abs(gene.biostatMet);
+                    breakdown.AbsoluteMetabolism += Math.Abs(GeneExtension.MetabolismOf(gene));
                     breakdown.Complexity += gene.biostatCpx;
                     breakdown.Archites += gene.biostatArc;
                 }

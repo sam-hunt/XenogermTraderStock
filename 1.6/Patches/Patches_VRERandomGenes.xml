@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  <!-- Vanilla Races Expanded gives some xenotypes a hidden placeholder gene
+       that costs no metabolism and, when added to a pawn, replaces itself with
+       randomly chosen genes that do. A xenogerm carries the placeholder, so its
+       price and the implant prediction undercount what the pawn ends up with.
+       GeneExtension.implantedMetabolism declares the real cost.
+
+       Hussar and Uhlan (VRE Hussar): one weapon aptitude, always -3.
+       Waster (VRE Waster): one to three mutations at -1 each, declared at the
+       least it costs. Undercharging and now and then allowing an implant that
+       lands a point or two under the limit was preferred to refusing ones
+       that would have fitted.
+       Not needed: VRE Starjack's astrogenes and VRE Fungoid's hair genes cost
+       nothing.
+
+       Each operation is conditional on its own gene def, so it does nothing
+       without the mod or if the mod drops the gene. Both defs already carry a
+       VEF GeneExtension in <modExtensions>; the inner conditional keeps this
+       working if that ever goes away. -->
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/GeneDef[defName="VREHT_WeaponAptitude_Randomizer"]</xpath>
+    <match Class="PatchOperationConditional">
+      <xpath>/Defs/GeneDef[defName="VREHT_WeaponAptitude_Randomizer"]/modExtensions</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/GeneDef[defName="VREHT_WeaponAptitude_Randomizer"]/modExtensions</xpath>
+        <value>
+          <li Class="XenogermTraderStock.GeneExtension">
+            <implantedMetabolism>-3</implantedMetabolism>
+          </li>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/GeneDef[defName="VREHT_WeaponAptitude_Randomizer"]</xpath>
+        <value>
+          <modExtensions>
+            <li Class="XenogermTraderStock.GeneExtension">
+              <implantedMetabolism>-3</implantedMetabolism>
+            </li>
+          </modExtensions>
+        </value>
+      </nomatch>
+    </match>
+  </Operation>
+
+  <Operation Class="PatchOperationConditional">
+    <xpath>/Defs/GeneDef[defName="VREW_Mutation_Randomizer"]</xpath>
+    <match Class="PatchOperationConditional">
+      <xpath>/Defs/GeneDef[defName="VREW_Mutation_Randomizer"]/modExtensions</xpath>
+      <match Class="PatchOperationAdd">
+        <xpath>/Defs/GeneDef[defName="VREW_Mutation_Randomizer"]/modExtensions</xpath>
+        <value>
+          <li Class="XenogermTraderStock.GeneExtension">
+            <implantedMetabolism>-1</implantedMetabolism>
+          </li>
+        </value>
+      </match>
+      <nomatch Class="PatchOperationAdd">
+        <xpath>/Defs/GeneDef[defName="VREW_Mutation_Randomizer"]</xpath>
+        <value>
+          <modExtensions>
+            <li Class="XenogermTraderStock.GeneExtension">
+              <implantedMetabolism>-1</implantedMetabolism>
+            </li>
+          </modExtensions>
+        </value>
+      </nomatch>
+    </match>
+  </Operation>
+</Patch>

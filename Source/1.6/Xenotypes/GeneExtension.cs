@@ -1,8 +1,11 @@
+using System.Collections.Generic;
 using Verse;
 
 namespace XenogermTraderStock
 {
-    // Opt-out marker for genes that must never travel in a trader-sold
+    // What this mod needs to know about a gene that its def does not say.
+    //
+    // excludeFromXenogermStock: opt-out marker for genes that must never travel in a trader-sold
     // xenogerm. Any xenotype containing such a gene — preset or player-scenario
     // — is dropped at the candidate stage (XenotypeEligibility.IsCandidate):
     // hidden from the settings grid and never generated as stock.
@@ -23,8 +26,33 @@ namespace XenogermTraderStock
     //       <excludeFromXenogermStock>true</excludeFromXenogermStock>
     //     </li>
     //   </modExtensions>
+    //
+    // implantedMetabolism: what the gene costs once it is on a pawn, for a
+    // placeholder that replaces itself with other genes when added. The def's
+    // own biostatMet is then not what the pawn ends up paying, so pricing and
+    // the implant prediction read MetabolismOf, never biostatMet.
+    // Patches_VRERandomGenes.xml is the shipped use.
     public class GeneExtension : DefModExtension
     {
         public bool excludeFromXenogermStock;
+
+        public int? implantedMetabolism;
+
+        public static int MetabolismOf(GeneDef gene)
+        {
+            return gene.GetModExtension<GeneExtension>()?.implantedMetabolism ?? gene.biostatMet;
+        }
+
+        // What to add to a sum of biostatMet over these genes to get what
+        // they will really cost.
+        public static int MetabolismCorrection(IEnumerable<GeneDef> genes)
+        {
+            int correction = 0;
+            foreach (GeneDef gene in genes)
+            {
+                correction += MetabolismOf(gene) - gene.biostatMet;
+            }
+            return correction;
+        }
     }
 }

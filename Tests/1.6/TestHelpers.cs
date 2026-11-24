@@ -17,14 +17,15 @@ namespace XenogermTraderStock.Tests
         // running any constructor, matching the pattern UWU's TestHelpers
         // uses for ThingDef.
         //
-        // exclude: null leaves modExtensions null (the common case for a gene
-        // no mod has patched); true/false attaches a GeneExtension with that
-        // excludeFromXenogermStock value.
+        // exclude and implantedMetabolism: both null leaves modExtensions null
+        // (the common case for a gene no mod has patched); either one set
+        // attaches a GeneExtension carrying them.
         //
         // passOnDirectly: GeneDef's field initializer defaults it to true, but
         // GetUninitializedObject skips initializers, so it is set explicitly here.
         public static GeneDef MakeGene(int metabolism = 0, int complexity = 0, int archites = 0,
-            string defName = null, bool? exclude = null, bool passOnDirectly = true)
+            string defName = null, bool? exclude = null, bool passOnDirectly = true,
+            int? implantedMetabolism = null)
         {
             var gene = (GeneDef)FormatterServices.GetUninitializedObject(typeof(GeneDef));
             gene.defName = defName ?? "TestGene";
@@ -32,11 +33,15 @@ namespace XenogermTraderStock.Tests
             gene.biostatMet = metabolism;
             gene.biostatCpx = complexity;
             gene.biostatArc = archites;
-            if (exclude.HasValue)
+            if (exclude.HasValue || implantedMetabolism.HasValue)
             {
                 gene.modExtensions = new List<DefModExtension>
                 {
-                    new GeneExtension { excludeFromXenogermStock = exclude.Value },
+                    new GeneExtension
+                    {
+                        excludeFromXenogermStock = exclude ?? false,
+                        implantedMetabolism = implantedMetabolism,
+                    },
                 };
             }
             return gene;
