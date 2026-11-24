@@ -7,6 +7,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 <!-- Entries are short one-liners ready to paste as Steam Workshop change notes: what changed for the player, no rationale, no def names, no sub-bullets. -->
 
+## [1.3.0] - 2026-11-25
+
+### Added
+
+- Xenogerms can now be offered as quest rewards (off by default).
+- Xenogerms can now be found as loot (off by default, requires Ideology or Odyssey).
+- New setting for which xenogerms the metabolism limit applies to.
+
+### Fixed
+
+- The metabolism limit no longer refuses germline xenogerms that would fit.
+- The implant confirmation now says when germline genes will be replaced and lists the ones lost.
+- Hussar, uhlan and waster xenogerms now have the right price and metabolism with Vanilla Races Expanded.
+- Imperial settlements no longer lose their xenogerm stock after a language change.
+
 ## [1.2.1] - 2026-11-11
 
 ### Changed
@@ -92,6 +107,7 @@ Initial release.
 - Compatible with Gene Trader; VRE Android xenotypes are excluded.
 - Nine translations: Chinese (Simplified/Traditional), French, German, Japanese, Korean, Brazilian Portuguese, Russian, Spanish.
 
+[1.3.0]: https://github.com/sam-hunt/XenogermTraderStock/releases/tag/v1.3.0
 [1.2.1]: https://github.com/sam-hunt/XenogermTraderStock/releases/tag/v1.2.1
 [1.2.0]: https://github.com/sam-hunt/XenogermTraderStock/releases/tag/v1.2.0
 [1.1.1]: https://github.com/sam-hunt/XenogermTraderStock/releases/tag/v1.1.1
