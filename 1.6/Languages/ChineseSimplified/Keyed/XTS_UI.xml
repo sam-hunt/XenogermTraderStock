@@ -93,6 +93,43 @@
   <XTS_PreserveDeathrestCapacityDesc>启用后，植入异种胚芽时，只要此人仍拥有死眠基因，就会保留通过血清获得的死眠容量。禁用后，其死眠容量会重置为1。</XTS_PreserveDeathrestCapacityDesc>
   <!-- EN: When enabled, a xenogerm for a germline xenotype will replace the person's germline genes, and their children will inherit them. Their existing xenogenes will be kept. When disabled, the genes will be implanted as xenogenes and will overwrite the existing ones. -->
   <XTS_ImplantGermlineAsEndogenesDesc>启用后，系谱异种人的异种胚芽会替换此人的系谱基因，其子女将遗传这些基因，原有的异种基因会被保留。禁用后，这些基因会作为异种基因植入，并覆盖原有的异种基因。</XTS_ImplantGermlineAsEndogenesDesc>
+  <!-- EN: Metabolism limit applies to -->
+  <XTS_MetabolismLimit>代谢率限制适用于</XTS_MetabolismLimit>
+  <!-- EN: A xenogerm cannot be implanted if the person's metabolic efficiency would fall below {0}. Choose which xenogerms this limit applies to. -->
+  <XTS_MetabolismLimitDesc>如果植入后此人的代谢率会低于{0}，就无法植入异种胚芽。请选择此限制适用于哪些异种胚芽。</XTS_MetabolismLimitDesc>
+  <!-- EN: All xenogerms -->
+  <XTS_LimitAllXenogerms>所有异种胚芽</XTS_LimitAllXenogerms>
+  <!-- EN: The limit applies to every xenogerm, as it does without this mod. -->
+  <XTS_LimitAllXenogermsDesc>此限制适用于每个异种胚芽，与没有本模组时相同。</XTS_LimitAllXenogermsDesc>
+  <!-- EN: All except preset and scenario xenotypes -->
+  <XTS_LimitExceptKnown>除预设和剧本异种人外的所有异种胚芽</XTS_LimitExceptKnown>
+  <!-- EN: Xenogerms for a preset or scenario xenotype, such as those sold by traders, can be implanted below the limit. Other xenogerms cannot. -->
+  <XTS_LimitExceptKnownDesc>预设或剧本异种人的异种胚芽，例如贸易商出售的那些，可以在低于限制时植入，其他异种胚芽则不行。</XTS_LimitExceptKnownDesc>
+  <!-- EN: No xenogerms -->
+  <XTS_LimitOff>不限制任何异种胚芽</XTS_LimitOff>
+  <!-- EN: Any xenogerm can be implanted, no matter how low the person's metabolic efficiency will be. -->
+  <XTS_LimitOffDesc>无论植入后此人的代谢率有多低，任何异种胚芽都可以植入。</XTS_LimitOffDesc>
+  <!-- EN: Additionally, this xenogerm will replace {PAWN_nameDef}'s germline genes, and {PAWN_possessive} children will inherit the new ones. Existing xenogenes will be kept. -->
+  <XTS_ImplantWarningGermline>此外，这个异种胚芽会替换{PAWN_nameDef}的系谱基因，{PAWN_possessive}子女将遗传新的系谱基因。现有的异种基因会被保留。</XTS_ImplantWarningGermline>
+  <!-- EN: This xenogerm will turn {PAWN_nameDef} back into a baseliner by removing all of {PAWN_possessive} germline genes. -->
+  <XTS_ImplantWarningBaseliner>这个异种胚芽会移除{PAWN_possessive}所有系谱基因，使{PAWN_nameDef}变回智人种。</XTS_ImplantWarningBaseliner>
+  <!-- EN: {PAWN_pronoun} will lose the following germline genes:\n{GENES} -->
+  <XTS_ImplantWarningGermlineLost>{PAWN_pronoun}将失去以下系谱基因：\n{GENES}</XTS_ImplantWarningGermlineLost>
+
+  <!-- EN: Rewards and loot -->
+  <XTS_LootSection>奖励与战利品</XTS_LootSection>
+  <!-- EN: Xenogerms can also be offered as quest rewards and found as loot. Only xenotypes that are for sale will appear. Factions below {0} tech will not offer them. -->
+  <XTS_LootSectionDesc>异种胚芽也可以作为任务奖励提供，或在战利品中找到。只有在售的异种人才会出现。科技等级低于{0}的派系不会提供它们。</XTS_LootSectionDesc>
+  <!-- EN: Quest reward frequency: {0}% -->
+  <XTS_QuestRewardCommonality>任务奖励频率: {0}%</XTS_QuestRewardCommonality>
+  <!-- EN: How often quests will offer a xenogerm as a reward, compared with a genepack. At 0% they will never offer one. -->
+  <XTS_QuestRewardCommonalityDesc>任务提供异种胚芽作为奖励的频率，以基因组为参照。设为0%时，任务不会再提供异种胚芽。</XTS_QuestRewardCommonalityDesc>
+  <!-- EN: Loot frequency: {0}% -->
+  <XTS_WorldLootCommonality>战利品频率: {0}%</XTS_WorldLootCommonality>
+  <!-- EN: How often ancient complexes, sealed crates and rusted safes will contain a xenogerm, compared with a genepack. At 0% they never will. -->
+  <XTS_WorldLootCommonalityDesc>远古建筑群、密封储物箱和生锈的保险箱里出现异种胚芽的频率，以基因组为参照。设为0%时，它们不会再出现异种胚芽。</XTS_WorldLootCommonalityDesc>
+  <!-- EN:  (same as genepacks) -->
+  <XTS_SameAsGenepacks>（与基因组相同）</XTS_SameAsGenepacks>
 
   <!-- EN: Xenotype rarity by price -->
   <XTS_CommonalitySection>稀有度取决于价格</XTS_CommonalitySection>

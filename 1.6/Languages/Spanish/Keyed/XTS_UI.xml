@@ -93,6 +93,43 @@
   <XTS_PreserveDeathrestCapacityDesc>Si está activado, una persona conservará la capacidad de mortisueño obtenida con sueros cuando se le implante un xenogermen, siempre que siga teniendo el gen de mortisueño. Si está desactivado, su capacidad de mortisueño volverá a uno.</XTS_PreserveDeathrestCapacityDesc>
   <!-- EN: When enabled, a xenogerm for a germline xenotype will replace the person's germline genes, and their children will inherit them. Their existing xenogenes will be kept. When disabled, the genes will be implanted as xenogenes and will overwrite the existing ones. -->
   <XTS_ImplantGermlineAsEndogenesDesc>Si está activado, un xenogermen de un xenotipo de línea germinal sustituirá los genes de línea germinal de la persona, y sus hijos los heredarán. Se conservarán sus xenogenes actuales. Si está desactivado, los genes se implantarán como xenogenes y sobrescribirán los existentes.</XTS_ImplantGermlineAsEndogenesDesc>
+  <!-- EN: Metabolism limit applies to -->
+  <XTS_MetabolismLimit>El límite metabólico se aplica a</XTS_MetabolismLimit>
+  <!-- EN: A xenogerm cannot be implanted if the person's metabolic efficiency would fall below {0}. Choose which xenogerms this limit applies to. -->
+  <XTS_MetabolismLimitDesc>No se puede implantar un xenogermen si la eficiencia metabólica de la persona fuera a quedar por debajo de {0}. Elige a qué xenogérmenes se aplica este límite.</XTS_MetabolismLimitDesc>
+  <!-- EN: All xenogerms -->
+  <XTS_LimitAllXenogerms>Todos los xenogérmenes</XTS_LimitAllXenogerms>
+  <!-- EN: The limit applies to every xenogerm, as it does without this mod. -->
+  <XTS_LimitAllXenogermsDesc>El límite se aplica a todos los xenogérmenes, igual que sin este mod.</XTS_LimitAllXenogermsDesc>
+  <!-- EN: All except preset and scenario xenotypes -->
+  <XTS_LimitExceptKnown>Todos menos los de xenotipos preestablecidos y de escenario</XTS_LimitExceptKnown>
+  <!-- EN: Xenogerms for a preset or scenario xenotype, such as those sold by traders, can be implanted below the limit. Other xenogerms cannot. -->
+  <XTS_LimitExceptKnownDesc>Los xenogérmenes de un xenotipo preestablecido o de escenario, como los que venden los comerciantes, se pueden implantar por debajo del límite. Los demás xenogérmenes no.</XTS_LimitExceptKnownDesc>
+  <!-- EN: No xenogerms -->
+  <XTS_LimitOff>Ninguno</XTS_LimitOff>
+  <!-- EN: Any xenogerm can be implanted, no matter how low the person's metabolic efficiency will be. -->
+  <XTS_LimitOffDesc>Se puede implantar cualquier xenogermen, por baja que vaya a quedar la eficiencia metabólica de la persona.</XTS_LimitOffDesc>
+  <!-- EN: Additionally, this xenogerm will replace {PAWN_nameDef}'s germline genes, and {PAWN_possessive} children will inherit the new ones. Existing xenogenes will be kept. -->
+  <XTS_ImplantWarningGermline>Además, este xenogermen sustituirá los genes de línea germinal de {PAWN_nameDef}, y {PAWN_possessive} descendencia heredará los nuevos. Se conservarán los xenogenes actuales.</XTS_ImplantWarningGermline>
+  <!-- EN: This xenogerm will turn {PAWN_nameDef} back into a baseliner by removing all of {PAWN_possessive} germline genes. -->
+  <XTS_ImplantWarningBaseliner>Este xenogermen convertirá de nuevo a {PAWN_nameDef} en básico al eliminar todos los genes de {PAWN_possessive} línea germinal.</XTS_ImplantWarningBaseliner>
+  <!-- EN: {PAWN_pronoun} will lose the following germline genes:\n{GENES} -->
+  <XTS_ImplantWarningGermlineLost>Esto hará que {PAWN_pronoun} pierda los siguientes genes de línea germinal:\n{GENES}</XTS_ImplantWarningGermlineLost>
+
+  <!-- EN: Rewards and loot -->
+  <XTS_LootSection>Recompensas y botín</XTS_LootSection>
+  <!-- EN: Xenogerms can also be offered as quest rewards and found as loot. Only xenotypes that are for sale will appear. Factions below {0} tech will not offer them. -->
+  <XTS_LootSectionDesc>Los xenogérmenes también pueden ofrecerse como recompensa de misiones y encontrarse como botín. Solo aparecerán los xenotipos que estén en venta. Las facciones con un nivel tecnológico inferior a {0} no los ofrecerán.</XTS_LootSectionDesc>
+  <!-- EN: Quest reward frequency: {0}% -->
+  <XTS_QuestRewardCommonality>Frecuencia como recompensa de misión: {0}%</XTS_QuestRewardCommonality>
+  <!-- EN: How often quests will offer a xenogerm as a reward, compared with a genepack. At 0% they will never offer one. -->
+  <XTS_QuestRewardCommonalityDesc>Con qué frecuencia las misiones ofrecerán un xenogermen como recompensa, en comparación con un paquete de genes. Al 0 % nunca lo ofrecerán.</XTS_QuestRewardCommonalityDesc>
+  <!-- EN: Loot frequency: {0}% -->
+  <XTS_WorldLootCommonality>Frecuencia como botín: {0}%</XTS_WorldLootCommonality>
+  <!-- EN: How often ancient complexes, sealed crates and rusted safes will contain a xenogerm, compared with a genepack. At 0% they never will. -->
+  <XTS_WorldLootCommonalityDesc>Con qué frecuencia los complejos antiguos, las cajas selladas y las cajas fuertes oxidadas contendrán un xenogermen, en comparación con un paquete de genes. Al 0 % nunca lo contendrán.</XTS_WorldLootCommonalityDesc>
+  <!-- EN:  (same as genepacks) -->
+  <XTS_SameAsGenepacks> (igual que los paquetes de genes)</XTS_SameAsGenepacks>
 
   <!-- EN: Xenotype rarity by price -->
   <XTS_CommonalitySection>Rareza de los xenotipos según el precio</XTS_CommonalitySection>

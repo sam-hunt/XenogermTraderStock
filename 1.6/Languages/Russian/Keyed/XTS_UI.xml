@@ -93,6 +93,43 @@
   <XTS_PreserveDeathrestCapacityDesc>Если включено, при вживлении ксеносемени поселенец сохранит торпорную вместимость, полученную от сывороток, пока у него остаётся ген торпора. Если выключено, его торпорная вместимость сбросится до одной единицы.</XTS_PreserveDeathrestCapacityDesc>
   <!-- EN: When enabled, a xenogerm for a germline xenotype will replace the person's germline genes, and their children will inherit them. Their existing xenogenes will be kept. When disabled, the genes will be implanted as xenogenes and will overwrite the existing ones. -->
   <XTS_ImplantGermlineAsEndogenesDesc>Если включено, ксеносемя наследуемого ксенотипа заменит наследуемые гены поселенца, и его дети унаследуют их. Уже имеющиеся ксеногены сохранятся. Если выключено, гены будут вживлены как ксеногены и перезапишут уже имеющиеся.</XTS_ImplantGermlineAsEndogenesDesc>
+  <!-- EN: Metabolism limit applies to -->
+  <XTS_MetabolismLimit>Ограничение метаболизма действует на</XTS_MetabolismLimit>
+  <!-- EN: A xenogerm cannot be implanted if the person's metabolic efficiency would fall below {0}. Choose which xenogerms this limit applies to. -->
+  <XTS_MetabolismLimitDesc>Ксеносемя нельзя вживить, если эффективность метаболизма поселенца упадёт ниже {0}. Выберите, на какие ксеносемена распространяется это ограничение.</XTS_MetabolismLimitDesc>
+  <!-- EN: All xenogerms -->
+  <XTS_LimitAllXenogerms>Все ксеносемена</XTS_LimitAllXenogerms>
+  <!-- EN: The limit applies to every xenogerm, as it does without this mod. -->
+  <XTS_LimitAllXenogermsDesc>Ограничение действует на любое ксеносемя, как и без этого мода.</XTS_LimitAllXenogermsDesc>
+  <!-- EN: All except preset and scenario xenotypes -->
+  <XTS_LimitExceptKnown>Все, кроме стандартных ксенотипов и ксенотипов сценария</XTS_LimitExceptKnown>
+  <!-- EN: Xenogerms for a preset or scenario xenotype, such as those sold by traders, can be implanted below the limit. Other xenogerms cannot. -->
+  <XTS_LimitExceptKnownDesc>Ксеносемена стандартного ксенотипа или ксенотипа сценария, например продаваемые торговцами, можно вживлять и ниже предела. Остальные ксеносемена нельзя.</XTS_LimitExceptKnownDesc>
+  <!-- EN: No xenogerms -->
+  <XTS_LimitOff>Никакие ксеносемена</XTS_LimitOff>
+  <!-- EN: Any xenogerm can be implanted, no matter how low the person's metabolic efficiency will be. -->
+  <XTS_LimitOffDesc>Можно вживить любое ксеносемя, как бы низко ни упала эффективность метаболизма поселенца.</XTS_LimitOffDesc>
+  <!-- EN: Additionally, this xenogerm will replace {PAWN_nameDef}'s germline genes, and {PAWN_possessive} children will inherit the new ones. Existing xenogenes will be kept. -->
+  <XTS_ImplantWarningGermline>Кроме того, {PAWN_nameDef} получит новые наследуемые гены вместо прежних, и {PAWN_possessive} дети унаследуют их. Уже имеющиеся ксеногены сохранятся.</XTS_ImplantWarningGermline>
+  <!-- EN: This xenogerm will turn {PAWN_nameDef} back into a baseliner by removing all of {PAWN_possessive} germline genes. -->
+  <XTS_ImplantWarningBaseliner>Из-за этого ксеносемени {PAWN_nameDef} снова станет {PAWN_gender ? первозданным : первозданной}, ведь все {PAWN_possessive} наследуемые гены будут удалены.</XTS_ImplantWarningBaseliner>
+  <!-- EN: {PAWN_pronoun} will lose the following germline genes:\n{GENES} -->
+  <XTS_ImplantWarningGermlineLost>{PAWN_pronoun} лишится следующих наследуемых генов:\n{GENES}</XTS_ImplantWarningGermlineLost>
+
+  <!-- EN: Rewards and loot -->
+  <XTS_LootSection>Награды и добыча</XTS_LootSection>
+  <!-- EN: Xenogerms can also be offered as quest rewards and found as loot. Only xenotypes that are for sale will appear. Factions below {0} tech will not offer them. -->
+  <XTS_LootSectionDesc>Ксеносемена также могут предлагаться в награду за задания и находиться в добыче. Появятся только ксенотипы, которые есть в продаже. Фракции с технологическим уровнем ниже, чем {0}, предлагать их не будут.</XTS_LootSectionDesc>
+  <!-- EN: Quest reward frequency: {0}% -->
+  <XTS_QuestRewardCommonality>Частота наград за задания: {0}%</XTS_QuestRewardCommonality>
+  <!-- EN: How often quests will offer a xenogerm as a reward, compared with a genepack. At 0% they will never offer one. -->
+  <XTS_QuestRewardCommonalityDesc>Как часто задания будут предлагать ксеносемя в награду по сравнению с генным пакетом. При 0% они не будут предлагать его никогда.</XTS_QuestRewardCommonalityDesc>
+  <!-- EN: Loot frequency: {0}% -->
+  <XTS_WorldLootCommonality>Частота добычи: {0}%</XTS_WorldLootCommonality>
+  <!-- EN: How often ancient complexes, sealed crates and rusted safes will contain a xenogerm, compared with a genepack. At 0% they never will. -->
+  <XTS_WorldLootCommonalityDesc>Как часто в древних комплексах, герметичных ящиках и заржавевших сейфах будет находиться ксеносемя по сравнению с генным пакетом. При 0% его там не будет.</XTS_WorldLootCommonalityDesc>
+  <!-- EN:  (same as genepacks) -->
+  <XTS_SameAsGenepacks> (как у генных пакетов)</XTS_SameAsGenepacks>
 
   <!-- EN: Xenotype rarity by price -->
   <XTS_CommonalitySection>Редкость ксенотипов в зависимости от цены</XTS_CommonalitySection>

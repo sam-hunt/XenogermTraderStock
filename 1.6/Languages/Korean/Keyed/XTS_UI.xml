@@ -93,6 +93,43 @@
   <XTS_PreserveDeathrestCapacityDesc>활성화하면 변형이식체를 이식해도 죽음안식 유전자가 남아 있는 한, 혈청으로 늘린 죽음안식 수용량이 유지됩니다. 비활성화하면 죽음안식 수용량이 1로 초기화됩니다.</XTS_PreserveDeathrestCapacityDesc>
   <!-- EN: When enabled, a xenogerm for a germline xenotype will replace the person's germline genes, and their children will inherit them. Their existing xenogenes will be kept. When disabled, the genes will be implanted as xenogenes and will overwrite the existing ones. -->
   <XTS_ImplantGermlineAsEndogenesDesc>활성화하면 생식유전자 인종형의 변형이식체가 그 사람의 생식유전자를 대체하며, 자식이 그 유전자를 물려받습니다. 기존의 변형인자는 유지됩니다. 비활성화하면 유전자가 변형인자로 이식되어 기존의 변형인자를 덮어씁니다.</XTS_ImplantGermlineAsEndogenesDesc>
+  <!-- EN: Metabolism limit applies to -->
+  <XTS_MetabolismLimit>대사 효율 제한 적용 대상</XTS_MetabolismLimit>
+  <!-- EN: A xenogerm cannot be implanted if the person's metabolic efficiency would fall below {0}. Choose which xenogerms this limit applies to. -->
+  <XTS_MetabolismLimitDesc>이식 후 사람의 대사 효율이 {0} 아래로 떨어지면 변형이식체를 이식할 수 없습니다. 이 제한을 적용할 변형이식체를 고르세요.</XTS_MetabolismLimitDesc>
+  <!-- EN: All xenogerms -->
+  <XTS_LimitAllXenogerms>모든 변형이식체</XTS_LimitAllXenogerms>
+  <!-- EN: The limit applies to every xenogerm, as it does without this mod. -->
+  <XTS_LimitAllXenogermsDesc>이 모드가 없을 때와 같이 모든 변형이식체에 제한이 적용됩니다.</XTS_LimitAllXenogermsDesc>
+  <!-- EN: All except preset and scenario xenotypes -->
+  <XTS_LimitExceptKnown>프리셋 및 시나리오 인종형 제외</XTS_LimitExceptKnown>
+  <!-- EN: Xenogerms for a preset or scenario xenotype, such as those sold by traders, can be implanted below the limit. Other xenogerms cannot. -->
+  <XTS_LimitExceptKnownDesc>상인이 파는 것처럼 프리셋 인종형이나 시나리오 인종형의 변형이식체는 제한을 넘어서도 이식할 수 있습니다. 그 밖의 변형이식체는 이식할 수 없습니다.</XTS_LimitExceptKnownDesc>
+  <!-- EN: No xenogerms -->
+  <XTS_LimitOff>적용 안 함</XTS_LimitOff>
+  <!-- EN: Any xenogerm can be implanted, no matter how low the person's metabolic efficiency will be. -->
+  <XTS_LimitOffDesc>대사 효율이 얼마나 낮아지든 모든 변형이식체를 이식할 수 있습니다.</XTS_LimitOffDesc>
+  <!-- EN: Additionally, this xenogerm will replace {PAWN_nameDef}'s germline genes, and {PAWN_possessive} children will inherit the new ones. Existing xenogenes will be kept. -->
+  <XTS_ImplantWarningGermline>또한 이 변형이식체는 {PAWN_nameDef}의 생식유전자를 대체하며, {PAWN_possessive} 자식이 새 유전자를 물려받습니다. 기존의 변형인자는 유지됩니다.</XTS_ImplantWarningGermline>
+  <!-- EN: This xenogerm will turn {PAWN_nameDef} back into a baseliner by removing all of {PAWN_possessive} germline genes. -->
+  <XTS_ImplantWarningBaseliner>이 변형이식체는 {PAWN_possessive} 생식유전자를 모두 제거하여 {PAWN_nameDef}(을)를 다시 일반인으로 되돌립니다.</XTS_ImplantWarningBaseliner>
+  <!-- EN: {PAWN_pronoun} will lose the following germline genes:\n{GENES} -->
+  <XTS_ImplantWarningGermlineLost>{PAWN_pronoun}는 다음 생식유전자를 잃게 됩니다.\n{GENES}</XTS_ImplantWarningGermlineLost>
+
+  <!-- EN: Rewards and loot -->
+  <XTS_LootSection>보상과 전리품</XTS_LootSection>
+  <!-- EN: Xenogerms can also be offered as quest rewards and found as loot. Only xenotypes that are for sale will appear. Factions below {0} tech will not offer them. -->
+  <XTS_LootSectionDesc>변형이식체는 임무 보상으로 제시되거나 전리품으로 발견될 수도 있습니다. 판매 중인 인종형만 나옵니다. {0}시대 수준보다 기술이 낮은 진영은 변형이식체를 제시하지 않습니다.</XTS_LootSectionDesc>
+  <!-- EN: Quest reward frequency: {0}% -->
+  <XTS_QuestRewardCommonality>임무 보상 빈도: {0}%</XTS_QuestRewardCommonality>
+  <!-- EN: How often quests will offer a xenogerm as a reward, compared with a genepack. At 0% they will never offer one. -->
+  <XTS_QuestRewardCommonalityDesc>유전자묶음에 비해 임무가 변형이식체를 보상으로 제시하는 빈도입니다. 0%이면 절대 제시하지 않습니다.</XTS_QuestRewardCommonalityDesc>
+  <!-- EN: Loot frequency: {0}% -->
+  <XTS_WorldLootCommonality>전리품 빈도: {0}%</XTS_WorldLootCommonality>
+  <!-- EN: How often ancient complexes, sealed crates and rusted safes will contain a xenogerm, compared with a genepack. At 0% they never will. -->
+  <XTS_WorldLootCommonalityDesc>유전자묶음에 비해 고대 유적, 밀봉된 상자, 녹슨 금고에 변형이식체가 들어 있을 빈도입니다. 0%이면 절대 들어 있지 않습니다.</XTS_WorldLootCommonalityDesc>
+  <!-- EN:  (same as genepacks) -->
+  <XTS_SameAsGenepacks> (유전자묶음과 동일)</XTS_SameAsGenepacks>
 
   <!-- EN: Xenotype rarity by price -->
   <XTS_CommonalitySection>가격별 인종형 희귀도</XTS_CommonalitySection>

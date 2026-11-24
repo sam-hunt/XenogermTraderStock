@@ -93,6 +93,43 @@
   <XTS_PreserveDeathrestCapacityDesc>有効にすると,異種胚を移植しても,死眠遺伝子が残っている限り,シーラムで得た死眠容量が維持されます.無効にすると,死眠容量は1にリセットされます.</XTS_PreserveDeathrestCapacityDesc>
   <!-- EN: When enabled, a xenogerm for a germline xenotype will replace the person's germline genes, and their children will inherit them. Their existing xenogenes will be kept. When disabled, the genes will be implanted as xenogenes and will overwrite the existing ones. -->
   <XTS_ImplantGermlineAsEndogenesDesc>有効にすると,生殖系ゼノタイプの異種胚が人の生殖系遺伝子を置き換え,その遺伝子は子供に受け継がれます.すでに持っている異種遺伝子は保持されます.無効にすると,遺伝子は異種遺伝子として移植され,既存の異種遺伝子を上書きします.</XTS_ImplantGermlineAsEndogenesDesc>
+  <!-- EN: Metabolism limit applies to -->
+  <XTS_MetabolismLimit>代謝限界の適用対象</XTS_MetabolismLimit>
+  <!-- EN: A xenogerm cannot be implanted if the person's metabolic efficiency would fall below {0}. Choose which xenogerms this limit applies to. -->
+  <XTS_MetabolismLimitDesc>人の代謝効率が{0}を下回る場合,異種胚は移植できません.この限界を適用する異種胚を選べます.</XTS_MetabolismLimitDesc>
+  <!-- EN: All xenogerms -->
+  <XTS_LimitAllXenogerms>すべての異種胚</XTS_LimitAllXenogerms>
+  <!-- EN: The limit applies to every xenogerm, as it does without this mod. -->
+  <XTS_LimitAllXenogermsDesc>このMODがない場合と同じく,すべての異種胚に限界が適用されます.</XTS_LimitAllXenogermsDesc>
+  <!-- EN: All except preset and scenario xenotypes -->
+  <XTS_LimitExceptKnown>プリセットとシナリオのゼノタイプを除くすべて</XTS_LimitExceptKnown>
+  <!-- EN: Xenogerms for a preset or scenario xenotype, such as those sold by traders, can be implanted below the limit. Other xenogerms cannot. -->
+  <XTS_LimitExceptKnownDesc>トレーダーが販売するものなど,プリセットまたはシナリオのゼノタイプの異種胚は,限界を下回っても移植できます.それ以外の異種胚は移植できません.</XTS_LimitExceptKnownDesc>
+  <!-- EN: No xenogerms -->
+  <XTS_LimitOff>適用しない</XTS_LimitOff>
+  <!-- EN: Any xenogerm can be implanted, no matter how low the person's metabolic efficiency will be. -->
+  <XTS_LimitOffDesc>代謝効率がどれだけ低くなっても,あらゆる異種胚を移植できます.</XTS_LimitOffDesc>
+  <!-- EN: Additionally, this xenogerm will replace {PAWN_nameDef}'s germline genes, and {PAWN_possessive} children will inherit the new ones. Existing xenogenes will be kept. -->
+  <XTS_ImplantWarningGermline>さらに,この異種胚は{PAWN_nameDef}の生殖系遺伝子を置き換え,新しい遺伝子は{PAWN_possessive}子供に受け継がれます.すでにある異種遺伝子は保持されます.</XTS_ImplantWarningGermline>
+  <!-- EN: This xenogerm will turn {PAWN_nameDef} back into a baseliner by removing all of {PAWN_possessive} germline genes. -->
+  <XTS_ImplantWarningBaseliner>この異種胚は{PAWN_possessive}生殖系遺伝子をすべて取り除き,{PAWN_nameDef}をベースライナーに戻します.</XTS_ImplantWarningBaseliner>
+  <!-- EN: {PAWN_pronoun} will lose the following germline genes:\n{GENES} -->
+  <XTS_ImplantWarningGermlineLost>{PAWN_pronoun}は次の生殖系遺伝子を失います:\n{GENES}</XTS_ImplantWarningGermlineLost>
+
+  <!-- EN: Rewards and loot -->
+  <XTS_LootSection>報酬と戦利品</XTS_LootSection>
+  <!-- EN: Xenogerms can also be offered as quest rewards and found as loot. Only xenotypes that are for sale will appear. Factions below {0} tech will not offer them. -->
+  <XTS_LootSectionDesc>異種胚はクエスト報酬として提示されたり,戦利品として見つかったりすることもあります.登場するのは販売されているゼノタイプだけです.テックレベルが{0}に満たない派閥は提示しません.</XTS_LootSectionDesc>
+  <!-- EN: Quest reward frequency: {0}% -->
+  <XTS_QuestRewardCommonality>クエスト報酬の出現頻度: {0}%</XTS_QuestRewardCommonality>
+  <!-- EN: How often quests will offer a xenogerm as a reward, compared with a genepack. At 0% they will never offer one. -->
+  <XTS_QuestRewardCommonalityDesc>遺伝子パックと比べて,クエストが異種胚を報酬として提示する頻度です.0%にすると,提示されることはありません.</XTS_QuestRewardCommonalityDesc>
+  <!-- EN: Loot frequency: {0}% -->
+  <XTS_WorldLootCommonality>戦利品の出現頻度: {0}%</XTS_WorldLootCommonality>
+  <!-- EN: How often ancient complexes, sealed crates and rusted safes will contain a xenogerm, compared with a genepack. At 0% they never will. -->
+  <XTS_WorldLootCommonalityDesc>遺伝子パックと比べて,古代遺跡,密封されたクレート,錆びた金庫に異種胚が入っている頻度です.0%にすると,入っていることはありません.</XTS_WorldLootCommonalityDesc>
+  <!-- EN:  (same as genepacks) -->
+  <XTS_SameAsGenepacks>(遺伝子パックと同じ)</XTS_SameAsGenepacks>
 
   <!-- EN: Xenotype rarity by price -->
   <XTS_CommonalitySection>価格によるゼノタイプの希少度</XTS_CommonalitySection>
